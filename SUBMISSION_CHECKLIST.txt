@@ -1,0 +1,40 @@
+SUBMISSION CHECKLIST
+====================
+
+Required by the guidelines                                   Status
+------------------------------------------------------------------------------------------
+Manuscript PDF                                               done: manuscript.pdf
+Manuscript editable source (LaTeX)                           done: manuscript.tex + references.bib + generated_*.tex + figure PDFs
+One journal format, double column                            done: Ind. Eng. Chem. Res. (ACS), achemso class v3.13g,
+                                                             journal=iecred, layout=twocolumn. Latest CTAN release is v3.14;
+                                                             recompile with a current TeX Live or Overleaf if possible.
+Sections: Abstract, Introduction, Theory & Methodology,      done (validation against NIST data is inside Results and Discussion)
+  Computational Details, Results & Discussion, Conclusion,
+  References
+Interactive prompting for missing data (Topic 2 scope)      done: python -m thermocalculus ask (Codes/thermocalculus/interactive.py),
+                                                             scripted session + transcript in Data/
+Code package with README (structure, functionality,          done: Codes/README.md
+  how to run)
+Link to web portal / app                                     TO DO: publish Codes/website with GitHub Pages and paste the link
+                                                             into Codes/README.md (placeholder marked there)
+Data: inputs and outputs for all scenarios, .txt/.csv,       done: Data/inputs (17 scenarios, tables, fluid database),
+  named and labelled                                         Data/outputs, Data/reference, Data/verification, Data/validation,
+                                                             Data/DATA_INDEX.txt
+Reference literature as PDF                                  TO DO: download the PDFs listed in Literature/download_checklist.csv
+                                                             into Literature/
+Folder structure: main + Literature, Codes, Data             done
+
+Before submitting, the group must
+------------------------------------------------------------------------------------------
+[ ] Replace every [TO FILL] in manuscript.tex (FIVE author slots, e-mail, affiliation, acknowledgment) and in README.txt
+    (the guidelines require all 5 group members to contribute: list all of them)
+[ ] Confirm and edit the AI-use disclosure in the Acknowledgment (required by ACS; check the course policy too)
+[ ] Read the manuscript and the references; you are responsible for every statement
+[ ] Check the five references marked UNVERIFIED in Literature/reference_list.md against the books/documents
+[ ] Download the reference PDFs into Literature/
+[ ] Publish the website and add its link to Codes/README.md
+[ ] Recompile the manuscript and re-run Codes/tools/audit.py; AUDIT_REPORT.txt should then show no failures
+
+Deadline: Thursday 19 November, 11:59 PM. Shared folders close at that time; upload everything before then.
+Upload map: Literature/ -> reference PDFs | Codes/ -> Codes folder incl. README | Data/ -> Data folder |
+            main folder -> manuscript.pdf, manuscript.tex, references.bib, manuscript.bbl, generated_*.tex, fig*.pdf, toc_graphic.pdf

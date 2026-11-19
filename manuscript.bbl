@@ -1,0 +1,177 @@
+\providecommand{\latin}[1]{#1}
+\makeatletter
+\providecommand{\doi}
+  {\begingroup\let\do\@makeother\dospecials
+  \catcode`\{=1 \catcode`\}=2 \doi@aux}
+\providecommand{\doi@aux}[1]{\endgroup\texttt{#1}}
+\makeatother
+\providecommand*\mcitethebibliography{\thebibliography}
+\csname @ifundefined\endcsname{endmcitethebibliography}
+  {\let\endmcitethebibliography\endthebibliography}{}
+\begin{mcitethebibliography}{19}
+\providecommand*\natexlab[1]{#1}
+\providecommand*\mciteSetBstSublistMode[1]{}
+\providecommand*\mciteSetBstMaxWidthForm[2]{}
+\providecommand*\mciteBstWouldAddEndPuncttrue
+  {\def\EndOfBibitem{\unskip.}}
+\providecommand*\mciteBstWouldAddEndPunctfalse
+  {\let\EndOfBibitem\relax}
+\providecommand*\mciteSetBstMidEndSepPunct[3]{}
+\providecommand*\mciteSetBstSublistLabelBeginEnd[3]{}
+\providecommand*\EndOfBibitem{}
+\mciteSetBstSublistMode{f}
+\mciteSetBstMaxWidthForm{subitem}{(\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd
+  {\mcitemaxwidthsubitemform\space}
+  {\relax}
+  {\relax}
+
+\bibitem[Bridgman(1914)]{Bridgman1914}
+Bridgman,~P.~W. A Complete Collection of Thermodynamic Formulas. \emph{Phys.
+  Rev.} \textbf{1914}, \emph{3}, 273--281\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Shaw(1935)]{Shaw1935}
+Shaw,~A.~N. The Derivation of Thermodynamical Relations for a Simple System.
+  \emph{Philos. Trans. R. Soc. London, Ser. A} \textbf{1935}, \emph{234},
+  299--328\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Callen(1985)]{Callen1985}
+Callen,~H.~B. \emph{Thermodynamics and an Introduction to Thermostatistics},
+  2nd ed.; Wiley: New York, 1985\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Smith \latin{et~al.}(2018)Smith, Van~Ness, Abbott, and
+  Swihart]{Smith2018}
+Smith,~J.~M.; Van~Ness,~H.~C.; Abbott,~M.~M.; Swihart,~M.~T. \emph{Introduction
+  to Chemical Engineering Thermodynamics}, 8th ed.; McGraw-Hill Education: New
+  York, 2018\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bell \latin{et~al.}(2014)Bell, Wronski, Quoilin, and Lemort]{Bell2014}
+Bell,~I.~H.; Wronski,~J.; Quoilin,~S.; Lemort,~V. Pure and Pseudo-pure Fluid
+  Thermophysical Property Evaluation and the Open-Source Thermophysical
+  Property Library {CoolProp}. \emph{Ind. Eng. Chem. Res.} \textbf{2014},
+  \emph{53}, 2498--2508\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lemmon \latin{et~al.}(2026)Lemmon, Bell, Huber, and
+  McLinden]{NISTWebBook}
+Lemmon,~E.~W.; Bell,~I.~H.; Huber,~M.~L.; McLinden,~M.~O. In \emph{{NIST}
+  Chemistry {WebBook}, {NIST} Standard Reference Database Number 69};
+  Linstrom,~P.~J., Mallard,~W.~G., Eds.; National Institute of Standards and
+  Technology: Gaithersburg, MD, 2026; https://doi.org/10.18434/T4D303
+  (retrieved November 15, 2026)\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Span and Wagner(1996)Span, and Wagner]{Span1996}
+Span,~R.; Wagner,~W. A New Equation of State for Carbon Dioxide Covering the
+  Fluid Region from the Triple-Point Temperature to 1100 {K} at Pressures up to
+  800 {MPa}. \emph{J. Phys. Chem. Ref. Data} \textbf{1996}, \emph{25},
+  1509--1596\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Span \latin{et~al.}(2000)Span, Lemmon, Jacobsen, Wagner, and
+  Yokozeki]{Span2000}
+Span,~R.; Lemmon,~E.~W.; Jacobsen,~R.~T.; Wagner,~W.; Yokozeki,~A. A Reference
+  Equation of State for the Thermodynamic Properties of Nitrogen for
+  Temperatures from 63.151 to 1000 {K} and Pressures to 2200 {MPa}. \emph{J.
+  Phys. Chem. Ref. Data} \textbf{2000}, \emph{29}, 1361--1433\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Castier(1999)]{Castier1999}
+Castier,~M. Automatic Implementation of Thermodynamic Models Using Computer
+  Algebra. \emph{Comput. Chem. Eng.} \textbf{1999}, \emph{23}, 1229--1245\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Marcelino~Neto and Barbosa(2013)Marcelino~Neto, and
+  Barbosa]{MarcelinoNeto2013}
+Marcelino~Neto,~M.~A.; Barbosa,~J.~R.,~Jr. A Departure-Function Approach to
+  Calculate Thermodynamic Properties of Refrigerant-Oil Mixtures. \emph{Int. J.
+  Refrig.} \textbf{2013}, \emph{36}, 972--979\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[da~Silva \latin{et~al.}(2023)da~Silva, Dias, Volskis, da~Silva,
+  Anastacio, and Peixoto]{daSilva2023}
+da~Silva,~L.~A.; Dias,~A. C.~M.; Volskis,~H. G.~T.; da~Silva,~J. D.~L.;
+  Anastacio,~A.~C.; Peixoto,~F.~C. Estimation of Thermochemical Properties of
+  Propellants Using {Peng--Robinson} Equation of State. \emph{J. Aerosp.
+  Technol. Manage.} \textbf{2023}, \emph{15}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[van~der Waals(1873)]{vanderWaals1873}
+van~der Waals,~J.~D. Over de Continuiteit van den Gas- en Vloeistoftoestand.
+  Ph.D.\ thesis, Leiden University, Leiden, The Netherlands, 1873\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Redlich and Kwong(1949)Redlich, and Kwong]{Redlich1949}
+Redlich,~O.; Kwong,~J. N.~S. On the Thermodynamics of Solutions. {V}. {An}
+  Equation of State. Fugacities of Gaseous Solutions. \emph{Chem. Rev.}
+  \textbf{1949}, \emph{44}, 233--244\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Soave(1972)]{Soave1972}
+Soave,~G. Equilibrium Constants from a Modified {Redlich--Kwong} Equation of
+  State. \emph{Chem. Eng. Sci.} \textbf{1972}, \emph{27}, 1197--1203\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Peng and Robinson(1976)Peng, and Robinson]{Peng1976}
+Peng,~D.-Y.; Robinson,~D.~B. A New Two-Constant Equation of State. \emph{Ind.
+  Eng. Chem. Fundam.} \textbf{1976}, \emph{15}, 59--64\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Poling \latin{et~al.}(2001)Poling, Prausnitz, and
+  O'Connell]{Poling2001}
+Poling,~B.~E.; Prausnitz,~J.~M.; O'Connell,~J.~P. \emph{The Properties of Gases
+  and Liquids}, 5th ed.; McGraw-Hill: New York, 2001\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Chase(1998)]{Chase1998}
+Chase,~M.~W.,~Jr. \emph{{NIST-JANAF} Thermochemical Tables}, 4th ed.; J. Phys.
+  Chem. Ref. Data, Monograph 9; American Institute of Physics: Woodbury, NY,
+  1998\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[{Joint Committee for Guides in Metrology}(2008)]{GUM2008}
+{Joint Committee for Guides in Metrology} \emph{Evaluation of Measurement
+  Data---Guide to the Expression of Uncertainty in Measurement}; 2008\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}
