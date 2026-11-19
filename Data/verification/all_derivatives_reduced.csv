@@ -1,0 +1,338 @@
+# all 336 first derivatives (dX/dY)_Z of T,P,V,S,U,H,A,G reduced to T,P,V,S,Cp,alpha,kappaT by the symbolic module
+X,Y,Z,expression,latex,symbols_needed
+T,P,V,kappaT/alpha,\frac{\kappa_T}{\alpha},alpha kappaT
+T,P,S,T*V*alpha/Cp,\frac{T V \alpha}{C_P},Cp T V alpha
+T,P,U,V*(P*kappaT - T*alpha)/(P*V*alpha - Cp),\frac{V\left(P \kappa_T - T \alpha\right)}{P V \alpha - C_P},Cp P T V alpha kappaT
+T,P,H,V*(T*alpha - 1)/Cp,\frac{V\left(T \alpha - 1\right)}{C_P},Cp T V alpha
+T,P,A,P*V*kappaT/(P*V*alpha + S),\frac{P V \kappa_T}{P V \alpha + S},P S V alpha kappaT
+T,P,G,V/S,\frac{V}{S},S V
+T,V,P,1/(V*alpha),\frac{1}{V \alpha},V alpha
+T,V,S,T*alpha/(T*V*alpha^2 - Cp*kappaT),\frac{T \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+T,V,U,(T*alpha - P*kappaT)/(T*V*alpha^2 - Cp*kappaT),\frac{T \alpha - P \kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp P T V alpha kappaT
+T,V,H,(T*alpha - 1)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{T \alpha - 1}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp T V alpha kappaT
+T,V,A,-P/S,-\frac{P}{S},P S
+T,V,G,1/(V*alpha - S*kappaT),\frac{1}{V \alpha - S \kappa_T},S V alpha kappaT
+T,S,P,T/Cp,\frac{T}{C_P},Cp T
+T,S,V,-T*kappaT/(T*V*alpha^2 - Cp*kappaT),-\frac{T \kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+T,S,U,T*(T*alpha - P*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(T \alpha - P \kappa_T\right)}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+T,S,H,T*(1 - T*alpha)/Cp,\frac{T\left(1 - T \alpha\right)}{C_P},Cp T alpha
+T,S,A,-T*P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),-\frac{T P \kappa_T}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+T,S,G,-T/(T*S*alpha - Cp),-\frac{T}{T S \alpha - C_P},Cp S T alpha
+T,U,P,-1/(P*V*alpha - Cp),-\frac{1}{P V \alpha - C_P},Cp P V alpha
+T,U,V,-kappaT/(T*V*alpha^2 - Cp*kappaT),-\frac{\kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+T,U,S,-T*alpha/(P*(T*V*alpha^2 - Cp*kappaT)),-\frac{T \alpha}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+T,U,H,(1 - T*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{1 - T \alpha}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P T V alpha kappaT
+T,U,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),-\frac{P \kappa_T}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+T,U,G,-1/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-\frac{1}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+T,H,P,1/Cp,\frac{1}{C_P},Cp
+T,H,V,-kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),-\frac{\kappa_T}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp T V alpha kappaT
+T,H,S,T*alpha/Cp,\frac{T \alpha}{C_P},Cp T alpha
+T,H,U,(T*alpha - P*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{T \alpha - P \kappa_T}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P T V alpha kappaT
+T,H,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),-\frac{P \kappa_T}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+T,H,G,-1/(T*S*alpha - S - Cp),-\frac{1}{T S \alpha - S - C_P},Cp S T alpha
+T,A,P,-1/(P*V*alpha + S),-\frac{1}{P V \alpha + S},P S V alpha
+T,A,V,-1/S,-\frac{1}{S},S
+T,A,S,-T*alpha/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),-\frac{T \alpha}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+T,A,U,(P*kappaT - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{P \kappa_T - T \alpha}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+T,A,H,(1 - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{1 - T \alpha}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+T,A,G,-1/(P*V*alpha - P*S*kappaT + S),-\frac{1}{P V \alpha - P S \kappa_T + S},P S V alpha kappaT
+T,G,P,-1/S,-\frac{1}{S},S
+T,G,V,kappaT/(V*alpha - S*kappaT),\frac{\kappa_T}{V \alpha - S \kappa_T},S V alpha kappaT
+T,G,S,-T*alpha/(T*S*alpha - Cp),-\frac{T \alpha}{T S \alpha - C_P},Cp S T alpha
+T,G,U,(P*kappaT - T*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{P \kappa_T - T \alpha}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+T,G,H,(1 - T*alpha)/(T*S*alpha - S - Cp),\frac{1 - T \alpha}{T S \alpha - S - C_P},Cp S T alpha
+T,G,A,P*kappaT/(P*V*alpha - P*S*kappaT + S),\frac{P \kappa_T}{P V \alpha - P S \kappa_T + S},P S V alpha kappaT
+P,T,V,alpha/kappaT,\frac{\alpha}{\kappa_T},alpha kappaT
+P,T,S,Cp/(T*V*alpha),\frac{C_P}{T V \alpha},Cp T V alpha
+P,T,U,(Cp - P*V*alpha)/(V*(T*alpha - P*kappaT)),\frac{C_P - P V \alpha}{V\left(T \alpha - P \kappa_T\right)},Cp P T V alpha kappaT
+P,T,H,Cp/(V*(T*alpha - 1)),\frac{C_P}{V\left(T \alpha - 1\right)},Cp T V alpha
+P,T,A,(P*V*alpha + S)/(P*V*kappaT),\frac{P V \alpha + S}{P V \kappa_T},P S V alpha kappaT
+P,T,G,S/V,\frac{S}{V},S V
+P,V,T,-1/(V*kappaT),-\frac{1}{V \kappa_T},V kappaT
+P,V,S,Cp/(V*(T*V*alpha^2 - Cp*kappaT)),\frac{C_P}{V\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp T V alpha kappaT
+P,V,U,(Cp - P*V*alpha)/(V*(T*V*alpha^2 - Cp*kappaT)),\frac{C_P - P V \alpha}{V\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+P,V,H,Cp/(V*(T*V*alpha^2 - V*alpha - Cp*kappaT)),\frac{C_P}{V\left(T V \alpha^{2} - V \alpha - C_P \kappa_T\right)},Cp T V alpha kappaT
+P,V,A,-(P*V*alpha + S)/(V*S*kappaT),-\frac{\left(P V \alpha + S\right)}{V S \kappa_T},P S V alpha kappaT
+P,V,G,S/(V*(V*alpha - S*kappaT)),\frac{S}{V\left(V \alpha - S \kappa_T\right)},S V alpha kappaT
+P,S,T,-1/(V*alpha),-\frac{1}{V \alpha},V alpha
+P,S,V,-T*alpha/(T*V*alpha^2 - Cp*kappaT),-\frac{T \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+P,S,U,T*(Cp - P*V*alpha)/(P*V*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(C_P - P V \alpha\right)}{P V\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+P,S,H,-T/V,-\frac{T}{V},T V
+P,S,A,-T*(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),-\frac{T\left(P V \alpha + S\right)}{V\left(T P V \alpha^{2} + T S \alpha - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+P,S,G,-T*S/(V*(T*S*alpha - Cp)),-\frac{T S}{V\left(T S \alpha - C_P\right)},Cp S T V alpha
+P,U,T,-1/(V*(T*alpha - P*kappaT)),-\frac{1}{V\left(T \alpha - P \kappa_T\right)},P T V alpha kappaT
+P,U,V,-alpha/(T*V*alpha^2 - Cp*kappaT),-\frac{\alpha}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+P,U,S,-Cp/(P*V*(T*V*alpha^2 - Cp*kappaT)),-\frac{C_P}{P V\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+P,U,H,-Cp/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),-\frac{C_P}{V\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)},Cp P T V alpha kappaT
+P,U,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),-\frac{\left(P V \alpha + S\right)}{V\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+P,U,G,-S/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),-\frac{S}{V\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)},Cp P S T V alpha kappaT
+P,H,T,-1/(V*(T*alpha - 1)),-\frac{1}{V\left(T \alpha - 1\right)},T V alpha
+P,H,V,-alpha/(T*V*alpha^2 - V*alpha - Cp*kappaT),-\frac{\alpha}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp T V alpha kappaT
+P,H,S,1/V,\frac{1}{V},V
+P,H,U,(Cp - P*V*alpha)/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),\frac{C_P - P V \alpha}{V\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)},Cp P T V alpha kappaT
+P,H,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-\frac{\left(P V \alpha + S\right)}{V\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)},Cp P S T V alpha kappaT
+P,H,G,-S/(V*(T*S*alpha - S - Cp)),-\frac{S}{V\left(T S \alpha - S - C_P\right)},Cp S T V alpha
+P,A,T,1/(P*V*kappaT),\frac{1}{P V \kappa_T},P V kappaT
+P,A,V,-alpha/(S*kappaT),-\frac{\alpha}{S \kappa_T},S alpha kappaT
+P,A,S,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),-\frac{C_P}{V\left(T P V \alpha^{2} + T S \alpha - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+P,A,U,(P*V*alpha - Cp)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),\frac{P V \alpha - C_P}{V\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+P,A,H,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-\frac{C_P}{V\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)},Cp P S T V alpha kappaT
+P,A,G,-S/(V*(P*V*alpha - P*S*kappaT + S)),-\frac{S}{V\left(P V \alpha - P S \kappa_T + S\right)},P S V alpha kappaT
+P,G,T,1/V,\frac{1}{V},V
+P,G,V,alpha/(V*alpha - S*kappaT),\frac{\alpha}{V \alpha - S \kappa_T},S V alpha kappaT
+P,G,S,-Cp/(V*(T*S*alpha - Cp)),-\frac{C_P}{V\left(T S \alpha - C_P\right)},Cp S T V alpha
+P,G,U,(P*V*alpha - Cp)/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),\frac{P V \alpha - C_P}{V\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)},Cp P S T V alpha kappaT
+P,G,H,-Cp/(V*(T*S*alpha - S - Cp)),-\frac{C_P}{V\left(T S \alpha - S - C_P\right)},Cp S T V alpha
+P,G,A,(P*V*alpha + S)/(V*(P*V*alpha - P*S*kappaT + S)),\frac{P V \alpha + S}{V\left(P V \alpha - P S \kappa_T + S\right)},P S V alpha kappaT
+V,T,P,V*alpha,V \alpha,V alpha
+V,T,S,(T*V*alpha^2 - Cp*kappaT)/(T*alpha),\frac{T V \alpha^{2} - C_P \kappa_T}{T \alpha},Cp T V alpha kappaT
+V,T,U,(T*V*alpha^2 - Cp*kappaT)/(T*alpha - P*kappaT),\frac{T V \alpha^{2} - C_P \kappa_T}{T \alpha - P \kappa_T},Cp P T V alpha kappaT
+V,T,H,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*alpha - 1),\frac{T V \alpha^{2} - V \alpha - C_P \kappa_T}{T \alpha - 1},Cp T V alpha kappaT
+V,T,A,-S/P,-\frac{S}{P},P S
+V,T,G,V*alpha - S*kappaT,V \alpha - S \kappa_T,S V alpha kappaT
+V,P,T,-V*kappaT,-V \kappa_T,V kappaT
+V,P,S,V*(T*V*alpha^2 - Cp*kappaT)/Cp,\frac{V\left(T V \alpha^{2} - C_P \kappa_T\right)}{C_P},Cp T V alpha kappaT
+V,P,U,V*(Cp*kappaT - T*V*alpha^2)/(P*V*alpha - Cp),\frac{V\left(C_P \kappa_T - T V \alpha^{2}\right)}{P V \alpha - C_P},Cp P T V alpha kappaT
+V,P,H,V*(T*V*alpha^2 - V*alpha - Cp*kappaT)/Cp,\frac{V\left(T V \alpha^{2} - V \alpha - C_P \kappa_T\right)}{C_P},Cp T V alpha kappaT
+V,P,A,-V*S*kappaT/(P*V*alpha + S),-\frac{V S \kappa_T}{P V \alpha + S},P S V alpha kappaT
+V,P,G,V*(V*alpha - S*kappaT)/S,\frac{V\left(V \alpha - S \kappa_T\right)}{S},S V alpha kappaT
+V,S,T,kappaT/alpha,\frac{\kappa_T}{\alpha},alpha kappaT
+V,S,P,T*V*alpha/Cp,\frac{T V \alpha}{C_P},Cp T V alpha
+V,S,U,T*(T*V*alpha^2 - Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(T V \alpha^{2} - C_P \kappa_T\right)}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+V,S,H,T*(V*alpha + Cp*kappaT - T*V*alpha^2)/Cp,\frac{T\left(V \alpha + C_P \kappa_T - T V \alpha^{2}\right)}{C_P},Cp T V alpha kappaT
+V,S,A,T*S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{T S \kappa_T}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+V,S,G,T*(S*kappaT - V*alpha)/(T*S*alpha - Cp),\frac{T\left(S \kappa_T - V \alpha\right)}{T S \alpha - C_P},Cp S T V alpha kappaT
+V,U,T,kappaT/(T*alpha - P*kappaT),\frac{\kappa_T}{T \alpha - P \kappa_T},P T alpha kappaT
+V,U,P,-V*alpha/(P*V*alpha - Cp),-\frac{V \alpha}{P V \alpha - C_P},Cp P V alpha
+V,U,S,-1/P,-\frac{1}{P},P
+V,U,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P T V alpha kappaT
+V,U,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{S \kappa_T}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+V,U,G,(S*kappaT - V*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{S \kappa_T - V \alpha}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+V,H,T,kappaT/(T*alpha - 1),\frac{\kappa_T}{T \alpha - 1},T alpha kappaT
+V,H,P,V*alpha/Cp,\frac{V \alpha}{C_P},Cp V alpha
+V,H,S,(T*V*alpha^2 - Cp*kappaT)/Cp,\frac{T V \alpha^{2} - C_P \kappa_T}{C_P},Cp T V alpha kappaT
+V,H,U,(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{T V \alpha^{2} - C_P \kappa_T}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P T V alpha kappaT
+V,H,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{S \kappa_T}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+V,H,G,(S*kappaT - V*alpha)/(T*S*alpha - S - Cp),\frac{S \kappa_T - V \alpha}{T S \alpha - S - C_P},Cp S T V alpha kappaT
+V,A,T,-1/P,-\frac{1}{P},P
+V,A,P,-V*alpha/(P*V*alpha + S),-\frac{V \alpha}{P V \alpha + S},P S V alpha
+V,A,S,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{C_P \kappa_T - T V \alpha^{2}}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+V,A,U,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{C_P \kappa_T - T V \alpha^{2}}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+V,A,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+V,A,G,(S*kappaT - V*alpha)/(P*V*alpha - P*S*kappaT + S),\frac{S \kappa_T - V \alpha}{P V \alpha - P S \kappa_T + S},P S V alpha kappaT
+V,G,T,-kappaT,-\kappa_T,kappaT
+V,G,P,-V*alpha/S,-\frac{V \alpha}{S},S V alpha
+V,G,S,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha - Cp),\frac{C_P \kappa_T - T V \alpha^{2}}{T S \alpha - C_P},Cp S T V alpha kappaT
+V,G,U,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{C_P \kappa_T - T V \alpha^{2}}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+V,G,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*S*alpha - S - Cp),\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{T S \alpha - S - C_P},Cp S T V alpha kappaT
+V,G,A,-S*kappaT/(P*V*alpha - P*S*kappaT + S),-\frac{S \kappa_T}{P V \alpha - P S \kappa_T + S},P S V alpha kappaT
+S,T,P,Cp/T,\frac{C_P}{T},Cp T
+S,T,V,(Cp*kappaT - T*V*alpha^2)/(T*kappaT),\frac{C_P \kappa_T - T V \alpha^{2}}{T \kappa_T},Cp T V alpha kappaT
+S,T,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*alpha - P*kappaT)),\frac{P\left(T V \alpha^{2} - C_P \kappa_T\right)}{T\left(T \alpha - P \kappa_T\right)},Cp P T V alpha kappaT
+S,T,H,-Cp/(T*(T*alpha - 1)),-\frac{C_P}{T\left(T \alpha - 1\right)},Cp T alpha
+S,T,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*kappaT),\frac{P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T P \kappa_T},Cp P S T V alpha kappaT
+S,T,G,(Cp - T*S*alpha)/T,\frac{C_P - T S \alpha}{T},Cp S T alpha
+S,P,T,-V*alpha,-V \alpha,V alpha
+S,P,V,(Cp*kappaT - T*V*alpha^2)/(T*alpha),\frac{C_P \kappa_T - T V \alpha^{2}}{T \alpha},Cp T V alpha kappaT
+S,P,U,P*V*(Cp*kappaT - T*V*alpha^2)/(T*(P*V*alpha - Cp)),\frac{P V\left(C_P \kappa_T - T V \alpha^{2}\right)}{T\left(P V \alpha - C_P\right)},Cp P T V alpha kappaT
+S,P,H,-V/T,-\frac{V}{T},T V
+S,P,A,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha + S)),\frac{V\left(P C_P \kappa_T - T P V \alpha^{2} - T S \alpha\right)}{T\left(P V \alpha + S\right)},Cp P S T V alpha kappaT
+S,P,G,V*(Cp - T*S*alpha)/(T*S),\frac{V\left(C_P - T S \alpha\right)}{T S},Cp S T V alpha
+S,V,T,alpha/kappaT,\frac{\alpha}{\kappa_T},alpha kappaT
+S,V,P,Cp/(T*V*alpha),\frac{C_P}{T V \alpha},Cp T V alpha
+S,V,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - Cp*kappaT)),\frac{P\left(T V \alpha^{2} - C_P \kappa_T\right)}{T\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+S,V,H,-Cp/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),-\frac{C_P}{T\left(T V \alpha^{2} - V \alpha - C_P \kappa_T\right)},Cp T V alpha kappaT
+S,V,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*kappaT),\frac{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T}{T S \kappa_T},Cp P S T V alpha kappaT
+S,V,G,(Cp - T*S*alpha)/(T*(V*alpha - S*kappaT)),\frac{C_P - T S \alpha}{T\left(V \alpha - S \kappa_T\right)},Cp S T V alpha kappaT
+S,U,T,alpha/(T*alpha - P*kappaT),\frac{\alpha}{T \alpha - P \kappa_T},P T alpha kappaT
+S,U,P,-Cp/(T*(P*V*alpha - Cp)),-\frac{C_P}{T\left(P V \alpha - C_P\right)},Cp P T V alpha
+S,U,V,1/T,\frac{1}{T},T
+S,U,H,Cp/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),\frac{C_P}{T\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)},Cp P T V alpha kappaT
+S,U,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),\frac{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T}{T\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+S,U,G,(T*S*alpha - Cp)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),\frac{T S \alpha - C_P}{T\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)},Cp P S T V alpha kappaT
+S,H,T,alpha/(T*alpha - 1),\frac{\alpha}{T \alpha - 1},T alpha
+S,H,P,1/T,\frac{1}{T},T
+S,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),\frac{T V \alpha^{2} - C_P \kappa_T}{T\left(T V \alpha^{2} - V \alpha - C_P \kappa_T\right)},Cp T V alpha kappaT
+S,H,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),\frac{P\left(T V \alpha^{2} - C_P \kappa_T\right)}{T\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)},Cp P T V alpha kappaT
+S,H,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),\frac{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T}{T\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)},Cp P S T V alpha kappaT
+S,H,G,(T*S*alpha - Cp)/(T*(T*S*alpha - S - Cp)),\frac{T S \alpha - C_P}{T\left(T S \alpha - S - C_P\right)},Cp S T alpha
+S,A,T,-alpha/(P*kappaT),-\frac{\alpha}{P \kappa_T},P alpha kappaT
+S,A,P,-Cp/(T*(P*V*alpha + S)),-\frac{C_P}{T\left(P V \alpha + S\right)},Cp P S T V alpha
+S,A,V,(T*V*alpha^2 - Cp*kappaT)/(T*S*kappaT),\frac{T V \alpha^{2} - C_P \kappa_T}{T S \kappa_T},Cp S T V alpha kappaT
+S,A,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),\frac{P\left(C_P \kappa_T - T V \alpha^{2}\right)}{T\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)},Cp P S T V alpha kappaT
+S,A,H,Cp/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),\frac{C_P}{T\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)},Cp P S T V alpha kappaT
+S,A,G,(T*S*alpha - Cp)/(T*(P*V*alpha - P*S*kappaT + S)),\frac{T S \alpha - C_P}{T\left(P V \alpha - P S \kappa_T + S\right)},Cp P S T V alpha kappaT
+S,G,T,-alpha,-\alpha,alpha
+S,G,P,-Cp/(T*S),-\frac{C_P}{T S},Cp S T
+S,G,V,(Cp*kappaT - T*V*alpha^2)/(T*(V*alpha - S*kappaT)),\frac{C_P \kappa_T - T V \alpha^{2}}{T\left(V \alpha - S \kappa_T\right)},Cp S T V alpha kappaT
+S,G,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),\frac{P\left(C_P \kappa_T - T V \alpha^{2}\right)}{T\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)},Cp P S T V alpha kappaT
+S,G,H,Cp/(T*(T*S*alpha - S - Cp)),\frac{C_P}{T\left(T S \alpha - S - C_P\right)},Cp S T alpha
+S,G,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha - P*S*kappaT + S)),\frac{P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T\left(P V \alpha - P S \kappa_T + S\right)},Cp P S T V alpha kappaT
+U,T,P,Cp - P*V*alpha,C_P - P V \alpha,Cp P V alpha
+U,T,V,(Cp*kappaT - T*V*alpha^2)/kappaT,\frac{C_P \kappa_T - T V \alpha^{2}}{\kappa_T},Cp T V alpha kappaT
+U,T,S,P*(Cp*kappaT - T*V*alpha^2)/(T*alpha),\frac{P\left(C_P \kappa_T - T V \alpha^{2}\right)}{T \alpha},Cp P T V alpha kappaT
+U,T,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*alpha - 1),\frac{P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P}{T \alpha - 1},Cp P T V alpha kappaT
+U,T,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),\frac{P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{P \kappa_T},Cp P S T V alpha kappaT
+U,T,G,P*S*kappaT + Cp - T*S*alpha - P*V*alpha,P S \kappa_T + C_P - T S \alpha - P V \alpha,Cp P S T V alpha kappaT
+U,P,T,V*(P*kappaT - T*alpha),V\left(P \kappa_T - T \alpha\right),P T V alpha kappaT
+U,P,V,(Cp*kappaT - T*V*alpha^2)/alpha,\frac{C_P \kappa_T - T V \alpha^{2}}{\alpha},Cp T V alpha kappaT
+U,P,S,P*V*(Cp*kappaT - T*V*alpha^2)/Cp,\frac{P V\left(C_P \kappa_T - T V \alpha^{2}\right)}{C_P},Cp P T V alpha kappaT
+U,P,H,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/Cp,\frac{V\left(P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P\right)}{C_P},Cp P T V alpha kappaT
+U,P,A,V*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),\frac{V\left(P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha\right)}{P V \alpha + S},Cp P S T V alpha kappaT
+U,P,G,V*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/S,\frac{V\left(P S \kappa_T + C_P - T S \alpha - P V \alpha\right)}{S},Cp P S T V alpha kappaT
+U,V,T,(T*alpha - P*kappaT)/kappaT,\frac{T \alpha - P \kappa_T}{\kappa_T},P T alpha kappaT
+U,V,P,(Cp - P*V*alpha)/(V*alpha),\frac{C_P - P V \alpha}{V \alpha},Cp P V alpha
+U,V,S,-P,-P,P
+U,V,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp P T V alpha kappaT
+U,V,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(S*kappaT),\frac{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T}{S \kappa_T},Cp P S T V alpha kappaT
+U,V,G,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(V*alpha - S*kappaT),\frac{P S \kappa_T + C_P - T S \alpha - P V \alpha}{V \alpha - S \kappa_T},Cp P S T V alpha kappaT
+U,S,T,(T*alpha - P*kappaT)/alpha,\frac{T \alpha - P \kappa_T}{\alpha},P T alpha kappaT
+U,S,P,T*(Cp - P*V*alpha)/Cp,\frac{T\left(C_P - P V \alpha\right)}{C_P},Cp P T V alpha
+U,S,V,T,T,T
+U,S,H,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/Cp,\frac{T\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)}{C_P},Cp P T V alpha kappaT
+U,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{T\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+U,S,G,T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - Cp),\frac{T\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)}{T S \alpha - C_P},Cp P S T V alpha kappaT
+U,H,T,(T*alpha - P*kappaT)/(T*alpha - 1),\frac{T \alpha - P \kappa_T}{T \alpha - 1},P T alpha kappaT
+U,H,P,(Cp - P*V*alpha)/Cp,\frac{C_P - P V \alpha}{C_P},Cp P V alpha
+U,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{T V \alpha^{2} - C_P \kappa_T}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp T V alpha kappaT
+U,H,S,P*(Cp*kappaT - T*V*alpha^2)/Cp,\frac{P\left(C_P \kappa_T - T V \alpha^{2}\right)}{C_P},Cp P T V alpha kappaT
+U,H,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+U,H,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - S - Cp),\frac{T S \alpha + P V \alpha - P S \kappa_T - C_P}{T S \alpha - S - C_P},Cp P S T V alpha kappaT
+U,A,T,(P*kappaT - T*alpha)/(P*kappaT),\frac{P \kappa_T - T \alpha}{P \kappa_T},P T alpha kappaT
+U,A,P,(P*V*alpha - Cp)/(P*V*alpha + S),\frac{P V \alpha - C_P}{P V \alpha + S},Cp P S V alpha
+U,A,V,(T*V*alpha^2 - Cp*kappaT)/(S*kappaT),\frac{T V \alpha^{2} - C_P \kappa_T}{S \kappa_T},Cp S T V alpha kappaT
+U,A,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{P\left(T V \alpha^{2} - C_P \kappa_T\right)}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+U,A,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+U,A,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - P*S*kappaT + S),\frac{T S \alpha + P V \alpha - P S \kappa_T - C_P}{P V \alpha - P S \kappa_T + S},Cp P S T V alpha kappaT
+U,G,T,P*kappaT - T*alpha,P \kappa_T - T \alpha,P T alpha kappaT
+U,G,P,(P*V*alpha - Cp)/S,\frac{P V \alpha - C_P}{S},Cp P S V alpha
+U,G,V,(Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),\frac{C_P \kappa_T - T V \alpha^{2}}{V \alpha - S \kappa_T},Cp S T V alpha kappaT
+U,G,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*S*alpha - Cp),\frac{P\left(T V \alpha^{2} - C_P \kappa_T\right)}{T S \alpha - C_P},Cp P S T V alpha kappaT
+U,G,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*S*alpha - S - Cp),\frac{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P}{T S \alpha - S - C_P},Cp P S T V alpha kappaT
+U,G,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),\frac{P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{P V \alpha - P S \kappa_T + S},Cp P S T V alpha kappaT
+H,T,P,Cp,C_P,Cp
+H,T,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/kappaT,\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{\kappa_T},Cp T V alpha kappaT
+H,T,S,Cp/(T*alpha),\frac{C_P}{T \alpha},Cp T alpha
+H,T,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*alpha - P*kappaT),\frac{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P}{T \alpha - P \kappa_T},Cp P T V alpha kappaT
+H,T,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),\frac{P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha}{P \kappa_T},Cp P S T V alpha kappaT
+H,T,G,S + Cp - T*S*alpha,S + C_P - T S \alpha,Cp S T alpha
+H,P,T,V*(1 - T*alpha),V\left(1 - T \alpha\right),T V alpha
+H,P,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/alpha,\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{\alpha},Cp T V alpha kappaT
+H,P,S,V,V,V
+H,P,U,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(P*V*alpha - Cp),\frac{V\left(P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P\right)}{P V \alpha - C_P},Cp P T V alpha kappaT
+H,P,A,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),\frac{V\left(P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha\right)}{P V \alpha + S},Cp P S T V alpha kappaT
+H,P,G,V*(S + Cp - T*S*alpha)/S,\frac{V\left(S + C_P - T S \alpha\right)}{S},Cp S T V alpha
+H,V,T,(T*alpha - 1)/kappaT,\frac{T \alpha - 1}{\kappa_T},T alpha kappaT
+H,V,P,Cp/(V*alpha),\frac{C_P}{V \alpha},Cp V alpha
+H,V,S,Cp/(T*V*alpha^2 - Cp*kappaT),\frac{C_P}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+H,V,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*V*alpha^2 - Cp*kappaT),\frac{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P}{T V \alpha^{2} - C_P \kappa_T},Cp P T V alpha kappaT
+H,V,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(S*kappaT),\frac{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S}{S \kappa_T},Cp P S T V alpha kappaT
+H,V,G,(S + Cp - T*S*alpha)/(V*alpha - S*kappaT),\frac{S + C_P - T S \alpha}{V \alpha - S \kappa_T},Cp S T V alpha kappaT
+H,S,T,(T*alpha - 1)/alpha,\frac{T \alpha - 1}{\alpha},T alpha
+H,S,P,T,T,T
+H,S,V,T*(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),\frac{T\left(T V \alpha^{2} - V \alpha - C_P \kappa_T\right)}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+H,S,U,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P\right)}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+H,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{T\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+H,S,G,T*(T*S*alpha - S - Cp)/(T*S*alpha - Cp),\frac{T\left(T S \alpha - S - C_P\right)}{T S \alpha - C_P},Cp S T alpha
+H,U,T,(T*alpha - 1)/(T*alpha - P*kappaT),\frac{T \alpha - 1}{T \alpha - P \kappa_T},P T alpha kappaT
+H,U,P,-Cp/(P*V*alpha - Cp),-\frac{C_P}{P V \alpha - C_P},Cp P V alpha
+H,U,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),\frac{T V \alpha^{2} - V \alpha - C_P \kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp T V alpha kappaT
+H,U,S,-Cp/(P*(T*V*alpha^2 - Cp*kappaT)),-\frac{C_P}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P T V alpha kappaT
+H,U,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+H,U,G,(T*S*alpha - S - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{T S \alpha - S - C_P}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+H,A,T,(1 - T*alpha)/(P*kappaT),\frac{1 - T \alpha}{P \kappa_T},P T alpha kappaT
+H,A,P,-Cp/(P*V*alpha + S),-\frac{C_P}{P V \alpha + S},Cp P S V alpha
+H,A,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(S*kappaT),\frac{T V \alpha^{2} - V \alpha - C_P \kappa_T}{S \kappa_T},Cp S T V alpha kappaT
+H,A,S,-Cp/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),-\frac{C_P}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+H,A,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+H,A,G,(T*S*alpha - S - Cp)/(P*V*alpha - P*S*kappaT + S),\frac{T S \alpha - S - C_P}{P V \alpha - P S \kappa_T + S},Cp P S T V alpha kappaT
+H,G,T,1 - T*alpha,1 - T \alpha,T alpha
+H,G,P,-Cp/S,-\frac{C_P}{S},Cp S
+H,G,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),\frac{V \alpha + C_P \kappa_T - T V \alpha^{2}}{V \alpha - S \kappa_T},Cp S T V alpha kappaT
+H,G,S,-Cp/(T*S*alpha - Cp),-\frac{C_P}{T S \alpha - C_P},Cp S T alpha
+H,G,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{P V \alpha + P C_P \kappa_T - T P V \alpha^{2} - C_P}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+H,G,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),\frac{P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha}{P V \alpha - P S \kappa_T + S},Cp P S T V alpha kappaT
+A,T,P,-(P*V*alpha + S),-\left(P V \alpha + S\right),P S V alpha
+A,T,V,-S,-S,S
+A,T,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha),\frac{P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T \alpha},Cp P S T V alpha kappaT
+A,T,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - P*kappaT),\frac{P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T \alpha - P \kappa_T},Cp P S T V alpha kappaT
+A,T,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - 1),\frac{P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha}{T \alpha - 1},Cp P S T V alpha kappaT
+A,T,G,P*S*kappaT - P*V*alpha - S,P S \kappa_T - P V \alpha - S,P S V alpha kappaT
+A,P,T,P*V*kappaT,P V \kappa_T,P V kappaT
+A,P,V,-S*kappaT/alpha,-\frac{S \kappa_T}{\alpha},S alpha kappaT
+A,P,S,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,\frac{V\left(P C_P \kappa_T - T P V \alpha^{2} - T S \alpha\right)}{C_P},Cp P S T V alpha kappaT
+A,P,U,V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(P*V*alpha - Cp),\frac{V\left(T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T\right)}{P V \alpha - C_P},Cp P S T V alpha kappaT
+A,P,H,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/Cp,\frac{V\left(P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha\right)}{C_P},Cp P S T V alpha kappaT
+A,P,G,V*(P*S*kappaT - P*V*alpha - S)/S,\frac{V\left(P S \kappa_T - P V \alpha - S\right)}{S},P S V alpha kappaT
+A,V,T,-P,-P,P
+A,V,P,-(P*V*alpha + S)/(V*alpha),-\frac{\left(P V \alpha + S\right)}{V \alpha},P S V alpha
+A,V,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp P S T V alpha kappaT
+A,V,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp P S T V alpha kappaT
+A,V,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{P V \alpha + P C_P \kappa_T + S - T P V \alpha^{2} - T S \alpha}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp P S T V alpha kappaT
+A,V,G,(P*S*kappaT - P*V*alpha - S)/(V*alpha - S*kappaT),\frac{P S \kappa_T - P V \alpha - S}{V \alpha - S \kappa_T},P S V alpha kappaT
+A,S,T,-P*kappaT/alpha,-\frac{P \kappa_T}{\alpha},P alpha kappaT
+A,S,P,-T*(P*V*alpha + S)/Cp,-\frac{T\left(P V \alpha + S\right)}{C_P},Cp P S T V alpha
+A,S,V,T*S*kappaT/(T*V*alpha^2 - Cp*kappaT),\frac{T S \kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp S T V alpha kappaT
+A,S,U,T*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha\right)}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P S T V alpha kappaT
+A,S,H,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/Cp,\frac{T\left(T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S\right)}{C_P},Cp P S T V alpha kappaT
+A,S,G,T*(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - Cp),\frac{T\left(P V \alpha - P S \kappa_T + S\right)}{T S \alpha - C_P},Cp P S T V alpha kappaT
+A,U,T,-P*kappaT/(T*alpha - P*kappaT),-\frac{P \kappa_T}{T \alpha - P \kappa_T},P T alpha kappaT
+A,U,P,(P*V*alpha + S)/(P*V*alpha - Cp),\frac{P V \alpha + S}{P V \alpha - C_P},Cp P S V alpha
+A,U,V,S*kappaT/(T*V*alpha^2 - Cp*kappaT),\frac{S \kappa_T}{T V \alpha^{2} - C_P \kappa_T},Cp S T V alpha kappaT
+A,U,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P S T V alpha kappaT
+A,U,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P S T V alpha kappaT
+A,U,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{P V \alpha - P S \kappa_T + S}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+A,H,T,-P*kappaT/(T*alpha - 1),-\frac{P \kappa_T}{T \alpha - 1},P T alpha kappaT
+A,H,P,-(P*V*alpha + S)/Cp,-\frac{\left(P V \alpha + S\right)}{C_P},Cp P S V alpha
+A,H,V,S*kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{S \kappa_T}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp S T V alpha kappaT
+A,H,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,\frac{P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{C_P},Cp P S T V alpha kappaT
+A,H,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{P S \kappa_T + P C_P \kappa_T - T P V \alpha^{2} - T S \alpha}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P S T V alpha kappaT
+A,H,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - S - Cp),\frac{P V \alpha - P S \kappa_T + S}{T S \alpha - S - C_P},Cp P S T V alpha kappaT
+A,G,T,P*kappaT,P \kappa_T,P kappaT
+A,G,P,(P*V*alpha + S)/S,\frac{P V \alpha + S}{S},P S V alpha
+A,G,V,-S*kappaT/(V*alpha - S*kappaT),-\frac{S \kappa_T}{V \alpha - S \kappa_T},S V alpha kappaT
+A,G,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*alpha - Cp),\frac{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T}{T S \alpha - C_P},Cp P S T V alpha kappaT
+A,G,U,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),\frac{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T}{T S \alpha + P V \alpha - P S \kappa_T - C_P},Cp P S T V alpha kappaT
+A,G,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*S*alpha - S - Cp),\frac{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S}{T S \alpha - S - C_P},Cp P S T V alpha kappaT
+G,T,P,-S,-S,S
+G,T,V,(V*alpha - S*kappaT)/kappaT,\frac{V \alpha - S \kappa_T}{\kappa_T},S V alpha kappaT
+G,T,S,(Cp - T*S*alpha)/(T*alpha),\frac{C_P - T S \alpha}{T \alpha},Cp S T alpha
+G,T,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*alpha - P*kappaT),\frac{P S \kappa_T + C_P - T S \alpha - P V \alpha}{T \alpha - P \kappa_T},Cp P S T V alpha kappaT
+G,T,H,(S + Cp - T*S*alpha)/(T*alpha - 1),\frac{S + C_P - T S \alpha}{T \alpha - 1},Cp S T alpha
+G,T,A,(P*V*alpha - P*S*kappaT + S)/(P*kappaT),\frac{P V \alpha - P S \kappa_T + S}{P \kappa_T},P S V alpha kappaT
+G,P,T,V,V,V
+G,P,V,(V*alpha - S*kappaT)/alpha,\frac{V \alpha - S \kappa_T}{\alpha},S V alpha kappaT
+G,P,S,V*(Cp - T*S*alpha)/Cp,\frac{V\left(C_P - T S \alpha\right)}{C_P},Cp S T V alpha
+G,P,U,V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - Cp),\frac{V\left(T S \alpha + P V \alpha - P S \kappa_T - C_P\right)}{P V \alpha - C_P},Cp P S T V alpha kappaT
+G,P,H,V*(S + Cp - T*S*alpha)/Cp,\frac{V\left(S + C_P - T S \alpha\right)}{C_P},Cp S T V alpha
+G,P,A,V*(P*V*alpha - P*S*kappaT + S)/(P*V*alpha + S),\frac{V\left(P V \alpha - P S \kappa_T + S\right)}{P V \alpha + S},P S V alpha kappaT
+G,V,T,-1/kappaT,-\frac{1}{\kappa_T},kappaT
+G,V,P,-S/(V*alpha),-\frac{S}{V \alpha},S V alpha
+G,V,S,(Cp - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{C_P - T S \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp S T V alpha kappaT
+G,V,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{P S \kappa_T + C_P - T S \alpha - P V \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp P S T V alpha kappaT
+G,V,H,(S + Cp - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{S + C_P - T S \alpha}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp S T V alpha kappaT
+G,V,A,(P*S*kappaT - P*V*alpha - S)/(S*kappaT),\frac{P S \kappa_T - P V \alpha - S}{S \kappa_T},P S V alpha kappaT
+G,S,T,-1/alpha,-\frac{1}{\alpha},alpha
+G,S,P,-T*S/Cp,-\frac{T S}{C_P},Cp S T
+G,S,V,T*(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{T\left(S \kappa_T - V \alpha\right)}{T V \alpha^{2} - C_P \kappa_T},Cp S T V alpha kappaT
+G,S,U,T*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T\left(P S \kappa_T + C_P - T S \alpha - P V \alpha\right)}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P S T V alpha kappaT
+G,S,H,T*(T*S*alpha - S - Cp)/Cp,\frac{T\left(T S \alpha - S - C_P\right)}{C_P},Cp S T alpha
+G,S,A,T*(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{T\left(P S \kappa_T - P V \alpha - S\right)}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+G,U,T,-1/(T*alpha - P*kappaT),-\frac{1}{T \alpha - P \kappa_T},P T alpha kappaT
+G,U,P,S/(P*V*alpha - Cp),\frac{S}{P V \alpha - C_P},Cp P S V alpha
+G,U,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),\frac{S \kappa_T - V \alpha}{T V \alpha^{2} - C_P \kappa_T},Cp S T V alpha kappaT
+G,U,S,(T*S*alpha - Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),\frac{T S \alpha - C_P}{P\left(T V \alpha^{2} - C_P \kappa_T\right)},Cp P S T V alpha kappaT
+G,U,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{T S \alpha - S - C_P}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P S T V alpha kappaT
+G,U,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{P S \kappa_T - P V \alpha - S}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+G,H,T,-1/(T*alpha - 1),-\frac{1}{T \alpha - 1},T alpha
+G,H,P,-S/Cp,-\frac{S}{C_P},Cp S
+G,H,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),\frac{S \kappa_T - V \alpha}{T V \alpha^{2} - V \alpha - C_P \kappa_T},Cp S T V alpha kappaT
+G,H,S,(Cp - T*S*alpha)/Cp,\frac{C_P - T S \alpha}{C_P},Cp S T alpha
+G,H,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),\frac{P S \kappa_T + C_P - T S \alpha - P V \alpha}{T P V \alpha^{2} - P V \alpha - P C_P \kappa_T + C_P},Cp P S T V alpha kappaT
+G,H,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{P S \kappa_T - P V \alpha - S}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT
+G,A,T,1/(P*kappaT),\frac{1}{P \kappa_T},P kappaT
+G,A,P,S/(P*V*alpha + S),\frac{S}{P V \alpha + S},P S V alpha
+G,A,V,(S*kappaT - V*alpha)/(S*kappaT),\frac{S \kappa_T - V \alpha}{S \kappa_T},S V alpha kappaT
+G,A,S,(T*S*alpha - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),\frac{T S \alpha - C_P}{T P V \alpha^{2} + T S \alpha - P C_P \kappa_T},Cp P S T V alpha kappaT
+G,A,U,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),\frac{T S \alpha + P V \alpha - P S \kappa_T - C_P}{T P V \alpha^{2} + T S \alpha - P S \kappa_T - P C_P \kappa_T},Cp P S T V alpha kappaT
+G,A,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),\frac{T S \alpha - S - C_P}{T P V \alpha^{2} + T S \alpha - P V \alpha - P C_P \kappa_T - S},Cp P S T V alpha kappaT

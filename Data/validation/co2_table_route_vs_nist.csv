@@ -1,0 +1,1775 @@
+# tabulated-input route: only the NIST molar volumes on a (T, P) grid are given to the engine;
+# all other properties follow from spline derivatives/integrals and the ideal-gas Cp correlation.
+# 'all 19 temperatures': evaluated at the grid nodes (tests derivatives and integrals);
+# model_value = nan: the engine refused the state (spline violates kappaT > 0) or could not form the
+# property (Cv <= 0); such points are counted in summary_deviations.csv
+# '10 K spacing, held-out nodes': table built from every second temperature and evaluated at the
+# omitted temperatures (tests interpolation as well); reference state for dH, dS: 400 K, 0.1 MPa
+# deviation = model - NIST; deviation_percent = 100 * deviation / NIST
+# dH and dS are changes from the reference state named below (the engine and NIST use different
+# zero points); for them only the absolute deviation is meaningful
+T_K,P_MPa,nist_phase,model,property,unit,model_value,nist_value,deviation,deviation_percent
+310,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.038968124,0.038968,1.2407451e-07,0.00031840101
+310,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),26.70278,29.455,-2.7522196,-9.3438111
+310,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),35.160671,37.94,-2.7793294,-7.3255914
+310,0.1,vapor,"table, all 19 temperatures",w,m/s,276.46977,273.46,3.0097747,1.100627
+310,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,9.5423168,9.9024,-0.36008318,-3.6363223
+310,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.571508,-3.577,0.005491965,nan
+310,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-10.095048,-10.11,0.014951804,nan
+315,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.038340618,0.03834,6.1805076e-07,0.001612026
+315,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),29.395366,29.671,-0.27563377,-0.92896692
+315,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),37.895733,38.148,-0.25226682,-0.66128452
+315,0.1,vapor,"table, all 19 temperatures",w,m/s,275.83403,275.46,0.37402628,0.13578243
+315,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,10.553487,9.5115,1.0419867,10.955019
+315,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.3889681,-3.387,-0.001968069,nan
+315,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-9.5109662,-9.51,-0.00096618783,nan
+320,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.037733001,0.037733,1.282922e-09,3.4000001e-06
+320,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.419648,29.886,2.5336482,8.4777093
+320,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.877331,38.355,2.5223311,6.5762771
+320,0.1,vapor,"table, all 19 temperatures",w,m/s,275.00838,277.45,-2.4416233,-0.8800228
+320,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.1398484,9.1437,-1.0038516,-10.978615
+320,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.1921398,-3.195,0.0028601896,nan
+320,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-8.8910835,-8.9,0.008916531,nan
+325,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.037145723,0.037145,7.2267003e-07,0.0019455379
+325,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),26.501396,30.099,-3.5976037,-11.952569
+325,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),34.967543,38.561,-3.5934565,-9.3188883
+325,0.1,vapor,"table, all 19 temperatures",w,m/s,283.56772,279.42,4.1477163,1.4844021
+325,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,9.90674,8.797,1.10974,12.614983
+325,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.0022889,-3.003,0.00071105789,nan
+325,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-8.3022684,-8.31,0.0077315567,nan
+330,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.036575107,0.036576,-8.9301781e-07,-0.0024415404
+330,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.101886,30.31,2.7918861,9.2111057
+330,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),41.575434,38.765,2.8104341,7.2499267
+330,0.1,vapor,"table, all 19 temperatures",w,m/s,278.83834,281.37,-2.5316573,-0.89976093
+330,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.6204224,8.4699,0.15052237,1.7771445
+330,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.8111743,-2.81,-0.0011742866,nan
+330,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-7.7188293,-7.72,0.0011707481,nan
+335,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.036023055,0.036023,5.4755043e-08,0.00015200023
+335,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),29.722784,30.519,-0.7962162,-2.6089197
+335,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),38.159351,38.968,-0.80864936,-2.0751626
+335,0.1,vapor,"table, all 19 temperatures",w,m/s,284.09107,283.31,0.78106662,0.27569328
+335,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.797476,8.1608,-0.36332397,-4.4520632
+335,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.6116973,-2.615,0.0033026695,nan
+335,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-7.1188229,-7.13,0.011177118,nan
+340,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.03548742,0.035488,-5.8029029e-07,-0.0016351733
+340,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),29.930646,30.726,-0.79535358,-2.588536
+340,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),38.385663,39.169,-0.78333746,-1.9998914
+340,0.1,vapor,"table, all 19 temperatures",w,m/s,286.09921,285.24,0.85921035,0.30122366
+340,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.5574015,7.8685,0.6889015,8.755182
+340,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.420335,-2.42,-0.00033497394,nan
+340,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-6.5518171,-6.55,-0.0018170759,nan
+345,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.03496748,0.034968,-5.1975663e-07,-0.0014863779
+345,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.966483,30.931,3.0354832,9.8137249
+345,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),42.384656,39.368,3.016656,7.6627107
+345,0.1,vapor,"table, all 19 temperatures",w,m/s,284.32105,287.15,-2.8289488,-0.98518153
+345,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.2670988,7.5917,-1.3246012,-17.448019
+345,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.2185442,-2.224,0.0054558385,nan
+345,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-5.9627074,-5.98,0.017292625,nan
+350,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.034463744,0.034463,7.4414116e-07,0.0021592466
+350,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),27.062772,31.134,-4.0712285,-13.076471
+350,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),35.490142,39.566,-4.0758575,-10.301414
+350,0.1,vapor,"table, all 19 temperatures",w,m/s,293.61614,289.04,4.576142,1.583221
+350,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.934912,7.3293,0.605612,8.26289
+350,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.023601,-2.026,0.0023990107,nan
+350,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-5.4015912,-5.41,0.0084087903,nan
+355,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.033973161,0.033973,1.6120265e-07,0.00047450225
+355,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.314181,31.335,3.9791808,12.698838
+355,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),43.740458,39.762,3.9784578,10.005678
+355,0.1,vapor,"table, all 19 temperatures",w,m/s,287.4247,290.92,-3.4953014,-1.2014648
+355,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.3859726,7.0804,-0.69442736,-9.807742
+355,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.8258085,-1.828,0.0021914756,nan
+355,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-4.8406067,-4.85,0.0093932525,nan
+360,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.033497471,0.033497,4.7094094e-07,0.0014059198
+360,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),27.327215,31.534,-4.2067851,-13.340474
+360,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),35.750881,39.956,-4.2051186,-10.524373
+360,0.1,vapor,"table, all 19 temperatures",w,m/s,297.50443,292.79,4.7144325,1.6101754
+360,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.6892949,6.844,0.84529492,12.35089
+360,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.6267925,-1.629,0.0022075093,nan
+360,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-4.2837792,-4.29,0.0062207626,nan
+365,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.033033827,0.033034,-1.7336152e-07,-0.00052479725
+365,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.046056,31.73,3.3160556,10.450853
+365,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),43.479458,40.149,3.3304585,8.2952464
+365,0.1,vapor,"table, all 19 temperatures",w,m/s,291.7574,294.64,-2.8825964,-0.97834523
+365,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.7257976,6.6192,0.10659755,1.6104295
+365,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.4289756,-1.429,2.436668e-05,nan
+365,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-3.7381914,-3.74,0.0018085656,nan
+370,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.032583904,0.032584,-9.6448355e-08,-0.00029599912
+370,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),30.855927,31.925,-1.0690733,-3.3487027
+370,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),39.254097,40.34,-1.0859031,-2.6918768
+370,0.1,vapor,"table, all 19 temperatures",w,m/s,297.49323,296.49,1.003227,0.33836792
+370,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.8112007,6.4053,-0.59409933,-9.2751211
+370,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.2219885,-1.227,0.0050115309,nan
+370,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-3.1748872,-3.19,0.015112809,nan
+375,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.032146072,0.032146,7.1750032e-08,0.0002232005
+375,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.256997,32.118,0.13899728,0.43277065
+375,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.664853,40.528,0.13685291,0.33767498
+375,0.1,vapor,"table, all 19 temperatures",w,m/s,298.17022,298.31,-0.1397753,-0.04685572
+375,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.0450784,6.2016,-0.15652161,-2.5238908
+375,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.0222313,-1.025,0.0027686535,nan
+375,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-2.6386396,-2.65,0.011360411,nan
+380,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.03171985,0.03172,-1.4971769e-07,-0.00047199777
+380,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.115671,32.308,-0.19232934,-0.59529942
+380,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.520957,40.716,-0.19504276,-0.47903221
+380,0.1,vapor,"table, all 19 temperatures",w,m/s,300.30985,300.13,0.17984746,0.059923186
+380,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.946256,6.0074,-0.061143951,-1.0178106
+380,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.81925455,-0.822,0.0027454487,nan
+380,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-2.1009427,-2.11,0.0090572501,nan
+385,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.031304783,0.031305,-2.166291e-07,-0.00069199521
+385,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.395958,32.497,-0.1010415,-0.31092563
+385,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.801952,40.901,-0.099047593,-0.24216423
+385,0.1,vapor,"table, all 19 temperatures",w,m/s,302.04045,301.94,0.10044841,0.033267671
+385,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9382133,5.8221,0.11611326,1.9943537
+385,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.6159493,-0.618,0.0020506986,nan
+385,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-1.5694222,-1.58,0.010577811,nan
+390,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.030900439,0.0309,4.3878623e-07,0.0014200202
+390,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.558158,32.683,-0.12484189,-0.38197807
+390,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.963853,41.084,-0.1201472,-0.2924428
+390,0.1,vapor,"table, all 19 temperatures",w,m/s,303.86591,303.73,0.13590925,0.044746734
+390,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9055701,5.6451,0.26047009,4.6140917
+390,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.41153298,-0.413,0.0014670153,nan
+390,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-1.0418911,-1.05,0.0081088626,nan
+395,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.030506406,0.030506,4.0634533e-07,0.0013320177
+395,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.747836,32.868,-0.1201636,-0.3655945
+395,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),41.153615,41.266,-0.11238519,-0.27234331
+395,0.1,vapor,"table, all 19 temperatures",w,m/s,305.65535,305.51,0.1453459,0.047574844
+395,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.8814554,5.4761,0.40535537,7.4022638
+395,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.20623851,-0.207,0.00076148569,nan
+395,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-0.51884339,-0.52,0.0011566062,nan
+400,0.1,vapor,"table, all 19 temperatures",rho,mol/L,0.030122297,0.030123,-7.0347611e-07,-0.0023353455
+400,0.1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.935862,33.051,-0.11513837,-0.34836577
+400,0.1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),41.341479,41.446,-0.10452134,-0.2521868
+400,0.1,vapor,"table, all 19 temperatures",w,m/s,307.43043,307.28,0.15043135,0.048955791
+400,0.1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.8515686,5.3144,0.53716859,10.107794
+400,0.1,vapor,"table, all 19 temperatures",dH,kJ/mol,0,0,0,nan
+400,0.1,vapor,"table, all 19 temperatures",dS,J/(mol*K),0,0,0,nan
+310,1,vapor,"table, all 19 temperatures",rho,mol/L,0.40622334,0.40622,3.3415932e-06,0.00082260677
+310,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),37.441668,30.318,7.123668,23.496497
+310,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),47.743278,40.574,7.1692784,17.669637
+310,1,vapor,"table, all 19 temperatures",w,m/s,260.88306,267.2,-6.3169366,-2.364123
+310,1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.558365,9.9291,-1.370735,-13.805229
+310,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.9809024,-3.927,-0.053902387,nan
+310,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-30.226908,-30.06,-0.16690808,nan
+315,1,vapor,"table, all 19 temperatures",rho,mol/L,0.39875588,0.39876,-4.1183507e-06,-0.0010327893
+315,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.827435,30.474,6.3534351,20.848707
+315,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),46.962903,40.62,6.3429026,15.61522
+315,1,vapor,"table, all 19 temperatures",w,m/s,263.62122,269.52,-5.8987765,-2.1886229
+315,1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.210698,9.5323,-1.321602,-13.864461
+315,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.7440734,-3.724,-0.020073391,nan
+315,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-29.469022,-29.41,-0.05902248,nan
+320,1,vapor,"table, all 19 temperatures",rho,mol/L,0.39160401,0.3916,4.0100251e-06,0.0010240105
+320,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.991977,30.633,5.3589771,17.494131
+320,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),46.027405,40.679,5.3484052,13.147829
+320,1,vapor,"table, all 19 temperatures",w,m/s,266.72323,271.8,-5.0767665,-1.8678317
+320,1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.0605125,9.159,-1.0984875,-11.993531
+320,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.5115319,-3.521,0.0094681032,nan
+320,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-28.736574,-28.77,0.033426142,nan
+325,1,vapor,"table, all 19 temperatures",rho,mol/L,0.38473376,0.38473,3.7642351e-06,0.00097840957
+325,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),22.05698,30.795,-8.7380197,-28.3748
+325,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),32.001077,40.75,-8.7489234,-21.469751
+325,1,vapor,"table, all 19 temperatures",w,m/s,286.96067,274.06,12.900674,4.7072445
+325,1,vapor,"table, all 19 temperatures",muJT,K/MPa,11.165212,8.8073,2.3579117,26.772242
+325,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.315903,-3.317,0.0010970077,nan
+325,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-28.12968,-28.14,0.010320489,nan
+330,1,vapor,"table, all 19 temperatures",rho,mol/L,0.37812902,0.37812,9.0176208e-06,0.0023848569
+330,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.106404,30.96,5.1464039,16.622752
+330,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.999547,40.831,5.1685474,12.65839
+330,1,vapor,"table, all 19 temperatures",w,m/s,271.53382,276.28,-4.7461804,-1.7178878
+330,1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.5986997,8.4756,-0.87690031,-10.346174
+330,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.1214229,-3.113,-0.0084228909,nan
+330,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-27.536107,-27.51,-0.026107494,nan
+335,1,vapor,"table, all 19 temperatures",rho,mol/L,0.37176103,0.37177,-8.9679914e-06,-0.0024122418
+335,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.330125,31.128,1.2021253,3.8618778
+335,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),42.130895,40.921,1.2098951,2.9566606
+335,1,vapor,"table, all 19 temperatures",w,m/s,277.25169,278.46,-1.2083113,-0.43392633
+335,1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.9558472,8.1624,-0.20655284,-2.5305406
+335,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.9009306,-2.909,0.0080693893,nan
+335,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-26.872887,-26.9,0.027112576,nan
+340,1,vapor,"table, all 19 temperatures",rho,mol/L,0.36564408,0.36564,4.0820505e-06,0.0011164125
+340,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),25.720175,31.296,-5.575825,-17.816414
+340,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),35.428484,41.017,-5.5885158,-13.624877
+340,1,vapor,"table, all 19 temperatures",w,m/s,287.6928,280.62,7.0728003,2.5204192
+340,1,vapor,"table, all 19 temperatures",muJT,K/MPa,9.0507126,7.8662,1.1845126,15.058257
+340,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.7067729,-2.704,-0.0027729414,nan
+340,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-26.297472,-26.29,-0.0074723398,nan
+345,1,vapor,"table, all 19 temperatures",rho,mol/L,0.35973811,0.35974,-1.8893446e-06,-0.00052519724
+345,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),43.034066,31.466,11.568066,36.763701
+345,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),52.688691,41.12,11.568691,28.133977
+345,1,vapor,"table, all 19 temperatures",w,m/s,273.68839,282.76,-9.0716125,-3.2082375
+345,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9218909,7.5859,-1.6640091,-21.935552
+345,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.4870915,-2.498,0.0109085,nan
+345,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-25.656362,-25.69,0.033638197,nan
+350,1,vapor,"table, all 19 temperatures",rho,mol/L,0.35404496,0.35404,4.9637104e-06,0.0014020197
+350,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),17.259276,31.637,-14.377724,-45.445913
+350,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),26.838671,41.229,-14.390329,-34.903415
+350,1,vapor,"table, all 19 temperatures",w,m/s,311.17557,284.86,26.315566,9.2380701
+350,1,vapor,"table, all 19 temperatures",muJT,K/MPa,11.165736,7.3204,3.8453357,52.529038
+350,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.287332,-2.293,0.0056679811,nan
+350,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-25.081059,-25.1,0.018941494,nan
+355,1,vapor,"table, all 19 temperatures",rho,mol/L,0.34854135,0.34854,1.3544317e-06,0.00038860151
+355,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),43.436118,31.808,11.628118,36.55721
+355,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),52.987705,41.342,11.645705,28.169185
+355,1,vapor,"table, all 19 temperatures",w,m/s,277.98552,286.94,-8.9544825,-3.1206812
+355,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.5692675,7.0685,-1.4992325,-21.210051
+355,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.088683,-2.086,-0.0026830283,nan
+355,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-24.517944,-24.51,-0.007944225,nan
+360,1,vapor,"table, all 19 temperatures",rho,mol/L,0.34321801,0.34322,-1.9879187e-06,-0.00057919665
+360,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),23.147302,31.979,-8.831698,-27.61718
+360,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),32.630129,41.46,-8.8298715,-21.297326
+360,1,vapor,"table, all 19 temperatures",w,m/s,301.35962,289,12.359616,4.2766836
+360,1,vapor,"table, all 19 temperatures",muJT,K/MPa,8.687115,6.8295,1.857615,27.199868
+360,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.8739123,-1.879,0.0050876845,nan
+360,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-23.916845,-23.93,0.013154633,nan
+365,1,vapor,"table, all 19 temperatures",rho,mol/L,0.33807769,0.33807,7.6902532e-06,0.0022747517
+365,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),38.449866,32.15,6.2998659,19.595228
+365,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),47.854997,41.581,6.2739973,15.088616
+365,1,vapor,"table, all 19 temperatures",w,m/s,285.5052,291.04,-5.5348013,-1.9017322
+365,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.6453487,6.6023,-0.95695129,-14.494211
+365,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.6732149,-1.672,-0.0012148624,nan
+365,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-23.36343,-23.36,-0.0034298089,nan
+370,1,vapor,"table, all 19 temperatures",rho,mol/L,0.33310016,0.33309,1.0163219e-05,0.0030511931
+370,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),28.412602,32.322,-3.9093976,-12.09516
+370,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),37.816472,41.705,-3.8885278,-9.3238886
+370,1,vapor,"table, all 19 temperatures",w,m/s,297.62803,293.05,4.5780294,1.5622008
+370,1,vapor,"table, all 19 temperatures",muJT,K/MPa,7.1378944,6.3863,0.75159444,11.768856
+370,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.4586819,-1.463,0.0043181111,nan
+370,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-22.779503,-22.79,0.010497233,nan
+375,1,vapor,"table, all 19 temperatures",rho,mol/L,0.32826708,0.32827,-2.9219053e-06,-0.00089009208
+375,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),34.895043,32.492,2.403043,7.395799
+375,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),44.254831,41.832,2.4228308,5.7918121
+375,1,vapor,"table, all 19 temperatures",w,m/s,292.83813,295.04,-2.2018664,-0.74629421
+375,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9226756,6.1806,-0.25792442,-4.1731292
+375,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.25371,-1.255,0.0012899544,nan
+375,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-22.229331,-22.23,0.00066881334,nan
+380,1,vapor,"table, all 19 temperatures",rho,mol/L,0.32359318,0.3236,-6.8213442e-06,-0.0021079556
+380,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),31.066833,32.663,-1.5961666,-4.8867727
+380,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),40.352514,41.961,-1.6084858,-3.8332875
+380,1,vapor,"table, all 19 temperatures",w,m/s,298.65703,297.02,1.6370324,0.55115225
+380,1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.1677077,5.9847,0.1830077,3.057926
+380,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.0420516,-1.045,0.0029483724,nan
+380,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-21.668581,-21.68,0.011418608,nan
+385,1,vapor,"table, all 19 temperatures",rho,mol/L,0.31906069,0.31906,6.8534235e-07,0.00021480046
+385,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.182951,32.833,3.3499511,10.203
+385,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.428285,42.092,3.3362849,7.9261735
+385,1,vapor,"table, all 19 temperatures",w,m/s,295.86258,298.97,-3.1074189,-1.0393748
+385,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.3164895,5.7978,-0.48131047,-8.3016053
+385,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.82775455,-0.835,0.0072454489,nan
+385,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-21.108392,-21.13,0.021608106,nan
+390,1,vapor,"table, all 19 temperatures",rho,mol/L,0.31466331,0.31466,3.310258e-06,0.0010520111
+390,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),26.916907,33.002,-6.0850931,-18.438558
+390,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),36.146847,42.225,-6.0781534,-14.394679
+390,1,vapor,"table, all 19 temperatures",w,m/s,308.27936,300.91,7.3693612,2.449025
+390,1,vapor,"table, all 19 temperatures",muJT,K/MPa,6.6000811,5.6195,0.98058105,17.449614
+390,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.62350944,-0.624,0.00049056038,nan
+390,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-20.581172,-20.59,0.0088283473,nan
+395,1,vapor,"table, all 19 temperatures",rho,mol/L,0.3103855,0.31039,-4.5012105e-06,-0.001450179
+395,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.201057,33.17,2.0310568,6.1231739
+395,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),44.408594,42.359,2.0495935,4.8386258
+395,1,vapor,"table, all 19 temperatures",w,m/s,300.98933,302.82,-1.8306721,-0.60454134
+395,1,vapor,"table, all 19 temperatures",muJT,K/MPa,5.2784965,5.4492,-0.17070349,-3.132634
+395,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.42237723,-0.413,-0.0093772253,nan
+395,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-20.068838,-20.05,-0.018837681,nan
+400,1,vapor,"table, all 19 temperatures",rho,mol/L,0.3062412,0.30624,1.1955656e-06,0.00039040152
+400,1,vapor,"table, all 19 temperatures",Cv,J/(mol*K),44.232427,33.338,10.894427,32.678707
+400,1,vapor,"table, all 19 temperatures",Cp,J/(mol*K),53.293552,42.494,10.799552,25.414298
+400,1,vapor,"table, all 19 temperatures",w,m/s,296.26037,304.72,-8.4596305,-2.776198
+400,1,vapor,"table, all 19 temperatures",muJT,K/MPa,3.8763234,5.2864,-1.4100766,-26.673664
+400,1,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.17838482,-0.201,0.022615181,nan
+400,1,vapor,"table, all 19 temperatures",dS,J/(mol*K),-19.455129,-19.51,0.054870642,nan
+310,2,vapor,"table, all 19 temperatures",rho,mol/L,0.85535882,0.85537,-1.1176974e-05,-0.0013066829
+310,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.344511,31.387,3.9575114,12.60876
+310,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.201441,44.27,3.9314408,8.8805982
+310,2,vapor,"table, all 19 temperatures",w,m/s,255.3,259.89,-4.5900008,-1.7661321
+310,2,vapor,"table, all 19 temperatures",muJT,K/MPa,9.1332077,9.9473,-0.81409225,-8.1840525
+310,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.3825041,-4.348,-0.034504108,nan
+310,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-36.906668,-36.797,-0.10966812,nan
+315,2,vapor,"table, all 19 temperatures",rho,mol/L,0.83689012,0.83691,-1.9883672e-05,-0.0023758436
+315,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.826665,31.456,4.3706645,13.894534
+315,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.414174,44.034,4.380174,9.9472543
+315,2,vapor,"table, all 19 temperatures",w,m/s,258.04769,262.63,-4.5823067,-1.7447766
+315,2,vapor,"table, all 19 temperatures",muJT,K/MPa,8.6921225,9.5426,-0.85047753,-8.9124299
+315,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.1409362,-4.127,-0.013936159,nan
+315,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-36.133639,-36.091,-0.042638727,nan
+320,2,vapor,"table, all 19 temperatures",rho,mol/L,0.81940347,0.81943,-2.6525729e-05,-0.0032370952
+320,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.236818,31.539,4.6978178,14.895266
+320,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.556145,43.843,4.713145,10.750051
+320,2,vapor,"table, all 19 temperatures",w,m/s,260.5304,265.31,-4.7796045,-1.8015169
+320,2,vapor,"table, all 19 temperatures",muJT,K/MPa,8.2889405,9.1625,-0.87355948,-9.5340734
+320,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.8984803,-3.907,0.0085196952,nan
+320,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-35.369985,-35.399,0.029014605,nan
+325,2,vapor,"table, all 19 temperatures",rho,mol/L,0.80282595,0.80284,-1.4052665e-05,-0.0017503694
+325,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),24.685602,31.634,-6.948398,-21.964968
+325,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),36.68957,43.691,-7.0014304,-16.02488
+325,2,vapor,"table, all 19 temperatures",w,m/s,277.97166,267.93,10.041663,3.747868
+325,2,vapor,"table, all 19 temperatures",muJT,K/MPa,10.382139,8.805,1.5771386,17.911853
+325,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.6848827,-3.688,0.0031172711,nan
+325,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-34.707416,-34.72,0.012583619,nan
+330,2,vapor,"table, all 19 temperatures",rho,mol/L,0.7870917,0.78707,2.1696183e-05,0.002756576
+330,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.209419,31.738,1.4714195,4.6361443
+330,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.054482,43.573,1.4814822,3.4000004
+330,2,vapor,"table, all 19 temperatures",w,m/s,268.89603,270.49,-1.5939746,-0.58929151
+330,2,vapor,"table, all 19 temperatures",muJT,K/MPa,8.2043026,8.4682,-0.26389743,-3.1163345
+330,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.4808231,-3.47,-0.010823108,nan
+330,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-34.084484,-34.054,-0.030483937,nan
+335,2,vapor,"table, all 19 temperatures",rho,mol/L,0.77202193,0.77204,-1.8074577e-05,-0.0023411452
+335,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.498209,31.851,4.6472089,14.590465
+335,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.17838,43.484,4.6943803,10.79565
+335,2,vapor,"table, all 19 temperatures",w,m/s,268.4459,272.99,-4.5441024,-1.6645674
+335,2,vapor,"table, all 19 temperatures",muJT,K/MPa,7.4248757,8.1505,-0.72562432,-8.9028197
+335,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.247831,-3.253,0.005169001,nan
+335,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-33.383801,-33.4,0.01619855,nan
+340,2,vapor,"table, all 19 temperatures",rho,mol/L,0.75769056,0.7577,-9.4408244e-06,-0.0012459845
+340,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),25.415687,31.971,-6.5553132,-20.503935
+340,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),36.810662,43.42,-6.6093384,-15.221876
+340,2,vapor,"table, all 19 temperatures",w,m/s,284.45913,275.45,9.009129,3.2706949
+340,2,vapor,"table, all 19 temperatures",muJT,K/MPa,9.1525701,7.8504,1.3021701,16.587309
+340,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.034918,-3.035,8.1976202e-05,nan
+340,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-32.752729,-32.756,0.0032712509,nan
+345,2,vapor,"table, all 19 temperatures",rho,mol/L,0.74399226,0.74399,2.2624805e-06,0.00030410092
+345,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),42.516704,32.096,10.420704,32.467298
+345,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),53.832666,43.377,10.455666,24.10417
+345,2,vapor,"table, all 19 temperatures",w,m/s,268.94203,277.85,-8.9079678,-3.2060349
+345,2,vapor,"table, all 19 temperatures",muJT,K/MPa,6.1456291,7.5667,-1.4210709,-18.78059
+345,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.8089085,-2.818,0.0090915349,nan
+345,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-32.093137,-32.12,0.026862602,nan
+350,2,vapor,"table, all 19 temperatures",rho,mol/L,0.73083388,0.73085,-1.6118541e-05,-0.0022054514
+350,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),20.663884,32.226,-11.562116,-35.878224
+350,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),31.763311,43.352,-11.588689,-26.731613
+350,2,vapor,"table, all 19 temperatures",w,m/s,299.55045,280.22,19.330449,6.8983119
+350,2,vapor,"table, all 19 temperatures",muJT,K/MPa,9.8948772,7.2981,2.5967772,35.581552
+350,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.5941069,-2.602,0.0078931073,nan
+350,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-31.474612,-31.5,0.025388016,nan
+355,2,vapor,"table, all 19 temperatures",rho,mol/L,0.7182876,0.71826,2.7602356e-05,0.0038429477
+355,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),40.287125,32.36,7.9271249,24.496678
+355,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),51.245223,43.344,7.901223,18.229104
+355,2,vapor,"table, all 19 temperatures",w,m/s,275.3317,282.54,-7.2082962,-2.551248
+355,2,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9185792,7.0436,-1.1250208,-15.972241
+355,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.3872619,-2.385,-0.0022618945,nan
+355,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-30.888134,-30.88,-0.0081344499,nan
+360,2,vapor,"table, all 19 temperatures",rho,mol/L,0.70616482,0.70617,-5.1811313e-06,-0.00073369462
+360,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),25.906456,32.497,-6.5905435,-20.280467
+360,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),36.829107,43.351,-6.5218929,-15.044389
+360,2,vapor,"table, all 19 temperatures",w,m/s,294.03954,284.83,9.2095361,3.2333448
+360,2,vapor,"table, all 19 temperatures",muJT,K/MPa,8.154234,6.8022,1.352034,19.876422
+360,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.1665543,-2.168,0.001445687,nan
+360,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-30.270526,-30.28,0.0094744589,nan
+365,2,vapor,"table, all 19 temperatures",rho,mol/L,0.69454091,0.69455,-9.0915405e-06,-0.0013089829
+365,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),40.112155,32.638,7.4741546,22.900161
+365,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),50.787376,43.37,7.4173763,17.102551
+365,2,vapor,"table, all 19 temperatures",w,m/s,280.23342,287.08,-6.8465844,-2.3849047
+365,2,vapor,"table, all 19 temperatures",muJT,K/MPa,5.5214365,6.573,-1.0515635,-15.998227
+365,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.9479782,-1.951,0.0030217989,nan
+365,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-29.667769,-29.68,0.012231317,nan
+370,2,vapor,"table, all 19 temperatures",rho,mol/L,0.68338687,0.68337,1.6865304e-05,0.0024679609
+370,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),25.025404,32.78,-7.7545959,-23.656485
+370,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),35.647074,43.401,-7.7539265,-17.865778
+370,2,vapor,"table, all 19 temperatures",w,m/s,300.06843,289.3,10.768427,3.7222354
+370,2,vapor,"table, all 19 temperatures",muJT,K/MPa,7.7407737,6.3552,1.3855737,21.802204
+370,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.7313623,-1.734,0.0026377021,nan
+370,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-29.078095,-29.09,0.011904977,nan
+375,2,vapor,"table, all 19 temperatures",rho,mol/L,0.67258542,0.67259,-4.5816519e-06,-0.00068119536
+375,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),38.645576,32.925,5.7205764,17.374568
+375,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),49.193976,43.441,5.7529756,13.243193
+375,2,vapor,"table, all 19 temperatures",w,m/s,286.30834,291.49,-5.181656,-1.7776445
+375,2,vapor,"table, all 19 temperatures",muJT,K/MPa,5.483378,6.1479,-0.66452203,-10.808927
+375,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.5197015,-1.517,-0.0027015099,nan
+375,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-28.510073,-28.51,-7.3000013e-05,nan
+380,2,vapor,"table, all 19 temperatures",rho,mol/L,0.6622078,0.6622,7.8008079e-06,0.0011780139
+380,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),30.962817,33.071,-2.1081827,-6.374717
+380,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),41.328952,43.49,-2.1610478,-4.9690682
+380,2,vapor,"table, all 19 temperatures",w,m/s,295.83138,293.64,2.1913818,0.74628179
+380,2,vapor,"table, all 19 temperatures",muJT,K/MPa,6.152913,5.9506,0.20231305,3.3998764
+380,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.2931178,-1.3,0.0068822039,nan
+380,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-27.909727,-27.93,0.020272508,nan
+385,2,vapor,"table, all 19 temperatures",rho,mol/L,0.65218809,0.65217,1.8091045e-05,0.0027739769
+385,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),35.03383,33.218,1.8158297,5.4664029
+385,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.401979,43.547,1.8549788,4.2597166
+385,2,vapor,"table, all 19 temperatures",w,m/s,294.06404,295.77,-1.7059611,-0.57678638
+385,2,vapor,"table, all 19 temperatures",muJT,K/MPa,5.6025479,5.7626,-0.16005208,-2.7774283
+385,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.0764109,-1.082,0.005589112,nan
+385,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-27.343223,-27.36,0.016776588,nan
+390,2,vapor,"table, all 19 temperatures",rho,mol/L,0.64246707,0.64248,-1.2926438e-05,-0.0020119595
+390,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),28.223588,33.366,-5.1424116,-15.412131
+390,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),38.504645,43.611,-5.1063553,-11.70887
+390,2,vapor,"table, all 19 temperatures",w,m/s,304.33175,297.87,6.4617521,2.1693195
+390,2,vapor,"table, all 19 temperatures",muJT,K/MPa,6.4055485,5.5832,0.82234847,14.728981
+390,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.86641146,-0.864,-0.002411457,nan
+390,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-26.801186,-26.8,-0.0011861847,nan
+395,2,vapor,"table, all 19 temperatures",rho,mol/L,0.63311174,0.63311,1.7442229e-06,0.00027550076
+395,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.536059,33.515,3.0210588,9.0140497
+395,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),46.639503,43.681,2.958503,6.7729745
+395,2,vapor,"table, all 19 temperatures",w,m/s,296.84583,299.94,-3.0941661,-1.031595
+395,2,vapor,"table, all 19 temperatures",muJT,K/MPa,4.9498714,5.4121,-0.46222861,-8.5406517
+395,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.65379966,-0.646,-0.0077996579,nan
+395,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-26.259603,-26.24,-0.019602752,nan
+400,2,vapor,"table, all 19 temperatures",rho,mol/L,0.6240639,0.62405,1.3904144e-05,0.0022280496
+400,2,vapor,"table, all 19 temperatures",Cv,J/(mol*K),45.27125,33.665,11.60625,34.475718
+400,2,vapor,"table, all 19 temperatures",Cp,J/(mol*K),55.378532,43.756,11.622532,26.562145
+400,2,vapor,"table, all 19 temperatures",w,m/s,292.96698,301.99,-9.0230247,-2.9878555
+400,2,vapor,"table, all 19 temperatures",muJT,K/MPa,4.1734628,5.2485,-1.0750372,-20.48275
+400,2,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.39900948,-0.428,0.028990525,nan
+400,2,vapor,"table, all 19 temperatures",dS,J/(mol*K),-25.618728,-25.69,0.07127207,nan
+310,4,vapor,"table, all 19 temperatures",rho,mol/L,1.9429171,1.9429,1.7095728e-05,0.00087990774
+310,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),69.339522,34.065,35.274522,103.55063
+310,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),91.905708,56.213,35.692708,63.49547
+310,4,vapor,"table, all 19 temperatures",w,m/s,220.66841,243.77,-23.101591,-9.4767983
+310,4,vapor,"table, all 19 temperatures",muJT,K/MPa,6.0485884,9.9017,-3.8531116,-38.913637
+310,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-5.5398982,-5.332,-0.20789823,nan
+310,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-45.595638,-44.934,-0.66163828,nan
+315,4,vapor,"table, all 19 temperatures",rho,mol/L,1.8809721,1.881,-2.7913626e-05,-0.001483978
+315,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),56.023295,33.846,22.177295,65.524125
+315,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),76.73467,54.559,22.17567,40.645301
+315,4,vapor,"table, all 19 temperatures",w,m/s,228.40422,247.73,-19.325784,-7.801148
+315,4,vapor,"table, all 19 temperatures",muJT,K/MPa,6.7401809,9.4843,-2.7441191,-28.933281
+315,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-5.1175749,-5.056,-0.061574911,nan
+315,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-44.243851,-44.048,-0.19585119,nan
+320,4,vapor,"table, all 19 temperatures",rho,mol/L,1.8247509,1.8247,5.0921499e-05,0.0027906779
+320,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),40.312723,33.69,6.6227227,19.657829
+320,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),59.800869,53.217,6.5838695,12.371741
+320,4,vapor,"table, all 19 temperatures",w,m/s,243.40375,251.49,-8.0862514,-3.2153371
+320,4,vapor,"table, all 19 temperatures",muJT,K/MPa,8.0975321,9.0944,-0.99686789,-10.961338
+320,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.7754895,-4.786,0.010510529,nan
+320,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-43.166045,-43.2,0.033955469,nan
+325,4,vapor,"table, all 19 temperatures",rho,mol/L,1.7733012,1.7733,1.177472e-06,6.6400044e-05
+325,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),27.744232,33.583,-5.8387682,-17.386083
+325,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),46.248944,52.115,-5.8660561,-11.255984
+325,4,vapor,"table, all 19 temperatures",w,m/s,264.15855,255.07,9.0885505,3.5631593
+325,4,vapor,"table, all 19 temperatures",muJT,K/MPa,9.8373992,8.7291,1.1082992,12.696604
+325,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.5097912,-4.523,0.0132088,nan
+325,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-42.341886,-42.384,0.042114017,nan
+330,4,vapor,"table, all 19 temperatures",rho,mol/L,1.7259532,1.7259,5.3157631e-05,0.0030799949
+330,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),31.216187,33.516,-2.2998128,-6.8618356
+330,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.875771,51.198,-2.3222291,-4.5357809
+330,4,vapor,"table, all 19 temperatures",w,m/s,261.59429,258.49,3.1042873,1.2009313
+330,4,vapor,"table, all 19 temperatures",muJT,K/MPa,8.7794966,8.386,0.39349661,4.6923039
+330,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.2720434,-4.265,-0.0070433939,nan
+330,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-41.615975,-41.595,-0.020975403,nan
+335,4,vapor,"table, all 19 temperatures",rho,mol/L,1.6820858,1.6821,-1.4213625e-05,-0.00084499286
+335,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),40.174877,33.481,6.6938775,19.993063
+335,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),57.119612,50.43,6.6896122,13.265144
+335,4,vapor,"table, all 19 temperatures",w,m/s,254.27329,261.78,-7.506715,-2.8675663
+335,4,vapor,"table, all 19 temperatures",muJT,K/MPa,7.1206389,8.0633,-0.9426611,-11.690761
+335,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.0073214,-4.011,0.0036785843,nan
+335,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-40.819959,-40.831,0.011040584,nan
+340,4,vapor,"table, all 19 temperatures",rho,mol/L,1.6412546,1.6413,-4.5425003e-05,-0.0027676234
+340,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),27.070111,33.471,-6.4008893,-19.123687
+340,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),43.386477,49.782,-6.3955228,-12.847059
+340,4,vapor,"table, all 19 temperatures",w,m/s,275.00153,264.95,10.051533,3.7937473
+340,4,vapor,"table, all 19 temperatures",muJT,K/MPa,8.9099609,7.7593,1.1506609,14.829442
+340,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.7555106,-3.76,0.0044894002,nan
+340,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-40.073588,-40.089,0.015411514,nan
+345,4,vapor,"table, all 19 temperatures",rho,mol/L,1.6030779,1.6031,-2.2090414e-05,-0.001377981
+345,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),41.031412,33.483,7.5484125,22.544015
+345,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),56.787613,49.232,7.5556126,15.346954
+345,4,vapor,"table, all 19 temperatures",w,m/s,260.00801,268.01,-8.0019854,-2.9857041
+345,4,vapor,"table, all 19 temperatures",muJT,K/MPa,6.4829078,7.4724,-0.98949217,-13.241959
+345,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.5055299,-3.513,0.0074700788,nan
+345,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-39.343943,-39.367,0.023057081,nan
+350,4,vapor,"table, all 19 temperatures",rho,mol/L,1.5672753,1.5673,-2.4708095e-05,-0.0015764751
+350,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),26.764863,33.511,-6.7461375,-20.131114
+350,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),42.013253,48.764,-6.7507473,-13.843711
+350,4,vapor,"table, all 19 temperatures",w,m/s,281.43255,270.98,10.452547,3.8573129
+350,4,vapor,"table, all 19 temperatures",muJT,K/MPa,8.3569782,7.2015,1.1554782,16.044965
+350,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.2579643,-3.268,0.010035704,nan
+350,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-38.631257,-38.662,0.030743315,nan
+355,4,vapor,"table, all 19 temperatures",rho,mol/L,1.5335777,1.5336,-2.2316622e-05,-0.0014551788
+355,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),36.757922,33.555,3.2029223,9.5452907
+355,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),51.558264,48.364,3.1942643,6.6046322
+355,4,vapor,"table, all 19 temperatures",w,m/s,270.16877,273.86,-3.6912319,-1.3478536
+355,4,vapor,"table, all 19 temperatures",muJT,K/MPa,6.5090401,6.9452,-0.43615994,-6.2800199
+355,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.0243477,-3.025,0.00065230631,nan
+355,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-37.968663,-37.973,0.0043365338,nan
+360,4,vapor,"table, all 19 temperatures",rho,mol/L,1.5017721,1.5018,-2.7908933e-05,-0.0018583655
+360,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),28.538142,33.611,-5.0728582,-15.092851
+360,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),42.943751,48.022,-5.0782491,-10.574839
+360,4,vapor,"table, all 19 temperatures",w,m/s,283.92929,276.67,7.2592861,2.6238067
+360,4,vapor,"table, all 19 temperatures",muJT,K/MPa,7.4909025,6.7024,0.78850248,11.76448
+360,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.7877656,-2.784,-0.0037656425,nan
+360,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-37.306744,-37.299,-0.0077442884,nan
+365,4,vapor,"table, all 19 temperatures",rho,mol/L,1.4716487,1.4716,4.8688025e-05,0.0033085095
+365,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),43.279551,33.678,9.601551,28.509861
+365,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),57.339926,47.73,9.6099263,20.133933
+365,4,vapor,"table, all 19 temperatures",w,m/s,270.13204,279.4,-9.2679614,-3.3170943
+365,4,vapor,"table, all 19 temperatures",muJT,K/MPa,5.3927881,6.4723,-1.0795119,-16.678954
+365,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.5375244,-2.545,0.0074755682,nan
+365,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-36.616641,-36.639,0.022359008,nan
+370,4,vapor,"table, all 19 temperatures",rho,mol/L,1.4430639,1.4431,-3.6086699e-05,-0.0025006375
+370,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),22.411692,33.753,-11.341308,-33.600889
+370,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),36.139477,47.481,-11.341523,-23.886444
+370,4,vapor,"table, all 19 temperatures",w,m/s,302.00598,282.06,19.945982,7.0715387
+370,4,vapor,"table, all 19 temperatures",muJT,K/MPa,8.215533,6.2538,1.961733,31.368656
+370,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.3030822,-2.307,0.0039178487,nan
+370,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-35.978366,-35.991,0.012634043,nan
+375,4,vapor,"table, all 19 temperatures",rho,mol/L,1.4158891,1.4159,-1.0892435e-05,-0.00076929408
+375,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),42.042595,33.837,8.2055946,24.250361
+375,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),55.478023,47.27,8.2080233,17.364128
+375,4,vapor,"table, all 19 temperatures",w,m/s,276.67223,284.67,-7.9977666,-2.809487
+375,4,vapor,"table, all 19 temperatures",muJT,K/MPa,5.1535158,6.0462,-0.89268421,-14.764384
+375,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.0746673,-2.07,-0.0046673232,nan
+375,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-35.365453,-35.355,-0.010452924,nan
+380,4,vapor,"table, all 19 temperatures",rho,mol/L,1.3899893,1.39,-1.0702918e-05,-0.00076999407
+380,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.112972,33.928,-1.8150277,-5.3496455
+380,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.270338,47.091,-1.8206622,-3.8662636
+380,4,vapor,"table, all 19 temperatures",w,m/s,289.46886,287.22,2.248862,0.78297541
+380,4,vapor,"table, all 19 temperatures",muJT,K/MPa,6.0787728,5.8488,0.22997275,3.9319647
+380,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.8224332,-1.834,0.011566811,nan
+380,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-34.697124,-34.73,0.032875958,nan
+385,4,vapor,"table, all 19 temperatures",rho,mol/L,1.3652809,1.3653,-1.9093453e-05,-0.0013984804
+385,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.063503,34.024,-1.9604966,-5.7620992
+385,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),44.979429,46.94,-1.9605709,-4.1767595
+385,4,vapor,"table, all 19 temperatures",w,m/s,292.15191,289.72,2.4319148,0.83940177
+385,4,vapor,"table, all 19 temperatures",muJT,K/MPa,5.9068809,5.6608,0.24608085,4.3471038
+385,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.5967819,-1.599,0.0022180523,nan
+385,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-34.107174,-34.116,0.0088263856,nan
+390,4,vapor,"table, all 19 temperatures",rho,mol/L,1.3416336,1.3416,3.3573039e-05,0.0025024626
+390,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.024982,34.126,-1.1010177,-3.2263309
+390,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),45.724106,46.815,-1.0908939,-2.3302231
+390,4,vapor,"table, all 19 temperatures",w,m/s,293.50731,292.17,1.337307,0.45771538
+390,4,vapor,"table, all 19 temperatures",muJT,K/MPa,5.6217133,5.4817,0.1400133,2.5541948
+390,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.3700304,-1.364,-0.0060303602,nan
+390,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-33.52201,-33.511,-0.01101044,nan
+395,4,vapor,"table, all 19 temperatures",rho,mol/L,1.3190002,1.319,1.9785003e-07,1.5000002e-05
+395,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),37.275828,34.232,3.0438282,8.8917626
+395,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),49.745314,46.712,3.0333138,6.4936499
+395,4,vapor,"table, all 19 temperatures",w,m/s,291.30765,294.57,-3.2623475,-1.1074948
+395,4,vapor,"table, all 19 temperatures",muJT,K/MPa,4.9785283,5.3109,-0.33237165,-6.2582924
+395,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.131466,-1.131,-0.00046603224,nan
+395,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-32.914249,-32.915,0.0007506064,nan
+400,4,vapor,"table, all 19 temperatures",rho,mol/L,1.2973029,1.2973,2.9072558e-06,0.0002241005
+400,4,vapor,"table, all 19 temperatures",Cv,J/(mol*K),41.753078,34.342,7.4110777,21.580216
+400,4,vapor,"table, all 19 temperatures",Cp,J/(mol*K),54.0319,46.629,7.4029,15.876171
+400,4,vapor,"table, all 19 temperatures",w,m/s,289.88518,296.93,-7.0448212,-2.3725529
+400,4,vapor,"table, all 19 temperatures",muJT,K/MPa,4.4362421,5.1478,-0.71155787,-13.822562
+400,4,vapor,"table, all 19 temperatures",dH,kJ/mol,-0.87213492,-0.897,0.024865075,nan
+400,4,vapor,"table, all 19 temperatures",dS,J/(mol*K),-32.261892,-32.328,0.066107993,nan
+310,6,vapor,"table, all 19 temperatures",rho,mol/L,3.5216228,3.5216,2.276377e-05,0.00064640418
+310,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),-2.3487436,38.297,-40.645744,-106.13297
+310,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),41.415262,86.721,-45.305738,-52.243099
+310,6,vapor,"table, all 19 temperatures",w,m/s,nan,224.44,nan,nan
+310,6,vapor,"table, all 19 temperatures",muJT,K/MPa,19.882731,9.5472,10.335531,108.25719
+310,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-6.4501648,-6.669,0.21883518,nan
+310,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-51.033362,-51.734,0.7006375,nan
+315,6,vapor,"table, all 19 temperatures",rho,mol/L,3.3231424,3.3231,4.2363419e-05,0.0012748163
+315,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),15.948083,37.303,-21.354917,-57.247185
+315,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),56.565391,77.841,-21.275609,-27.332137
+315,6,vapor,"table, all 19 temperatures",w,m/s,300.7401,230.73,70.010102,30.342869
+315,6,vapor,"table, all 19 temperatures",muJT,K/MPa,12.642677,9.1713,3.4713774,37.85044
+315,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-6.2057637,-6.259,0.053236279,nan
+315,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-50.251585,-50.422,0.17041453,nan
+320,6,vapor,"table, all 19 temperatures",rho,mol/L,3.1609559,3.161,-4.4126944e-05,-0.0013959805
+320,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),37.343969,36.603,0.74096945,2.0243408
+320,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),73.057332,71.834,1.2233324,1.7029992
+320,6,vapor,"table, all 19 temperatures",w,m/s,237.623,236.3,1.3229965,0.55988003
+320,6,vapor,"table, all 19 temperatures",muJT,K/MPa,8.6584745,8.8102,-0.15172554,-1.7221577
+320,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-5.8822746,-5.886,0.0037254415,nan
+320,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-49.233042,-49.247,0.013958275,nan
+325,6,vapor,"table, all 19 temperatures",rho,mol/L,3.0239802,3.024,-1.983731e-05,-0.0006559957
+325,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.3696,36.093,-3.7233996,-10.316127
+325,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),64.01589,67.488,-3.4721098,-5.144781
+325,6,vapor,"table, all 19 temperatures",w,m/s,249.29938,241.37,7.9293797,3.2851554
+325,6,vapor,"table, all 19 temperatures",muJT,K/MPa,8.9212075,8.4666,0.45460752,5.3694225
+325,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-5.5391567,-5.538,-0.0011567038,nan
+325,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-48.168908,-48.168,-0.00090798843,nan
+330,6,vapor,"table, all 19 temperatures",rho,mol/L,2.9054564,2.9054,5.6447208e-05,0.0019428377
+330,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.450269,35.714,-2.2637315,-6.3384988
+330,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),62.088436,64.2,-2.1115639,-3.2890403
+330,6,vapor,"table, all 19 temperatures",w,m/s,250.59311,246.04,4.5531139,1.8505584
+330,6,vapor,"table, all 19 temperatures",muJT,K/MPa,8.4224772,8.1408,0.28167716,3.4600673
+330,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-5.2237518,-5.209,-0.01475185,nan
+330,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-47.205784,-47.164,-0.041783591,nan
+335,6,vapor,"table, all 19 temperatures",rho,mol/L,2.801042,2.8011,-5.8012381e-05,-0.0020710571
+335,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),42.962385,35.433,7.5293853,21.249641
+335,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),69.225699,61.63,7.5956986,12.324677
+335,6,vapor,"table, all 19 temperatures",w,m/s,241.29684,250.39,-9.0931597,-3.6315986
+335,6,vapor,"table, all 19 temperatures",muJT,K/MPa,6.9732028,7.8323,-0.85909717,-10.968645
+335,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.8956636,-4.895,-0.00066364299,nan
+335,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-46.219168,-46.218,-0.0011680397,nan
+340,6,vapor,"table, all 19 temperatures",rho,mol/L,2.7079723,2.7079,7.2270364e-05,0.0026688712
+340,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),28.584526,35.223,-6.6384736,-18.846985
+340,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),52.931785,59.571,-6.6392149,-11.145045
+340,6,vapor,"table, all 19 temperatures",w,m/s,266.45109,254.48,11.97109,4.7041377
+340,6,vapor,"table, all 19 temperatures",muJT,K/MPa,8.476224,7.5403,0.93592399,12.412291
+340,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.589606,-4.592,0.0023939569,nan
+340,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-45.312016,-45.321,0.0089838745,nan
+345,6,vapor,"table, all 19 temperatures",rho,mol/L,2.6239832,2.624,-1.6793493e-05,-0.0006399959
+345,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),43.002838,35.069,7.9338382,22.623509
+345,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),65.855591,57.889,7.9665914,13.76184
+345,6,vapor,"table, all 19 temperatures",w,m/s,248.91618,258.36,-9.4438213,-3.6552954
+345,6,vapor,"table, all 19 temperatures",muJT,K/MPa,6.3902703,7.2639,-0.87362968,-12.027006
+345,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.2930548,-4.299,0.0059452052,nan
+345,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-44.446387,-44.464,0.017612798,nan
+350,6,vapor,"table, all 19 temperatures",rho,mol/L,2.5475111,2.5475,1.1081673e-05,0.00043500189
+350,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),28.016825,34.957,-6.9401747,-19.853462
+350,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),49.5741,56.495,-6.9209003,-12.250465
+350,6,vapor,"table, all 19 temperatures",w,m/s,274.24088,262.05,12.190881,4.6521204
+350,6,vapor,"table, all 19 temperatures",muJT,K/MPa,7.9845148,7.0022,0.98231481,14.02866
+350,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-4.0038454,-4.013,0.0091546055,nan
+350,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-43.613835,-43.641,0.027165302,nan
+355,6,vapor,"table, all 19 temperatures",rho,mol/L,2.4774552,2.4775,-4.4841938e-05,-0.0018099672
+355,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),38.438454,34.879,3.5594543,10.20515
+355,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),58.886788,55.324,3.5627877,6.4398592
+355,6,vapor,"table, all 19 temperatures",w,m/s,261.02449,265.58,-4.5555081,-1.7153054
+355,6,vapor,"table, all 19 temperatures",muJT,K/MPa,6.3460091,6.7542,-0.40819092,-6.0435124
+355,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.7329817,-3.733,1.826444e-05,nan
+355,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-42.84557,-42.849,0.0034295947,nan
+360,6,vapor,"table, all 19 temperatures",rho,mol/L,2.4128363,2.4129,-6.3710942e-05,-0.0026404303
+360,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),29.788092,34.83,-5.0419076,-14.475761
+360,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),49.285145,54.332,-5.0468552,-9.2889184
+360,6,vapor,"table, all 19 temperatures",w,m/s,277.02209,268.98,8.0420884,2.9898462
+360,6,vapor,"table, all 19 temperatures",muJT,K/MPa,7.1841751,6.5189,0.66527506,10.205327
+360,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.4621766,-3.459,-0.0031765524,nan
+360,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-42.087905,-42.082,-0.0059045369,nan
+365,6,vapor,"table, all 19 temperatures",rho,mol/L,2.3529412,2.3529,4.1176471e-05,0.0017500306
+365,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),43.748764,34.804,8.9447639,25.700391
+365,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),62.435878,53.486,8.9498781,16.733123
+365,6,vapor,"table, all 19 temperatures",w,m/s,262.36845,272.25,-9.8815499,-3.6295867
+365,6,vapor,"table, all 19 temperatures",muJT,K/MPa,5.3947531,6.2956,-0.90084692,-14.309151
+365,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-3.1832874,-3.19,0.0067126068,nan
+365,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-41.318751,-41.339,0.02024858,nan
+370,6,vapor,"table, all 19 temperatures",rho,mol/L,2.2971079,2.2971,7.9411022e-06,0.0003457012
+370,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),24.285809,34.799,-10.513191,-30.211188
+370,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),42.252048,52.758,-10.505952,-19.913477
+370,6,vapor,"table, all 19 temperatures",w,m/s,295.02225,275.41,19.612249,7.12111
+370,6,vapor,"table, all 19 temperatures",muJT,K/MPa,7.5995866,6.0835,1.5160866,24.921289
+370,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.9208474,-2.924,0.0031525711,nan
+370,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-40.604307,-40.616,0.011693282,nan
+375,6,vapor,"table, all 19 temperatures",rho,mol/L,2.2449209,2.2449,2.0866539e-05,0.00092950864
+375,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),42.37873,34.809,7.5697304,21.746475
+375,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),59.695138,52.13,7.565138,14.512062
+375,6,vapor,"table, all 19 temperatures",w,m/s,270.06615,278.46,-8.3938476,-3.0143818
+375,6,vapor,"table, all 19 temperatures",muJT,K/MPa,5.1346149,5.8817,-0.7470851,-12.701857
+375,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.6665349,-2.662,-0.0045348607,nan
+375,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-39.92184,-39.912,-0.0098400494,nan
+380,6,vapor,"table, all 19 temperatures",rho,mol/L,2.19592,2.1959,1.9980676e-05,0.00090990828
+380,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.546022,34.835,-1.2889777,-3.7002373
+380,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),50.295576,51.587,-1.2914238,-2.5033899
+380,6,vapor,"table, all 19 temperatures",w,m/s,283.17469,281.43,1.7446902,0.61993752
+380,6,vapor,"table, all 19 temperatures",muJT,K/MPa,5.834667,5.6897,0.14496696,2.5478841
+380,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.3912128,-2.403,0.011787171,nan
+380,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-39.192362,-39.225,0.032637906,nan
+385,6,vapor,"table, all 19 temperatures",rho,mol/L,2.1497979,2.1498,-2.0810044e-06,-9.6799906e-05
+385,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),32.727385,34.872,-2.1446151,-6.1499629
+385,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),48.950275,51.114,-2.1637249,-4.2331355
+385,6,vapor,"table, all 19 temperatures",w,m/s,287.20544,284.31,2.8954427,1.0184104
+385,6,vapor,"table, all 19 temperatures",muJT,K/MPa,5.7412532,5.5068,0.23445325,4.2575225
+385,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-2.1430287,-2.146,0.0029713454,nan
+385,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-38.543486,-38.554,0.010513815,nan
+390,6,vapor,"table, all 19 temperatures",rho,mol/L,2.1062387,2.1062,3.8678967e-05,0.0018364337
+390,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),33.610135,34.92,-1.3098647,-3.7510444
+390,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),49.392419,50.702,-1.3095812,-2.5828984
+390,6,vapor,"table, all 19 temperatures",w,m/s,288.85706,287.12,1.7370559,0.60499301
+390,6,vapor,"table, all 19 temperatures",muJT,K/MPa,5.4740821,5.3324,0.14168211,2.6570046
+390,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.8971623,-1.891,-0.0061623317,nan
+390,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-37.90899,-37.897,-0.01198978,nan
+395,6,vapor,"table, all 19 temperatures",rho,mol/L,2.0649638,2.065,-3.6240114e-05,-0.0017549692
+395,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),38.14375,34.978,3.1657498,9.0506883
+395,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),53.521849,50.344,3.177849,6.3122696
+395,6,vapor,"table, all 19 temperatures",w,m/s,286.2009,289.86,-3.6591,-1.262368
+395,6,vapor,"table, all 19 temperatures",muJT,K/MPa,4.8647657,5.166,-0.30123431,-5.831094
+395,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.6399827,-1.639,-0.00098265773,nan
+395,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-37.253802,-37.254,0.00019807739,nan
+400,6,vapor,"table, all 19 temperatures",rho,mol/L,2.0258088,2.0258,8.8041651e-06,0.00043460189
+400,6,vapor,"table, all 19 temperatures",Cv,J/(mol*K),42.948824,35.044,7.9048237,22.556853
+400,6,vapor,"table, all 19 temperatures",Cp,J/(mol*K),57.908738,50.031,7.8777381,15.745714
+400,6,vapor,"table, all 19 temperatures",w,m/s,284.28745,292.53,-8.2425522,-2.8176776
+400,6,vapor,"table, all 19 temperatures",muJT,K/MPa,4.3143204,5.0072,-0.69287959,-13.837666
+400,6,vapor,"table, all 19 temperatures",dH,kJ/mol,-1.3615147,-1.388,0.026485257,nan
+400,6,vapor,"table, all 19 temperatures",dS,J/(mol*K),-36.553302,-36.622,0.068697687,nan
+310,8,supercritical,"table, all 19 temperatures",rho,mol/L,7.4465709,7.4463,0.00027085412,0.0036374323
+310,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),15.966031,50.607,-34.640969,-68.450943
+310,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),451.66116,421.9,29.761157,7.0540784
+310,8,supercritical,"table, all 19 temperatures",w,m/s,460.83753,194.28,266.55753,137.20276
+310,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.7142737,7.3321,-1.6178263,-22.064979
+310,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-10.387843,-9.477,-0.91084277,nan
+310,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-65.045659,-62.142,-2.9036592,nan
+315,8,supercritical,"table, all 19 temperatures",rho,mol/L,5.9368321,5.937,-0.00016789361,-0.00282792
+315,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),151.04325,43.844,107.19925,244.50152
+315,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),299.84086,177.36,122.48086,69.057772
+315,8,supercritical,"table, all 19 temperatures",w,m/s,148.97596,210.19,-61.214045,-29.123196
+315,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.9211695,7.9336,-3.0124305,-37.970536
+315,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-8.5023041,-8.192,-0.31030412,nan
+315,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-59.008568,-58.026,-0.98256819,nan
+320,8,supercritical,"table, all 19 temperatures",rho,mol/L,5.2695368,5.2695,3.6807715e-05,0.00069850488
+320,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),53.765634,41.209,12.556634,30.47061
+320,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),131.47027,126.53,4.9402707,3.9044264
+320,8,supercritical,"table, all 19 temperatures",w,m/s,190.81672,219.8,-28.983281,-13.186206
+320,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,7.4479571,7.9179,-0.46994292,-5.9351965
+320,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.417018,-7.453,0.035982034,nan
+320,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-55.586794,-55.697,0.11020598,nan
+325,8,supercritical,"table, all 19 temperatures",rho,mol/L,4.8374613,4.8375,-3.869969e-05,-0.0007999936
+325,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),33.110533,39.654,-6.543467,-16.501405
+325,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),95.580031,103.75,-8.169969,-7.8746689
+325,8,supercritical,"table, all 19 temperatures",w,m/s,234.39044,227.35,7.0404402,3.0967408
+325,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,8.4854592,7.7599,0.72555918,9.3501099
+325,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.8478247,-6.883,0.035175285,nan
+325,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-53.821099,-53.93,0.10890051,nan
+330,8,supercritical,"table, all 19 temperatures",rho,mol/L,4.5187528,4.5188,-4.7175779e-05,-0.0010439891
+330,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),35.016433,38.603,-3.5865669,-9.2909021
+330,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),85.730098,90.634,-4.9039023,-5.4106653
+330,8,supercritical,"table, all 19 temperatures",w,m/s,236.21908,233.83,2.3890829,1.0217179
+330,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,7.9627564,7.5524,0.41035637,5.4334566
+330,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.3940458,-6.4,0.0059542147,nan
+330,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-52.435297,-52.454,0.018703249,nan
+335,8,supercritical,"table, all 19 temperatures",rho,mol/L,4.2669398,4.267,-6.0249189e-05,-0.0014119801
+335,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),44.801565,37.852,6.9495654,18.359837
+335,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),88.515918,82.068,6.4479178,7.856799
+335,8,supercritical,"table, all 19 temperatures",w,m/s,227.34669,239.57,-12.223311,-5.1021877
+335,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.795097,7.3266,-0.53150303,-7.2544295
+335,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.9584202,-5.97,0.011579772,nan
+335,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-51.125173,-51.159,0.033827491,nan
+340,8,supercritical,"table, all 19 temperatures",rho,mol/L,4.0592653,4.0593,-3.4727014e-05,-0.00085549268
+340,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),29.838001,37.302,-7.4639993,-20.009649
+340,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),68.301973,76.023,-7.7210266,-10.156172
+340,8,supercritical,"table, all 19 temperatures",w,m/s,258.62326,244.79,13.833256,5.6510706
+340,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,7.8953143,7.0957,0.79961426,11.268998
+340,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.5655312,-5.575,0.0094687847,nan
+340,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-49.960666,-49.991,0.030334062,nan
+345,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.882892,3.8829,-8.0220548e-06,-0.00020659957
+345,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),44.199715,36.889,7.3107151,19.818144
+345,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),78.742093,71.528,7.2140929,10.085691
+345,8,supercritical,"table, all 19 temperatures",w,m/s,238.89109,249.61,-10.718908,-4.2942621
+345,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.2385221,6.8663,-0.62777789,-9.1428847
+345,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.1982191,-5.207,0.0087808716,nan
+345,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-48.888388,-48.915,0.02661175,nan
+350,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.7299515,3.73,-4.848937e-05,-0.0012999831
+350,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),29.581882,36.575,-6.9931184,-19.119941
+350,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),61.027241,68.054,-7.0267588,-10.325269
+350,8,supercritical,"table, all 19 temperatures",w,m/s,267.35637,254.1,13.256368,5.2169885
+350,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,7.4092873,6.642,0.76728734,11.552053
+350,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.8480849,-4.858,0.0099150675,nan
+350,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-47.880485,-47.912,0.031515158,nan
+355,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.5951825,3.5952,-1.754449e-05,-0.00048799762
+355,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),39.973422,36.334,3.6394219,10.016574
+355,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),68.876484,65.293,3.5834837,5.4883122
+355,8,supercritical,"table, all 19 temperatures",w,m/s,252.8599,258.32,-5.4601033,-2.1136975
+355,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.0841828,6.4246,-0.34041719,-5.2986518
+355,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.5235414,-4.525,0.0014585788,nan
+355,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-46.95991,-46.967,0.0070898075,nan
+360,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.4749974,3.4749,9.7393752e-05,0.0028027786
+360,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),30.583388,36.148,-5.5646118,-15.393969
+360,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),57.486174,63.049,-5.562826,-8.8230202
+360,8,supercritical,"table, all 19 temperatures",w,m/s,272.2673,262.32,9.947304,3.7920494
+360,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.8191289,6.215,0.60412887,9.7204967
+360,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.2071793,-4.204,-0.0031793192,nan
+360,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-46.074781,-46.07,-0.0047811515,nan
+365,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.3664366,3.3665,-6.337317e-05,-0.0018824646
+365,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),45.241206,36.008,9.2332058,25.642096
+365,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),70.449419,61.195,9.2544188,15.122835
+365,8,supercritical,"table, all 19 temperatures",w,m/s,254.73542,266.14,-11.404578,-4.2851801
+365,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.2279931,6.0134,-0.78540694,-13.060946
+365,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.8877319,-3.894,0.0062681074,nan
+365,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-45.193738,-45.213,0.019261587,nan
+370,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.2678671,3.2679,-3.2936832e-05,-0.0010078898
+370,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),25.273796,35.903,-10.629204,-29.605335
+370,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),48.983379,59.642,-10.658621,-17.870999
+370,8,supercritical,"table, all 19 temperatures",w,m/s,291.38663,269.78,21.606632,8.008982
+370,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,7.0786614,5.82,1.2586614,21.626485
+370,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.5883724,-3.592,0.0036275684,nan
+370,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-44.378811,-44.391,0.012188831,nan
+375,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.1775285,3.1775,2.8518318e-05,0.00089750806
+375,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),43.295115,35.828,7.4671153,20.841563
+375,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),65.811514,58.327,7.4845135,12.831988
+375,8,supercritical,"table, all 19 temperatures",w,m/s,264.05793,273.28,-9.2220745,-3.3745881
+375,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.9978742,5.6346,-0.63672585,-11.300285
+375,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.3019081,-3.297,-0.0049081213,nan
+375,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-43.610021,-43.6,-0.01002057,nan
+380,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.0942509,3.0943,-4.9118138e-05,-0.0015873748
+380,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),34.54631,35.778,-1.2316898,-3.4425899
+380,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),55.985264,57.204,-1.2187357,-2.1305078
+380,8,supercritical,"table, all 19 temperatures",w,m/s,278.52318,276.65,1.873181,0.67709417
+380,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.5792377,5.457,0.12223775,2.2400173
+380,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.9970461,-3.008,0.010953855,nan
+380,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-42.802284,-42.835,0.032716275,nan
+385,8,supercritical,"table, all 19 temperatures",rho,mol/L,3.0171373,3.0172,-6.2659908e-05,-0.0020767569
+385,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),33.96886,35.748,-1.7791398,-4.9768932
+385,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),54.423227,56.236,-1.812773,-3.2235098
+385,8,supercritical,"table, all 19 temperatures",w,m/s,282.47288,279.9,2.5728801,0.91921403
+385,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.4536709,5.2869,0.16677089,3.1544173
+385,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.7209385,-2.725,0.0040615132,nan
+385,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-42.080401,-42.093,0.012598881,nan
+390,8,supercritical,"table, all 19 temperatures",rho,mol/L,2.9454213,2.9454,2.1342523e-05,0.00072460525
+390,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),33.670482,35.737,-2.0665178,-5.7825722
+390,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),53.330845,55.398,-2.0671547,-3.7314609
+390,8,supercritical,"table, all 19 temperatures",w,m/s,286.11567,283.05,3.0656678,1.0830835
+390,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.3222048,5.124,0.19820483,3.8681662
+390,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.4514859,-2.446,-0.0054858963,nan
+390,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-41.385015,-41.373,-0.012014792,nan
+395,8,supercritical,"table, all 19 temperatures",rho,mol/L,2.8782776,2.8783,-2.2361339e-05,-0.00077689396
+395,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),39.163389,35.741,3.4223887,9.5755259
+395,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),58.132494,54.669,3.4634936,6.3353886
+395,8,supercritical,"table, all 19 temperatures",w,m/s,281.84402,286.1,-4.2559792,-1.4875845
+395,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.6834907,4.9679,-0.28440934,-5.7249409
+395,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.1729475,-2.171,-0.0019475055,nan
+395,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-40.675418,-40.672,-0.0034181762,nan
+400,8,supercritical,"table, all 19 temperatures",rho,mol/L,2.8153946,2.8154,-5.42245e-06,-0.00019259963
+400,8,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),45.060123,35.758,9.3021226,26.014102
+400,8,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),63.225445,54.031,9.1944455,17.016982
+400,8,supercritical,"table, all 19 temperatures",w,m/s,278.55977,289.07,-10.510226,-3.6358756
+400,8,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.0890217,4.8184,-0.72937828,-15.137354
+400,8,supercritical,"table, all 19 temperatures",dH,kJ/mol,-1.8696755,-1.899,0.029324546,nan
+400,8,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-39.912527,-39.989,0.07647329,nan
+310,10,supercritical,"table, all 19 temperatures",rho,mol/L,15.582392,15.582,0.00039189716,0.0025150633
+310,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),475.71381,43.993,431.72081,981.33977
+310,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),477.07692,195.67,281.40692,143.8171
+310,10,supercritical,"table, all 19 temperatures",w,m/s,70.414638,307.04,-236.62536,-77.066624
+310,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,0.052943123,2.0006,-1.9476569,-97.353638
+310,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-13.209556,-13.202,-0.0075563757,nan
+310,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-74.750157,-74.675,-0.075156686,nan
+315,10,supercritical,"table, all 19 temperatures",rho,mol/L,13.315757,13.316,-0.00024346529,-0.0018283666
+315,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),175.41429,46.151,129.26329,280.08773
+315,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),321.70699,294.7,27.006988,9.1642306
+315,10,supercritical,"table, all 19 temperatures",w,m/s,88.187503,249.42,-161.2325,-64.64297
+315,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.4348011,3.1888,0.24600106,7.7145341
+315,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-11.205603,-12.008,0.80239707,nan
+315,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-68.334055,-70.856,2.5219454,nan
+320,10,supercritical,"table, all 19 temperatures",rho,mol/L,10.185893,10.186,-0.00010746117,-0.0010549889
+320,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-116.02568,46.548,-162.57368,-349.2603
+320,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),149.27348,335.24,-185.96652,-55.472651
+320,10,supercritical,"table, all 19 temperatures",w,m/s,nan,219.14,nan,nan
+320,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,10.33128,4.9031,5.4281805,110.70915
+320,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-10.020926,-10.315,0.29407421,nan
+320,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-64.599147,-65.524,0.92485253,nan
+325,10,supercritical,"table, all 19 temperatures",rho,mol/L,8.1353726,8.1354,-2.7399935e-05,-0.00033679887
+325,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),34.469824,44.427,-9.9571756,-22.412442
+325,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),244.18633,217.58,26.606327,12.228296
+325,10,supercritical,"table, all 19 temperatures",w,m/s,281.99102,219.84,62.151025,28.271027
+325,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.4093953,5.8657,-0.45630466,-7.7792021
+325,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-9.0406122,-8.947,-0.093612238,nan
+325,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-61.561256,-61.28,-0.28125573,nan
+330,10,supercritical,"table, all 19 temperatures",rho,mol/L,7.0497004,7.0497,3.8773352e-07,5.5000003e-06
+330,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),23.110684,42.378,-19.267316,-45.465373
+330,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),143.59354,155.41,-11.816462,-7.6034113
+330,10,supercritical,"table, all 19 temperatures",w,m/s,307.04751,225.91,81.137513,35.915857
+330,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.634622,6.2103,0.42432198,6.8325521
+330,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-8.0670002,-8.034,-0.03300019,nan
+330,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-58.586383,-58.491,-0.095382994,nan
+335,10,supercritical,"table, all 19 temperatures",rho,mol/L,6.3645621,6.3646,-3.7881874e-05,-0.00059519646
+335,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),48.012792,40.832,7.1807925,17.586189
+335,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),135.9246,123.95,11.974603,9.6608337
+335,10,supercritical,"table, all 19 temperatures",w,m/s,229.92556,232.23,-2.30444,-0.99230934
+335,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.7638006,6.2969,-0.53309942,-8.4660613
+335,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.3677014,-7.343,-0.024701385,nan
+335,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-56.483045,-56.413,-0.070044563,nan
+340,10,supercritical,"table, all 19 temperatures",rho,mol/L,5.8764765,5.8763,0.00017646471,0.0030029902
+340,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),30.77783,39.721,-8.9431697,-22.514966
+340,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),98.363191,105.7,-7.3368092,-6.9411629
+340,10,supercritical,"table, all 19 temperatures",w,m/s,264.45046,238.14,26.310462,11.048317
+340,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.7207459,6.2638,0.45694592,7.2950273
+340,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.7804226,-6.773,-0.0074226204,nan
+340,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-54.742241,-54.722,-0.020240561,nan
+345,10,supercritical,"table, all 19 temperatures",rho,mol/L,5.5011552,5.5013,-0.0001447574,-0.0026313308
+345,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),46.850959,38.918,7.9329586,20.383778
+345,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),102.70162,93.923,8.7786236,9.3466176
+345,10,supercritical,"table, all 19 temperatures",w,m/s,233.71133,243.58,-9.8686671,-4.0515096
+345,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.6494208,6.1698,-0.52037919,-8.4342959
+345,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.2777856,-6.276,-0.0017855865,nan
+345,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-53.274738,-53.271,-0.0037381647,nan
+350,10,supercritical,"table, all 19 temperatures",rho,mol/L,5.1988563,5.1989,-4.3748375e-05,-0.00084149292
+350,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),31.450833,38.325,-6.8741671,-17.936509
+350,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),79.099965,85.729,-6.629035,-7.7325467
+350,10,supercritical,"table, all 19 temperatures",w,m/s,264.48416,248.62,15.864161,6.3808868
+350,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.5441379,6.0435,0.50063794,8.2839074
+350,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.8223202,-5.828,0.0056798187,nan
+350,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-51.963617,-51.981,0.017383421,nan
+355,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.9470664,4.947,6.6389631e-05,0.001342018
+355,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),41.98987,37.874,4.1158698,10.86727
+355,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),83.896891,79.709,4.1878909,5.2539749
+355,10,supercritical,"table, all 19 temperatures",w,m/s,247.19163,253.34,-6.1483711,-2.4269247
+355,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.6010777,5.9002,-0.29912231,-5.0696979
+355,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.4149053,-5.415,9.4725045e-05,nan
+355,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-50.807891,-50.81,0.0021093408,nan
+360,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.7319358,4.7318,0.00013583495,0.0028706824
+360,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),31.111542,37.524,-6.4124581,-17.088951
+360,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),68.769628,75.103,-6.3333721,-8.4329149
+360,10,supercritical,"table, all 19 temperatures",w,m/s,271.06846,257.77,13.298464,5.1590424
+360,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.2816938,5.7487,0.53299383,9.2715541
+360,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.0326288,-5.028,-0.0046288266,nan
+360,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-49.738322,-49.729,-0.0093219079,nan
+365,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.5446282,4.5446,2.8249409e-05,0.00062160386
+365,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),47.317565,37.249,10.068565,27.03043
+365,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),81.583086,71.472,10.111086,14.146919
+365,10,supercritical,"table, all 19 temperatures",w,m/s,248.39425,261.97,-13.57575,-5.1821773
+365,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.9035221,5.5939,-0.69037786,-12.34162
+365,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.6571132,-4.662,0.0048867535,nan
+365,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-48.702604,-48.719,0.016396425,nan
+370,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.3794342,4.3794,3.4177104e-05,0.00078040609
+370,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),26.180091,37.032,-10.851909,-29.304139
+370,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),57.650927,68.542,-10.891073,-15.889634
+370,10,supercritical,"table, all 19 temperatures",w,m/s,290.14246,265.97,24.172463,9.0884171
+370,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,6.4591708,5.439,1.0201708,18.756588
+370,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.3081493,-4.312,0.0038506548,nan
+370,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-47.752658,-47.767,0.014341859,nan
+375,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.2319086,4.2318,0.00010859077,0.0025660658
+375,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),43.990112,36.862,7.1281121,19.337291
+375,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),73.281499,66.133,7.1484986,10.809276
+375,10,supercritical,"table, all 19 temperatures",w,m/s,259.97655,269.8,-9.8234549,-3.6410137
+375,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.7731871,5.2859,-0.51271291,-9.6996332
+375,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.9812867,-3.976,-0.005286715,nan
+375,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-46.875396,-46.863,-0.012396069,nan
+380,10,supercritical,"table, all 19 temperatures",rho,mol/L,4.0986966,4.0987,-3.3855234e-06,-8.2599932e-05
+380,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),35.943106,36.73,-0.7868941,-2.1423744
+380,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),63.339508,64.123,-0.78349168,-1.2218575
+380,10,supercritical,"table, all 19 temperatures",w,m/s,274.74482,273.47,1.2748239,0.4661659
+380,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.2000674,5.1358,0.064267421,1.2513614
+380,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.6393475,-3.65,0.010652494,nan
+380,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-45.969438,-46.001,0.03156174,nan
+385,10,supercritical,"table, all 19 temperatures",rho,mol/L,3.9777247,3.9777,2.4741448e-05,0.00062200387
+385,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),34.693659,36.629,-1.9353408,-5.2836298
+385,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),60.484772,62.426,-1.9412278,-3.1096463
+385,10,supercritical,"table, all 19 temperatures",w,m/s,280.14485,277,3.1448456,1.1353233
+385,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.1488041,4.9893,0.15950412,3.1969238
+385,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.3296467,-3.334,0.0043532734,nan
+385,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-45.159711,-45.174,0.014289155,nan
+390,10,supercritical,"table, all 19 temperatures",rho,mol/L,3.8668265,3.8668,2.6495495e-05,0.0006852047
+390,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),34.230093,36.555,-2.3249074,-6.3600256
+390,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),58.6784,60.978,-2.2996004,-3.7711969
+390,10,supercritical,"table, all 19 temperatures",w,m/s,284.26044,280.4,3.8604438,1.3767631
+390,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,5.0413941,4.8469,0.19449415,4.0127534
+390,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.0316387,-3.026,-0.0056386709,nan
+390,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-44.390622,-44.378,-0.012622067,nan
+395,10,supercritical,"table, all 19 temperatures",rho,mol/L,3.7647767,3.7648,-2.3251261e-05,-0.00061759619
+395,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),40.168419,36.503,3.6654188,10.041418
+395,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),63.367648,59.733,3.6346483,6.0848246
+395,10,supercritical,"table, all 19 temperatures",w,m/s,278.53813,283.69,-5.1518681,-1.8160203
+395,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.4333299,4.7089,-0.27557012,-5.8521123
+395,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.7266311,-2.724,-0.002631141,nan
+395,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-43.613586,-43.61,-0.0035857224,nan
+400,10,supercritical,"table, all 19 temperatures",rho,mol/L,3.6702635,3.6703,-3.6475079e-05,-0.00099379012
+400,10,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),46.080209,36.47,9.6102092,26.350999
+400,10,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),68.318041,58.654,9.6640414,16.476355
+400,10,supercritical,"table, all 19 temperatures",w,m/s,275.44395,286.88,-11.436051,-3.9863534
+400,10,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.9377699,4.5754,-0.63763014,-13.936052
+400,10,supercritical,"table, all 19 temperatures",dH,kJ/mol,-2.3975269,-2.428,0.030473053,nan
+400,10,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-42.785705,-42.865,0.079295003,nan
+310,15,supercritical,"table, all 19 temperatures",rho,mol/L,nan,18.235,nan,nan
+310,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,40.945,nan,nan
+310,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,113.68,nan,nan
+310,15,supercritical,"table, all 19 temperatures",w,m/s,nan,448.77,nan,nan
+310,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,0.7996,nan,nan
+310,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-14.086,nan,nan
+310,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-78.469,nan,nan
+315,15,supercritical,"table, all 19 temperatures",rho,mol/L,nan,17.417,nan,nan
+315,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,41.127,nan,nan
+315,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,120.34,nan,nan
+315,15,supercritical,"table, all 19 temperatures",w,m/s,nan,414.97,nan,nan
+315,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,1.0038,nan,nan
+315,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-13.502,nan,nan
+315,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-76.598,nan,nan
+320,15,supercritical,"table, all 19 temperatures",rho,mol/L,nan,16.515,nan,nan
+320,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,41.359,nan,nan
+320,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,128.46,nan,nan
+320,15,supercritical,"table, all 19 temperatures",w,m/s,nan,382.22,nan,nan
+320,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,1.2582,nan,nan
+320,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-12.88,nan,nan
+320,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-74.641,nan,nan
+325,15,supercritical,"table, all 19 temperatures",rho,mol/L,15.521202,15.521,0.00020196188,0.0013012169
+325,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),452.61059,41.66,410.95059,986.43924
+325,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),573.49272,137.66,435.83272,316.60084
+325,15,supercritical,"table, all 19 temperatures",w,m/s,244.13034,351.34,-107.20966,-30.514505
+325,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,0.3770705,1.5708,-1.1937295,-75.995003
+325,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-13.525629,-12.215,-1.3106289,nan
+325,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-76.628725,-72.579,-4.0497247,nan
+330,15,supercritical,"table, all 19 temperatures",rho,mol/L,14.440016,14.44,1.6172818e-05,0.00011200013
+330,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),145.99814,42.019,103.97914,247.45744
+330,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),219.71811,146.59,73.128109,49.886151
+330,15,supercritical,"table, all 19 temperatures",w,m/s,178.53056,323.89,-145.35944,-44.879262
+330,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,1.2950502,1.94,-0.64494982,-33.244836
+330,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-11.52839,-11.504,-0.024390385,nan
+330,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-70.523297,-70.408,-0.11529689,nan
+335,15,supercritical,"table, all 19 temperatures",rho,mol/L,13.301587,13.302,-0.00041312069,-0.0031057035
+335,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),116.6152,42.251,74.364203,176.00578
+335,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),194.34227,152.92,41.42227,27.087543
+335,15,supercritical,"table, all 19 temperatures",w,m/s,171.62323,301.72,-130.09677,-43.118378
+335,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,1.8513397,2.3535,-0.50216034,-21.336747
+335,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-10.491934,-10.754,0.26206641,nan
+335,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-67.405597,-68.15,0.74440327,nan
+340,15,supercritical,"table, all 19 temperatures",rho,mol/L,12.169003,12.169,3.1152648e-06,2.5600007e-05
+340,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),40.151629,42.122,-1.9703707,-4.6777711
+340,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),126.35987,152.88,-26.520125,-17.347021
+340,15,supercritical,"table, all 19 temperatures",w,m/s,235.09087,286.11,-51.01913,-17.831998
+340,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.3545856,2.7733,0.58128562,20.96007
+340,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-9.6874012,-9.986,0.29859882,nan
+340,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-65.02051,-65.876,0.85548994,nan
+345,15,supercritical,"table, all 19 temperatures",rho,mol/L,11.120625,11.121,-0.00037457603,-0.0033681865
+345,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),46.661128,41.672,4.9891282,11.972375
+345,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),136.26321,145.95,-9.6867894,-6.6370602
+345,15,supercritical,"table, all 19 temperatures",w,m/s,234.15189,276.63,-42.478107,-15.355568
+345,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.3765472,3.1525,0.22404718,7.1069684
+345,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-9.0310048,-9.236,0.20499521,nan
+345,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-63.104166,-63.687,0.5828339,nan
+350,15,supercritical,"table, all 19 temperatures",rho,mol/L,10.206894,10.207,-0.00010626397,-0.0010410892
+350,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),28.91294,41.122,-12.20906,-29.689849
+350,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),115.16734,135.06,-19.892663,-14.72876
+350,15,supercritical,"table, all 19 temperatures",w,m/s,286.90265,271.76,15.142653,5.5720683
+350,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.0506122,3.4558,0.59481216,17.211996
+350,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-8.4014872,-8.533,0.13151282,nan
+350,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-61.292209,-61.663,0.37079054,nan
+355,15,supercritical,"table, all 19 temperatures",rho,mol/L,9.4375236,9.4371,0.00042359381,0.0044886015
+355,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),38.551041,40.605,-2.0539589,-5.0583891
+355,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),117.79364,123.49,-5.6963569,-4.6128083
+355,15,supercritical,"table, all 19 temperatures",w,m/s,264.51971,269.95,-5.4302929,-2.0115921
+355,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.8529951,3.6745,0.17849506,4.8576695
+355,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.8190179,-7.887,0.067982058,nan
+355,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-59.639831,-59.83,0.19016921,nan
+360,15,supercritical,"table, all 19 temperatures",rho,mol/L,8.7950748,8.7952,-0.00012524186,-0.0014239797
+360,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),31.291769,40.143,-8.8512311,-22.049252
+360,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),102.5184,112.98,-10.461605,-9.2596964
+360,15,supercritical,"table, all 19 temperatures",w,m/s,287.90364,270.06,17.843644,6.6072889
+360,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.2131966,3.8192,0.39399662,10.316208
+360,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.2675602,-7.296,0.028439811,nan
+360,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-58.097017,-58.178,0.080982503,nan
+365,15,supercritical,"table, all 19 temperatures",rho,mol/L,8.2576383,8.2579,-0.00026168456,-0.0031688996
+365,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),48.302473,39.734,8.5684729,21.564587
+365,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),111.76713,104.03,7.7371343,7.4374068
+365,15,supercritical,"table, all 19 temperatures",w,m/s,253.47388,271.34,-17.866122,-6.5844041
+365,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.633959,3.905,-0.27104098,-6.9408701
+365,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.7320327,-6.754,0.021967318,nan
+365,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-56.619823,-56.683,0.063176559,nan
+370,15,supercritical,"table, all 19 temperatures",rho,mol/L,7.8033554,7.8034,-4.455716e-05,-0.00057099674
+370,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),28.152619,39.374,-11.221381,-28.499468
+370,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),84.95194,96.597,-11.64506,-12.055302
+370,15,supercritical,"table, all 19 temperatures",w,m/s,302.10624,273.34,28.766241,10.523978
+370,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.4854356,3.946,0.53943564,13.670442
+370,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.239208,-6.253,0.013791965,nan
+370,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-55.27837,-55.319,0.040630311,nan
+375,15,supercritical,"table, all 19 temperatures",rho,mol/L,7.4145473,7.4145,4.7341885e-05,0.00063850408
+375,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),44.825485,39.061,5.7644853,14.757649
+375,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),95.965457,90.462,5.5034565,6.0837219
+375,15,supercritical,"table, all 19 temperatures",w,m/s,264.64169,275.77,-11.128308,-4.0353584
+375,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.7239183,3.9539,-0.22998168,-5.8165781
+375,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.7871852,-5.786,-0.0011851861,nan
+375,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-54.065033,-54.065,-3.2667455e-05,nan
+380,15,supercritical,"table, all 19 temperatures",rho,mol/L,7.0776417,7.0775,0.00014172978,0.0020025401
+380,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),38.28499,38.792,-0.50700952,-1.3069951
+380,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),84.823238,85.388,-0.56476156,-0.66140624
+380,15,supercritical,"table, all 19 temperatures",w,m/s,279.03914,278.46,0.57913524,0.20797789
+380,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.966762,3.9374,0.029361984,0.74572013
+380,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.3347498,-5.347,0.012250197,nan
+380,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-52.866348,-52.901,0.03465206,nan
+385,15,supercritical,"table, all 19 temperatures",rho,mol/L,6.78196,6.7821,-0.00014001356,-0.0020644574
+385,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),35.817027,38.561,-2.743973,-7.1159281
+385,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),78.390445,81.165,-2.774555,-3.4184131
+385,15,supercritical,"table, all 19 temperatures",w,m/s,286.65674,281.3,5.3567363,1.9042788
+385,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,4.0432717,3.9032,0.14007173,3.5886383
+385,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.926426,-4.931,0.0045740405,nan
+385,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-51.798728,-51.814,0.015272171,nan
+390,15,supercritical,"table, all 19 temperatures",rho,mol/L,6.5206051,6.5205,0.00010511215,0.001612026
+390,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),37.014424,38.367,-1.3525756,-3.5253619
+390,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),76.163789,77.623,-1.4592107,-1.8798689
+390,15,supercritical,"table, all 19 temperatures",w,m/s,286.47098,284.22,2.2509839,0.79198646
+390,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.9251686,3.8561,0.069068631,1.7911525
+390,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.5398979,-4.534,-0.0058979124,nan
+390,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-50.801191,-50.79,-0.011191364,nan
+395,15,supercritical,"table, all 19 temperatures",rho,mol/L,6.2869357,6.2868,0.00013574752,0.0021592466
+395,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),41.593235,38.204,3.3892349,8.8714136
+395,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),77.990033,74.627,3.3630331,4.5064562
+395,15,supercritical,"table, all 19 temperatures",w,m/s,281.24122,287.17,-5.928775,-2.0645524
+395,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.6360594,3.7997,-0.16364056,-4.3066705
+395,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-4.1545041,-4.154,-0.00050413399,nan
+395,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-49.819308,-49.82,0.00069219353,nan
+400,15,supercritical,"table, all 19 temperatures",rho,mol/L,6.0764416,6.0763,0.00014163578,0.0023309543
+400,15,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),45.870968,38.07,7.8009683,20.491117
+400,15,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),79.793208,72.071,7.7222083,10.714723
+400,15,supercritical,"table, all 19 temperatures",w,m/s,278.00056,290.12,-12.119438,-4.1773879
+400,15,supercritical,"table, all 19 temperatures",muJT,K/MPa,3.370699,3.7368,-0.36610096,-9.7971782
+400,15,supercritical,"table, all 19 temperatures",dH,kJ/mol,-3.760036,-3.787,0.026963971,nan
+400,15,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-48.826946,-48.898,0.071054093,nan
+310,20,supercritical,"table, all 19 temperatures",rho,mol/L,19.456389,19.456,0.00038850517,0.0019968399
+310,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-252.87897,40.392,-293.27097,-726.06202
+310,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),-249.31552,97.718,-347.03352,-355.13776
+310,20,supercritical,"table, all 19 temperatures",w,m/s,nan,530.04,nan,nan
+310,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,-0.17870075,0.45483,-0.63353075,-139.28957
+310,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-13.024565,-14.404,1.3794351,nan
+310,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-75.912721,-80.349,4.4362791,nan
+315,20,supercritical,"table, all 19 temperatures",rho,mol/L,18.857606,18.858,-0.00039378453,-0.0020881564
+315,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-119.05643,40.399,-159.45543,-394.70143
+315,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),-116.00057,100.09,-216.09057,-215.89627
+315,20,supercritical,"table, all 19 temperatures",w,m/s,nan,502.71,nan,nan
+315,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,-0.4780167,0.55451,-1.0325267,-186.20524
+315,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-13.94352,-13.91,-0.033520014,nan
+315,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-78.856284,-78.766,-0.090283961,nan
+320,20,supercritical,"table, all 19 temperatures",rho,mol/L,18.230876,18.231,-0.00012418873,-0.00068119536
+320,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),25.480547,40.416,-14.935453,-36.954307
+320,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),31.131743,102.65,-71.518257,-69.67195
+320,20,supercritical,"table, all 19 temperatures",w,m/s,99.507924,476.13,-376.62208,-79.100682
+320,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.2054197,0.6688,1.5366197,229.75774
+320,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-14.161542,-13.403,-0.75854163,nan
+320,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-79.546021,-77.17,-2.376021,nan
+325,20,supercritical,"table, all 19 temperatures",rho,mol/L,17.574692,17.575,-0.00030755712,-0.0017499694
+325,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),362.85623,40.462,322.39423,796.78273
+325,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),381.4108,105.41,276.0008,261.8355
+325,20,supercritical,"table, all 19 temperatures",w,m/s,152.9763,450.59,-297.6137,-66.049779
+325,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,0.22091636,0.79933,-0.57841364,-72.362309
+325,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-13.143374,-12.883,-0.26037419,nan
+325,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-76.395865,-75.558,-0.83786537,nan
+330,20,supercritical,"table, all 19 temperatures",rho,mol/L,16.88961,16.889,0.00060951223,0.0036089302
+330,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-70.761477,40.531,-111.29248,-274.58606
+330,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),112.97179,108.31,4.6617889,4.3041168
+330,20,supercritical,"table, all 19 temperatures",w,m/s,nan,426.44,nan,nan
+330,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,0.90805608,0.94726,-0.039203917,-4.1386649
+330,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-11.896726,-12.349,0.45227433,nan
+330,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-72.584017,-73.926,1.3419828,nan
+335,20,supercritical,"table, all 19 temperatures",rho,mol/L,nan,16.177,nan,nan
+335,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,40.601,nan,nan
+335,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,111.11,nan,nan
+335,20,supercritical,"table, all 19 temperatures",w,m/s,nan,404.1,nan,nan
+335,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,1.1122,nan,nan
+335,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-11.8,nan,nan
+335,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-72.276,nan,nan
+340,20,supercritical,"table, all 19 temperatures",rho,mol/L,nan,15.444,nan,nan
+340,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,40.64,nan,nan
+340,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,113.45,nan,nan
+340,20,supercritical,"table, all 19 temperatures",w,m/s,nan,384.01,nan,nan
+340,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,1.2917,nan,nan
+340,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-11.239,nan,nan
+340,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-70.612,nan,nan
+345,20,supercritical,"table, all 19 temperatures",rho,mol/L,nan,14.699,nan,nan
+345,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),nan,40.62,nan,nan
+345,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),nan,114.96,nan,nan
+345,20,supercritical,"table, all 19 temperatures",w,m/s,nan,366.45,nan,nan
+345,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,nan,1.4822,nan,nan
+345,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,nan,-10.667,nan,nan
+345,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),nan,-68.944,nan,nan
+350,20,supercritical,"table, all 19 temperatures",rho,mol/L,13.955371,13.955,0.00037072442,0.0026565706
+350,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-174.14328,40.54,-214.68328,-529.55916
+350,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),101.35929,115.34,-13.980713,-12.121305
+350,20,supercritical,"table, all 19 temperatures",w,m/s,nan,351.52,nan,nan
+350,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,1.9095518,1.678,0.23155176,13.799271
+350,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-10.125673,-10.091,-0.03467299,nan
+350,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-67.372132,-67.285,-0.087132143,nan
+355,20,supercritical,"table, all 19 temperatures",rho,mol/L,13.228388,13.228,0.00038812091,0.0029340861
+355,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),-17.331003,40.422,-57.753003,-142.87517
+355,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),116.70379,114.41,2.293795,2.0048903
+355,20,supercritical,"table, all 19 temperatures",w,m/s,nan,339.24,nan,nan
+355,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,1.8336154,1.8707,-0.037084646,-1.9823941
+355,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-9.5809009,-9.516,-0.064900904,nan
+355,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-65.826911,-65.654,-0.17291077,nan
+360,20,supercritical,"table, all 19 temperatures",rho,mol/L,12.532271,12.532,0.00027059679,0.0021592466
+360,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),12.035658,40.29,-28.254342,-70.127432
+360,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),110.14907,112.27,-2.1209265,-1.8891302
+360,20,supercritical,"table, all 19 temperatures",w,m/s,697.26169,329.54,367.72169,111.58636
+360,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.0913138,2.0518,0.039513789,1.9258109
+360,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-9.0133817,-8.949,-0.064381665,nan
+360,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-64.239312,-64.068,-0.17131165,nan
+365,20,supercritical,"table, all 19 temperatures",rho,mol/L,11.878319,11.878,0.00031850523,0.0026814719
+365,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),40.929024,40.154,0.77502419,1.9301295
+365,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),122.84176,109.21,13.631759,12.482153
+365,20,supercritical,"table, all 19 temperatures",w,m/s,368.66664,322.21,46.45664,14.418125
+365,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,1.969102,2.215,-0.24589801,-11.10149
+365,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-8.4311873,-8.395,-0.036187292,nan
+365,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-62.633434,-62.539,-0.094433977,nan
+370,20,supercritical,"table, all 19 temperatures",rho,mol/L,11.273322,11.273,0.00032168423,0.0028535814
+370,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),24.93886,40.009,-15.07014,-37.666875
+370,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),97.233596,105.52,-8.2864044,-7.852923
+370,20,supercritical,"table, all 19 temperatures",w,m/s,404.82633,316.94,87.886333,27.729644
+370,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.5567888,2.356,0.20078879,8.5224443
+370,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.8799884,-7.858,-0.021988378,nan
+370,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-61.133155,-61.078,-0.05515485,nan
+375,20,supercritical,"table, all 19 temperatures",rho,mol/L,10.719952,10.72,-4.8025385e-05,-0.00044799799
+375,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),44.557629,39.855,4.702629,11.799345
+375,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),109.97508,101.49,8.4850807,8.3605091
+375,20,supercritical,"table, all 19 temperatures",w,m/s,317.75376,313.37,4.3837609,1.3989089
+375,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.2828756,2.4729,-0.19002442,-7.6842742
+375,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-7.3622698,-7.34,-0.02226978,nan
+375,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-59.743477,-59.688,-0.055476698,nan
+380,20,supercritical,"table, all 19 temperatures",rho,mol/L,10.217636,10.218,-0.00036436089,-0.0035658728
+380,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),36.9599,39.695,-2.7351,-6.8902884
+380,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),96.759369,97.387,-0.62763082,-0.64447085
+380,20,supercritical,"table, all 19 temperatures",w,m/s,327.49197,311.16,16.331973,5.248738
+380,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.5794296,2.5655,0.013929617,0.54295917
+380,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.8448771,-6.843,-0.0018770916,nan
+380,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-58.372687,-58.371,-0.0016868121,nan
+385,20,supercritical,"table, all 19 temperatures",rho,mol/L,9.763718,9.7634,0.00031802382,0.0032573061
+385,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),37.671435,39.533,-1.861565,-4.7088889
+385,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),92.878712,93.397,-0.51828777,-0.55492979
+385,20,supercritical,"table, all 19 temperatures",w,m/s,320.41889,310.01,10.408892,3.3575987
+385,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.6526853,2.6356,0.017085309,0.64825123
+385,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-6.3705521,-6.366,-0.004552137,nan
+385,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-57.132549,-57.125,-0.00754866,nan
+390,20,supercritical,"table, all 19 temperatures",rho,mol/L,9.3527871,9.3531,-0.00031286944,-0.0033450881
+390,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),36.930193,39.377,-2.4468066,-6.2137963
+390,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),88.097869,89.642,-1.5441307,-1.7225527
+390,20,supercritical,"table, all 19 temperatures",w,m/s,319.74632,309.69,10.056322,3.2472222
+390,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.7339833,2.6856,0.048383302,1.8015826
+390,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.9178632,-5.909,-0.0088632464,nan
+390,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-55.964237,-55.944,-0.02023673,nan
+395,20,supercritical,"table, all 19 temperatures",rho,mol/L,8.9823049,8.982,0.00030485943,0.0033941152
+395,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),42.528652,39.229,3.2996522,8.4112575
+395,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),89.841989,86.181,3.6609895,4.2480239
+395,20,supercritical,"table, all 19 temperatures",w,m/s,305.74451,309.98,-4.2354857,-1.3663739
+395,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.5995774,2.718,-0.1184226,-4.3569757
+395,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.4729817,-5.469,-0.0039817069,nan
+395,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-54.830789,-54.824,-0.0067888383,nan
+400,20,supercritical,"table, all 19 temperatures",rho,mol/L,8.6460315,8.6458,0.00023147155,0.0026772717
+400,20,supercritical,"table, all 19 temperatures",Cv,J/(mol*K),46.887541,39.093,7.7945405,19.938456
+400,20,supercritical,"table, all 19 temperatures",Cp,J/(mol*K),91.507707,83.036,8.4717072,10.202451
+400,20,supercritical,"table, all 19 temperatures",w,m/s,299.19311,310.75,-11.55689,-3.7190315
+400,20,supercritical,"table, all 19 temperatures",muJT,K/MPa,2.4944057,2.7356,-0.24119428,-8.8168694
+400,20,supercritical,"table, all 19 temperatures",dH,kJ/mol,-5.019574,-5.046,0.026425978,nan
+400,20,supercritical,"table, all 19 temperatures",dS,J/(mol*K),-53.690147,-53.76,0.069852501,nan
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.038340428,0.03834,4.2823235e-07,0.0011169336
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),29.749174,29.671,0.078173845,0.26346886
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),38.23519,38.148,0.087190332,0.22855807
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,275.41181,275.46,-0.048189328,-0.017494129
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,9.8809058,9.5115,0.36940576,3.8837803
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.3873644,-3.387,-0.00036437354,nan
+315,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-9.5055048,-9.51,0.0044952108,nan
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.037144867,0.037145,-1.3337219e-07,-0.00035905826
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),30.201032,30.099,0.10203196,0.33898787
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),38.666993,38.561,0.10599321,0.27487153
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,279.33387,279.42,-0.086130172,-0.030824627
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.9421437,8.797,0.1451437,1.6499228
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.0028338,-3.003,0.00016622835,nan
+325,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-8.303784,-8.31,0.0062160001,nan
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.036022873,0.036023,-1.26637e-07,-0.00035154484
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),30.713537,30.519,0.19453658,0.63742777
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),39.159663,38.968,0.19166335,0.49184805
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,283.1109,283.31,-0.19909522,-0.070274687
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.0038264,8.1608,-0.15697358,-1.9235073
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.6138951,-2.615,0.0011049321,nan
+335,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-7.1251293,-7.13,0.0048707233,nan
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.034968007,0.034968,6.9732064e-09,1.9941679e-05
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),30.973148,30.931,0.042148301,0.13626556
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),39.397595,39.368,0.029595449,0.07517641
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,287.0569,287.15,-0.09310346,-0.032423284
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.0221755,7.5917,-0.56952449,-7.5019362
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.2202566,-2.224,0.0037433532,nan
+345,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-5.9673032,-5.98,0.012696753,nan
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.033973782,0.033973,7.8168746e-07,0.0023009079
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.081611,31.335,-0.25338899,-0.80864527
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),39.507483,39.762,-0.25451738,-0.64010205
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,291.16591,290.92,0.24590674,0.084527272
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.0595671,7.0804,-0.020832874,-0.29423301
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.8263762,-1.828,0.0016237549,nan
+355,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-4.8418613,-4.85,0.0081386832,nan
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.033034283,0.033034,2.8340471e-07,0.00085791822
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.821489,31.73,0.091488574,0.28833462
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.249089,40.149,0.10008917,0.2492943
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,294.5884,294.64,-0.051596243,-0.017511622
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.0069079,6.6192,0.38770793,5.8573231
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.4285441,-1.429,0.00045591922,nan
+365,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-3.7367483,-3.74,0.0032517359,nan
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.032145987,0.032146,-1.2756277e-08,-3.9682316e-05
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.2453,32.118,0.12729993,0.39635075
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.649289,40.528,0.12128944,0.29927318
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,298.16743,298.31,-0.14257393,-0.047793881
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.8695375,6.2016,-0.33206246,-5.3544643
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.0221181,-1.025,0.002881938,nan
+375,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-2.6382577,-2.65,0.01174231,nan
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.031304811,0.031305,-1.8922911e-07,-0.00060446927
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.289536,32.497,-0.20746401,-0.63840974
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.695718,40.901,-0.2052819,-0.50189947
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,302.14303,301.94,0.203033,0.067242829
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.9642431,5.8221,0.14214312,2.4414408
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-0.61660183,-0.618,0.0013981676,nan
+385,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-1.5710504,-1.58,0.0089495722,nan
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.03050638,0.030506,3.796863e-07,0.0012446283
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.837716,32.868,-0.030284135,-0.09213866
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),41.243777,41.266,-0.022223433,-0.053854101
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,305.56951,305.51,0.059506054,0.019477613
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.8858046,5.4761,0.40970464,7.4816866
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-0.20691917,-0.207,8.0834631e-05,nan
+395,0.1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-0.52055452,-0.52,-0.00055451931,nan
+315,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.39875934,0.39876,-6.589203e-07,-0.00016524233
+315,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.905239,30.474,3.4312393,11.259563
+315,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),44.049883,40.62,3.429883,8.4438281
+315,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,266.1021,269.52,-3.4178989,-1.2681429
+315,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.7801921,9.5323,-0.75210793,-7.8900993
+315,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.7447032,-3.724,-0.020703202,nan
+315,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-29.470244,-29.41,-0.060243632,nan
+325,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.38473436,0.38473,4.3632088e-06,0.0011340963
+325,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.745129,30.795,0.95012871,3.0853343
+325,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),41.692829,40.75,0.94282873,2.3136901
+325,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,273.01888,274.06,-1.0411154,-0.37988595
+325,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.5846764,8.8073,-0.22262362,-2.527717
+325,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.3154483,-3.317,0.0015516575,nan
+325,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-28.128521,-28.14,0.011478722,nan
+335,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.37176948,0.37177,-5.2339981e-07,-0.00014078592
+335,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.426507,31.128,0.29850742,0.95896757
+335,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),41.228705,40.921,0.30770528,0.75194956
+335,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,278.17599,278.46,-0.28400752,-0.10199222
+335,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.1367401,8.1624,-0.025659933,-0.3143675
+335,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.9067671,-2.909,0.0022329208,nan
+335,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-26.88996,-26.9,0.010039899,nan
+345,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.35974161,0.35974,1.6071513e-06,0.00044675358
+345,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.342889,31.466,-0.1231111,-0.39125118
+345,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.990064,41.12,-0.12993585,-0.31599186
+345,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,282.86548,282.76,0.10547914,0.037303418
+345,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.5817312,7.5859,-0.0041688296,-0.054954977
+345,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.4899642,-2.498,0.0080358006,nan
+345,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-25.663966,-25.69,0.026033928,nan
+355,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.34853885,0.34854,-1.1508522e-06,-0.0003301923
+355,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.202402,31.808,-0.60559772,-1.9039164
+355,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.751413,41.342,-0.59058737,-1.4285409
+355,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,287.64147,286.94,0.70146649,0.24446452
+355,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.2285979,7.0685,0.16009786,2.2649482
+355,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.0876311,-2.086,-0.0016310714,nan
+355,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-24.514346,-24.51,-0.0043458952,nan
+365,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.33807703,0.33807,7.0250713e-06,0.0020779931
+365,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.388227,32.15,0.23822676,0.74098527
+365,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),41.799734,41.581,0.21873387,0.52604284
+365,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,290.72825,291.04,-0.31175114,-0.10711625
+365,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.490002,6.6023,-0.11229802,-1.7008924
+365,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.6713306,-1.672,0.00066944166,nan
+365,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-23.35795,-23.36,0.0020500916,nan
+375,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.32827294,0.32827,2.9404639e-06,0.00089574556
+375,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.76977,32.492,0.27776986,0.85488691
+375,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),42.129338,41.832,0.29733794,0.71079063
+375,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,294.83236,295.04,-0.20764173,-0.070377484
+375,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.2221929,6.1806,0.041592877,0.67295856
+375,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.2536608,-1.255,0.0013392117,nan
+375,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-22.229063,-22.23,0.00093662309,nan
+385,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.31905963,0.31906,-3.6632157e-07,-0.00011481275
+385,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.859507,32.833,0.026506645,0.080731719
+385,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),42.10603,42.092,0.014030321,0.033332511
+385,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,298.90137,298.97,-0.06863421,-0.022956888
+385,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.7397824,5.7978,-0.058017647,-1.0006838
+385,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-0.82949492,-0.835,0.0055050753,nan
+385,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-21.112773,-21.13,0.017227457,nan
+395,1,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.31039378,0.31039,3.7841873e-06,0.0012191718
+395,1,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.490387,33.17,-1.6796129,-5.0636506
+395,1,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),40.674121,42.359,-1.684879,-3.9776176
+395,1,vapor,"table, 10 K spacing, held-out nodes",w,m/s,304.55428,302.82,1.7342765,0.57270871
+395,1,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.6532439,5.4492,0.20404388,3.744474
+395,1,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-0.41534366,-0.413,-0.0023436646,nan
+395,1,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-20.05071,-20.05,-0.00070961531,nan
+315,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.83686927,0.83691,-4.0731308e-05,-0.0048668683
+315,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.107537,31.456,2.6515372,8.4293529
+315,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),46.685452,44.034,2.651452,6.0213745
+315,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,259.67094,262.63,-2.9590625,-1.1267039
+315,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,9.0057293,9.5426,-0.53687072,-5.6260424
+315,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.1405915,-4.127,-0.013591504,nan
+315,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-36.131915,-36.091,-0.04091475,nan
+325,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.80284598,0.80284,5.9806505e-06,0.00074493679
+325,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.136941,31.634,0.50294055,1.5898734
+325,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),44.157373,43.691,0.46637343,1.0674359
+325,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,267.27947,267.93,-0.65052951,-0.24279831
+325,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.6500826,8.805,-0.15491738,-1.7594251
+325,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.6857485,-3.688,0.0022515083,nan
+325,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-34.710209,-34.72,0.0097909889,nan
+335,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.77205405,0.77204,1.4046184e-05,0.0018193596
+335,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.114697,31.851,0.26369737,0.82790924
+335,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),43.777826,43.484,0.29382595,0.67571048
+335,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,272.78806,272.99,-0.20194288,-0.073974462
+335,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.1447428,8.1505,-0.005757209,-0.070636267
+335,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.25283,-3.253,0.00017002127,nan
+335,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-33.398202,-33.4,0.0017979202,nan
+345,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.7439667,0.74399,-2.3302865e-05,-0.0031321477
+345,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.047939,32.096,-0.04806118,-0.14974196
+345,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),43.337671,43.377,-0.03932906,-0.090668004
+345,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,277.95059,277.85,0.1005903,0.036203094
+345,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.5876274,7.5667,0.020927395,0.27657229
+345,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.8099507,-2.818,0.0080492965,nan
+345,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-32.095493,-32.12,0.024506631,nan
+355,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.71824511,0.71826,-1.4886278e-05,-0.0020725473
+355,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),31.978526,32.36,-0.38147433,-1.1788453
+355,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),42.954033,43.344,-0.38996743,-0.89970338
+355,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,282.94829,282.54,0.4082857,0.14450545
+355,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.0908035,7.0436,0.047203471,0.67016115
+355,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.3868247,-2.385,-0.0018247107,nan
+355,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-30.88645,-30.88,-0.0064503262,nan
+365,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.69455925,0.69455,9.2538432e-06,0.0013323509
+365,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.807367,32.638,0.16936671,0.5189249
+365,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),43.508761,43.37,0.13876148,0.31994806
+365,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,286.79336,287.08,-0.28663576,-0.099845256
+365,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.4946285,6.573,-0.078371478,-1.1923243
+365,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.9480142,-1.951,0.0029857722,nan
+365,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-29.667492,-29.68,0.012508085,nan
+375,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.67261003,0.67259,2.0031498e-05,0.0029782629
+375,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.919216,32.925,-0.0057835833,-0.017565933
+375,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),43.450319,43.441,0.0093189089,0.021451875
+375,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,291.53484,291.49,0.044844042,0.015384419
+375,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.1756928,6.1479,0.027792778,0.45206946
+375,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.5187685,-1.517,-0.0017685088,nan
+375,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-28.507292,-28.51,0.0027076836,nan
+385,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.65216445,0.65217,-5.5486737e-06,-0.00085080174
+385,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.527304,33.218,0.30930433,0.93113471
+385,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),43.882789,43.547,0.33578879,0.77109513
+385,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,295.537,295.77,-0.23300149,-0.078777934
+385,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.7703506,5.7626,0.0077506441,0.13449908
+385,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.0774577,-1.082,0.0045423426,nan
+385,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-27.345907,-27.36,0.014092696,nan
+395,2,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,0.63310393,0.63311,-6.0711107e-06,-0.00095893457
+395,2,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.053717,33.515,-1.4612831,-4.3600868
+395,2,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),42.189779,43.681,-1.4912212,-3.4138898
+395,2,vapor,"table, 10 K spacing, held-out nodes",w,m/s,301.43572,299.94,1.4957242,0.49867446
+395,2,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.5396792,5.4121,0.12757916,2.3572949
+395,2,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-0.64678647,-0.646,-0.00078647224,nan
+395,2,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-26.241469,-26.24,-0.0014689742,nan
+315,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.8810067,1.881,6.7451063e-06,0.00035859151
+315,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),47.467302,33.846,13.621302,40.244938
+315,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),68.263865,54.559,13.704865,25.119348
+315,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,234.41353,247.73,-13.316469,-5.3753962
+315,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.5834819,9.4843,-1.9008181,-20.041733
+315,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.1270814,-5.056,-0.071081405,nan
+315,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-44.272559,-44.048,-0.22455924,nan
+325,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.7733065,1.7733,6.5395594e-06,0.00036877908
+325,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.427542,33.583,2.844542,8.4701844
+325,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),54.908601,52.115,2.7936015,5.3604556
+325,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,251.05506,255.07,-4.0149434,-1.5740555
+325,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.284148,8.7291,-0.44495205,-5.0973416
+325,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.5086039,-4.523,0.014396083,nan
+325,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-42.338573,-42.384,0.045426688,nan
+335,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.6820873,1.6821,-1.2701131e-05,-0.00075507587
+335,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),32.502952,33.481,-0.97804808,-2.9212033
+335,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),49.453333,50.43,-0.97666661,-1.9366778
+335,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,263.08647,261.78,1.3064675,0.49907079
+335,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.2242717,8.0633,0.16097173,1.9963505
+335,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.0122703,-4.011,-0.0012703278,nan
+335,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-40.833987,-40.831,-0.0029873845,nan
+345,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.6030819,1.6031,-1.8139397e-05,-0.00113152
+345,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.871946,33.483,0.38894585,1.1616219
+345,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),49.626152,49.232,0.39415199,0.80060122
+345,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,267.49792,268.01,-0.51207645,-0.19106617
+345,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.4186791,7.4724,-0.053720883,-0.71892408
+345,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.5044359,-3.513,0.0085641477,nan
+345,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-39.340267,-39.367,0.026733439,nan
+355,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.5335813,1.5336,-1.8715779e-05,-0.001220382
+355,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.27743,33.555,-0.27756962,-0.82720792
+355,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),48.075938,48.364,-0.28806227,-0.595613
+355,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,274.17794,273.86,0.31793522,0.11609407
+355,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.9800751,6.9452,0.034875065,0.5021463
+355,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.0253743,-3.025,-0.00037432513,nan
+355,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-37.971317,-37.973,0.001683029,nan
+365,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.4716497,1.4716,4.9670778e-05,0.0033752907
+365,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.703977,33.678,0.025976632,0.077132347
+365,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),47.763377,47.73,0.033377344,0.069929486
+365,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,279.39017,279.4,-0.0098298425,-0.003518197
+365,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.4725912,6.4723,0.00029120971,0.0044993234
+365,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.539489,-2.545,0.0055109726,nan
+365,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-36.621531,-36.639,0.017468969,nan
+375,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.4158844,1.4159,-1.5588927e-05,-0.0011009907
+375,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.543178,33.837,-0.29382226,-0.86834607
+375,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),46.976574,47.27,-0.29342556,-0.62074373
+375,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,285.03856,284.67,0.36855926,0.12946895
+375,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.0838421,6.0462,0.037642056,0.62257378
+375,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.0720982,-2.07,-0.0020982352,nan
+375,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-35.358186,-35.355,-0.0031857413,nan
+385,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.3652689,1.3653,-3.1079228e-05,-0.0022763662
+385,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.498888,34.024,0.47488811,1.3957445
+385,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),47.415764,46.94,0.47576434,1.0135585
+385,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,289.17036,289.72,-0.54963602,-0.18971283
+385,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.6047913,5.6608,-0.056008716,-0.98941344
+385,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.5966918,-1.599,0.0023082179,nan
+385,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-34.10707,-34.116,0.0089297023,nan
+395,4,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,1.319003,1.319,3.0371512e-06,0.00023026165
+395,4,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.752162,34.232,-0.47983756,-1.4017222
+395,4,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),46.22443,46.712,-0.48756985,-1.0437786
+395,4,vapor,"table, 10 K spacing, held-out nodes",w,m/s,295.09483,294.57,0.52483089,0.17816848
+395,4,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.3607984,5.3109,0.049898423,0.9395474
+395,4,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.1281926,-1.131,0.0028074073,nan
+395,4,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-32.905659,-32.915,0.0093407411,nan
+315,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,3.3238618,3.3231,0.00076182581,0.022925154
+315,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),24.438345,37.303,-12.864655,-34.486917
+315,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),64.493174,77.841,-13.347826,-17.147552
+315,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,257.01589,230.73,26.285891,11.392489
+315,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,11.122605,9.1713,1.9513052,21.276212
+315,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-6.1931742,-6.259,0.065825772,nan
+315,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-50.212196,-50.422,0.20980432,nan
+325,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,3.0237501,3.024,-0.0002499177,-0.0082644742
+325,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),33.304465,36.093,-2.7885349,-7.7259717
+325,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),65.123545,67.488,-2.3644547,-3.5035186
+325,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,248.74182,241.37,7.3718229,3.0541587
+325,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.7604912,8.4666,0.29389121,3.4711833
+325,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.5445519,-5.538,-0.0065518869,nan
+325,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-48.185137,-48.168,-0.017137327,nan
+335,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.80114,2.8011,4.0038662e-05,0.0014293907
+335,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.79654,35.433,1.3635404,3.8482217
+335,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),63.024605,61.63,1.394605,2.2628671
+335,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,248.53854,250.39,-1.8514608,-0.73943079
+335,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.6629777,7.8323,-0.16932235,-2.1618471
+335,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.8980125,-4.895,-0.0030125164,nan
+335,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-46.225619,-46.218,-0.0076189878,nan
+345,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.6239415,2.624,-5.8468508e-05,-0.0022282206
+345,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),35.141629,35.069,0.072629303,0.207104
+345,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),57.99674,57.889,0.10774025,0.18611524
+345,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,258.47661,258.36,0.11660559,0.045132987
+345,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,7.253032,7.2639,-0.010867952,-0.14961593
+345,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.2926908,-4.299,0.0063091867,nan
+345,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-44.44477,-44.464,0.019230019,nan
+355,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.4774503,2.4775,-4.9713398e-05,-0.0020065953
+355,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.821262,34.879,-0.057737685,-0.1655371
+355,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),55.268335,55.324,-0.055664871,-0.10061614
+355,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,265.67275,265.58,0.092754411,0.034925224
+355,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.7618498,6.7542,0.0076498147,0.11326012
+355,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.7336136,-3.733,-0.00061356274,nan
+355,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-42.847109,-42.849,0.0018908848,nan
+365,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.3529189,2.3529,1.8851656e-05,0.00080120941
+365,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.813559,34.804,0.0095585556,0.027463957
+365,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),53.499384,53.486,0.013384243,0.025023825
+365,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,272.25402,272.25,0.0040192406,0.0014763051
+365,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.2955644,6.2956,-3.5586915e-05,-0.00056526646
+365,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.1850711,-3.19,0.0049288942,nan
+365,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-41.32317,-41.339,0.015830111,nan
+375,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.244909,2.2449,8.9959057e-06,0.00040072634
+375,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.617795,34.809,-0.19120523,-0.54929825
+375,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),51.936576,52.13,-0.1934237,-0.37104105
+375,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,278.71221,278.46,0.25221205,0.09057389
+375,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.9028616,5.8817,0.021161583,0.35978684
+375,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.6640711,-2.662,-0.0020710509,nan
+375,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-39.914879,-39.912,-0.0028786451,nan
+385,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.1497948,2.1498,-5.2107291e-06,-0.00024238204
+385,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),35.384821,34.872,0.51282055,1.4705797
+385,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),51.612861,51.114,0.49886089,0.97597701
+385,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,283.62203,284.31,-0.68797033,-0.24197894
+385,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.44742,5.5068,-0.059380007,-1.0783033
+385,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.1432381,-2.146,0.0027619156,nan
+385,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-38.544169,-38.554,0.0098313244,nan
+395,6,vapor,"table, 10 K spacing, held-out nodes",rho,mol/L,2.0649894,2.065,-1.0648631e-05,-0.00051567222
+395,6,vapor,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.321659,34.978,-0.65634117,-1.87644
+395,6,vapor,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),49.68681,50.344,-0.65719037,-1.3053996
+395,6,vapor,"table, 10 K spacing, held-out nodes",w,m/s,290.69795,289.86,0.83795405,0.28908923
+395,6,vapor,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.2342727,5.166,0.06827275,1.3215786
+395,6,vapor,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-1.6362916,-1.639,0.0027083619,nan
+395,6,vapor,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-37.244129,-37.254,0.0098707148,nan
+315,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,6.01446,5.937,0.077459991,1.3046992
+315,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),59.358045,43.844,15.514045,35.384648
+315,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),226.28652,177.36,48.926521,27.585995
+315,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,205.95511,210.19,-4.2348911,-2.0147919
+315,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.8791723,7.9336,-1.0544277,-13.290659
+315,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-8.6030484,-8.192,-0.41104839,nan
+315,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-59.318794,-58.026,-1.292794,nan
+325,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,4.825272,4.8375,-0.012227974,-0.25277466
+325,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),67.79537,39.654,28.14137,70.967292
+325,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),126.65089,103.75,22.900891,22.073148
+325,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,187.60431,227.35,-39.74569,-17.48216
+325,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.2231445,7.7599,-1.5367555,-19.803805
+325,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-6.820386,-6.883,0.062613964,nan
+325,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-53.739415,-53.93,0.19058513,nan
+335,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,4.2694266,4.267,0.0024266157,0.056869362
+335,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),30.263267,37.852,-7.5887327,-20.048433
+335,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),74.742338,82.068,-7.3256617,-8.9263315
+335,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,254.66843,239.57,15.098429,6.3023036
+335,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,8.1185498,7.3266,0.79194976,10.80924
+335,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.9718484,-5.97,-0.001848449,nan
+335,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-51.163843,-51.159,-0.0048433983,nan
+345,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.8822757,3.8829,-0.00062429703,-0.016078112
+345,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),39.112404,36.889,2.2234035,6.0272806
+345,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),73.478101,71.528,1.9501007,2.7263458
+345,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,245.18609,249.61,-4.4239107,-1.7723291
+345,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.6658481,6.8663,-0.20045185,-2.9193576
+345,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.1947475,-5.207,0.012252486,nan
+345,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-48.878012,-48.915,0.036988464,nan
+355,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.5953578,3.5952,0.00015782526,0.0043898882
+355,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),35.613686,36.334,-0.72031357,-1.982478
+355,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),64.575854,65.293,-0.71714597,-1.0983505
+355,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,259.42969,258.32,1.109693,0.42958076
+355,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.4985287,6.4246,0.073928735,1.1507134
+355,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.5252523,-4.525,-0.00025228215,nan
+355,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-46.964424,-46.967,0.0025762816,nan
+365,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.3664933,3.3665,-6.6964632e-06,-0.00019891469
+365,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.168152,36.008,0.16015214,0.44476822
+365,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),61.356639,61.195,0.16163935,0.26413816
+365,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,265.857,266.14,-0.28299528,-0.10633324
+365,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.9993429,6.0134,-0.014057076,-0.23376253
+365,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.889193,-3.894,0.0048070149,nan
+365,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-45.197274,-45.213,0.015726202,nan
+375,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.1775074,3.1775,7.4130764e-06,0.00023329902
+375,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),35.653953,35.828,-0.1740466,-0.48578374
+375,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),58.167581,58.327,-0.15941882,-0.27331908
+375,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,273.57121,273.28,0.29120711,0.10655998
+375,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.6536049,5.6346,0.019004886,0.33728899
+375,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.2994727,-3.297,-0.0024726606,nan
+375,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-43.603141,-43.6,-0.0031411583,nan
+385,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.0171524,3.0172,-4.7584835e-05,-0.001577119
+385,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.356588,35.748,0.608588,1.7024393
+385,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),56.822336,56.236,0.58633609,1.0426348
+385,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,278.99569,279.9,-0.90431096,-0.32308359
+385,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.2263474,5.2869,-0.060552644,-1.1453336
+385,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.7214235,-2.725,0.0035764601,nan
+385,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-42.081795,-42.093,0.01120532,nan
+395,8,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,2.8783711,2.8783,7.1141209e-05,0.0024716398
+395,8,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),34.770104,35.741,-0.97089563,-2.7164758
+395,8,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),53.698436,54.669,-0.97056382,-1.7753458
+395,8,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,287.48366,286.1,1.3836625,0.48362899
+395,8,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.0577582,4.9679,0.089858177,1.8087759
+395,8,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.1681536,-2.171,0.0028463598,nan
+395,8,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-40.662905,-40.672,0.0090949135,nan
+315,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,12.831995,13.316,-0.48400505,-3.6347631
+315,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),121.5033,46.151,75.352303,163.27339
+315,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),260.09672,294.7,-34.603283,-11.741867
+315,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,102.15479,249.42,-147.26521,-59.043065
+315,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,3.9744237,3.1888,0.78562371,24.63697
+315,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-11.323821,-12.008,0.68417935,nan
+315,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-68.70127,-70.856,2.1547298,nan
+325,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,8.2709876,8.1354,0.13558756,1.6666367
+325,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),-11.136124,44.427,-55.563124,-125.06612
+325,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),199.38227,217.58,-18.197729,-8.3636957
+325,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,219.84,nan,nan
+325,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.7518982,5.8657,0.88619825,15.108141
+325,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-9.0136076,-8.947,-0.066607564,nan
+325,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-61.476328,-61.28,-0.19632779,nan
+335,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,6.3398716,6.3646,-0.024728357,-0.38852963
+335,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),50.012226,40.832,9.1802261,22.48292
+335,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),134.11702,123.95,10.167023,8.2025194
+335,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,225.61982,232.23,-6.6101825,-2.8463948
+335,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.6539408,6.2969,-0.64295918,-10.210726
+335,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-7.3612238,-7.343,-0.018223755,nan
+335,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-56.463716,-56.413,-0.050715649,nan
+345,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,5.5061774,5.5013,0.0048773619,0.088658352
+345,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),37.452746,38.918,-1.4652537,-3.764977
+345,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),94.108736,93.923,0.18573609,0.19775357
+345,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,249.69329,243.58,6.1132861,2.5097652
+345,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,6.2349632,6.1698,0.065163188,1.0561637
+345,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-6.2794485,-6.276,-0.0034484612,nan
+345,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-53.278883,-53.271,-0.0078827919,nan
+355,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,4.9458238,4.947,-0.001176177,-0.023775561
+355,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),38.863501,37.874,0.98950098,2.6126128
+355,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),80.582132,79.709,0.87313227,1.0953999
+355,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,251.97277,253.34,-1.3672296,-0.5396817
+355,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.808959,5.9002,-0.091240998,-1.5464052
+355,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.4154173,-5.415,-0.00041733754,nan
+355,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-50.80913,-50.81,0.00087009483,nan
+365,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,4.5449766,4.5446,0.00037658144,0.0082863496
+365,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),37.130498,37.249,-0.11850229,-0.3181355
+365,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),71.448876,71.472,-0.023124234,-0.032354256
+365,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,262.3812,261.97,0.41120311,0.15696572
+365,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.6063377,5.5939,0.012437723,0.22234439
+365,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.6588679,-4.662,0.0031320909,nan
+365,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-48.70688,-48.719,0.012120451,nan
+375,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,4.2317468,4.2318,-5.3218185e-05,-0.001257578
+375,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.9165,36.862,0.054500355,0.1478497
+375,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),66.180796,66.133,0.047795535,0.072271839
+375,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,269.71174,269.8,-0.0882637,-0.032714492
+375,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,5.2808169,5.2859,-0.0050830591,-0.096162605
+375,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.9784686,-3.976,-0.0024685687,nan
+375,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-46.867527,-46.863,-0.0045269731,nan
+385,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.977656,3.9777,-4.4008548e-05,-0.0011063818
+385,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),37.274065,36.629,0.64506535,1.7610782
+385,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),63.079751,62.426,0.6537506,1.0472409
+385,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,276.02294,277,-0.97706293,-0.3527303
+385,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,4.9392095,4.9893,-0.050090513,-1.0039587
+385,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-3.3304527,-3.334,0.0035472538,nan
+385,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-45.161945,-45.174,0.012054849,nan
+395,10,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,3.7647739,3.7648,-2.6098684e-05,-0.00069322895
+395,10,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),35.345678,36.503,-1.1573225,-3.170486
+395,10,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),58.563926,59.733,-1.1690735,-1.9571653
+395,10,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,285.47801,283.69,1.7880085,0.63026842
+395,10,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,4.800105,4.7089,0.091204961,1.9368634
+395,10,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-2.7213152,-2.724,0.0026847916,nan
+395,10,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-43.599721,-43.61,0.010278884,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,nan,17.417,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),nan,41.127,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),nan,120.34,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,414.97,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,nan,1.0038,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,nan,-13.502,nan,nan
+315,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),nan,-76.598,nan,nan
+325,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,15.523475,15.521,0.0024748928,0.015945447
+325,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),15.158018,41.66,-26.501982,-63.614935
+325,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),199.51221,137.66,61.852207,44.93114
+325,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,972.61845,351.34,621.27845,176.83112
+325,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,1.0823825,1.5708,-0.48841746,-31.093548
+325,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-13.617845,-12.215,-1.4028453,nan
+325,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-76.88602,-72.579,-4.3070196,nan
+335,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,13.295912,13.302,-0.0060880301,-0.04576778
+335,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),182.07379,42.251,139.82279,330.93368
+335,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),257.73732,152.92,104.81732,68.543889
+335,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,156.06742,301.72,-145.65258,-48.27409
+335,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,1.3964875,2.3535,-0.95701248,-40.663373
+335,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-10.387714,-10.754,0.36628624,nan
+335,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-67.101889,-68.15,1.0481114,nan
+345,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,11.122976,11.121,0.0019759625,0.017767849
+345,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),17.364637,41.672,-24.307363,-58.330205
+345,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),107.61532,145.95,-38.33468,-26.265625
+345,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,341.99462,276.63,65.364617,23.628897
+345,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,4.2796478,3.1525,1.1271478,35.754095
+345,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-9.059442,-9.236,0.17655801,nan
+345,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-63.183884,-63.687,0.50311557,nan
+355,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,9.4373649,9.4371,0.00026487986,0.002806793
+355,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),41.731233,40.605,1.1262334,2.7736323
+355,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),120.78069,123.49,-2.7093069,-2.1939484
+355,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,257.24687,269.95,-12.703126,-4.7057331
+355,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,3.7556702,3.6745,0.081170214,2.2090138
+355,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-7.8115722,-7.887,0.075427842,nan
+355,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-59.619237,-59.83,0.21076346,nan
+365,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,8.257712,8.2579,-0.00018804461,-0.0022771481
+365,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),36.6357,39.734,-3.0983001,-7.7976044
+365,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),100.12572,104.03,-3.9042755,-3.7530285
+365,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,275.51905,271.34,4.1790479,1.5401518
+365,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,4.0566365,3.905,0.15163649,3.8831368
+365,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-6.7359967,-6.754,0.018003306,nan
+365,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-56.629995,-56.683,0.05300467,nan
+375,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,7.4145552,7.4145,5.5170542e-05,0.00074408985
+375,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),39.262169,39.061,0.20116934,0.51501328
+375,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),90.40485,90.462,-0.057149718,-0.063175386
+375,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,274.42786,275.77,-1.3421443,-0.48668973
+375,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,3.953658,3.9539,-0.00024197447,-0.0061198935
+375,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.7835415,-5.786,0.0024584958,nan
+375,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-54.055043,-54.065,0.0099568646,nan
+385,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,6.7821928,6.7821,9.2817594e-05,0.0013685672
+385,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),39.116958,38.561,0.55595758,1.4417613
+385,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),81.682613,81.165,0.5176132,0.63772956
+385,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,279.97041,281.3,-1.3295872,-0.4726581
+385,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,3.8802541,3.9032,-0.022945897,-0.58787398
+385,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.9275695,-4.931,0.0034305395,nan
+385,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-51.80185,-51.814,0.012149975,nan
+395,15,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,6.2869523,6.2868,0.00015226909,0.0024220444
+395,15,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),37.153018,38.204,-1.0509822,-2.7509742
+395,15,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),73.513889,74.627,-1.1131113,-1.4915664
+395,15,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,288.89474,287.17,1.7247352,0.60059729
+395,15,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,3.8547313,3.7997,0.05503129,1.4483062
+395,15,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-4.1499824,-4.154,0.0040175868,nan
+395,15,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-49.80748,-49.82,0.012519571,nan
+315,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,18.857304,18.858,-0.0006959248,-0.0036903426
+315,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),-5.221404,40.399,-45.620404,-112.92459
+315,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),-1.6864845,100.09,-101.77648,-101.68497
+315,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,502.71,nan,nan
+315,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,-32.872331,0.55451,-33.426841,-6028.1764
+315,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-13.877479,-13.91,0.03252102,nan
+315,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-78.660566,-78.766,0.10543385,nan
+325,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,17.57501,17.575,9.9727576e-06,5.6743998e-05
+325,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),131.68108,40.462,91.21908,225.44382
+325,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),146.14008,105.41,40.730082,38.639676
+325,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,138.75912,450.59,-311.83088,-69.205015
+325,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,0.57655896,0.79933,-0.22277104,-27.869721
+325,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-13.177123,-12.883,-0.29412282,nan
+325,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-76.483803,-75.558,-0.92580251,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,nan,16.177,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),nan,40.601,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),nan,111.11,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,404.1,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,nan,1.1122,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,nan,-11.8,nan,nan
+335,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),nan,-72.276,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,nan,14.699,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),nan,40.62,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),nan,114.96,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,366.45,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,nan,1.4822,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,nan,-10.667,nan,nan
+345,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),nan,-68.944,nan,nan
+355,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,13.228309,13.228,0.00030943102,0.0023392124
+355,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),-19.288054,40.422,-59.710054,-147.71672
+355,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),116.57319,114.41,2.163194,1.8907386
+355,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,nan,339.24,nan,nan
+355,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,1.8360356,1.8707,-0.034664406,-1.8530179
+355,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-9.5758027,-9.516,-0.059802658,nan
+355,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-65.812702,-65.654,-0.15870222,nan
+365,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,11.878384,11.878,0.00038421819,0.0032347044
+365,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),29.455969,40.154,-10.698031,-26.642505
+365,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),111.26306,109.21,2.0530554,1.8799152
+365,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,413.2885,322.21,91.078503,28.266815
+365,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,2.1742211,2.215,-0.040778934,-1.8410354
+365,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-8.4342874,-8.395,-0.039287415,nan
+365,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-62.641282,-62.539,-0.10228159,nan
+375,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,10.72008,10.72,8.0368998e-05,0.0007497108
+375,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),37.923806,39.855,-1.9311937,-4.8455495
+375,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),103.3522,101.49,1.8621965,1.8348572
+375,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,333.98969,313.37,20.619687,6.5799813
+375,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,2.4284578,2.4729,-0.044442226,-1.7971703
+375,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-7.3591143,-7.34,-0.01911434,nan
+375,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-59.73475,-59.688,-0.046750205,nan
+385,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,9.7633623,9.7634,-3.7676726e-05,-0.0003858976
+385,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),39.47155,39.533,-0.061449506,-0.15543851
+385,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),94.700409,93.397,1.3034085,1.3955571
+385,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,316.26682,310.01,6.2568168,2.0182629
+385,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,2.6003204,2.6356,-0.035279601,-1.3385795
+385,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-6.3713524,-6.366,-0.0053523908,nan
+385,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-57.134726,-57.125,-0.0097261705,nan
+395,20,supercritical,"table, 10 K spacing, held-out nodes",rho,mol/L,8.9815828,8.982,-0.00041723882,-0.0046452775
+395,20,supercritical,"table, 10 K spacing, held-out nodes",Cv,J/(mol*K),38.047954,39.229,-1.1810457,-3.0106443
+395,20,supercritical,"table, 10 K spacing, held-out nodes",Cp,J/(mol*K),85.57649,86.181,-0.60450964,-0.70144189
+395,20,supercritical,"table, 10 K spacing, held-out nodes",w,m/s,315.65008,309.98,5.670077,1.8291751
+395,20,supercritical,"table, 10 K spacing, held-out nodes",muJT,K/MPa,2.7363457,2.718,0.018345662,0.67496918
+395,20,supercritical,"table, 10 K spacing, held-out nodes",dH,kJ/mol,-5.4680704,-5.469,0.00092960764,nan
+395,20,supercritical,"table, 10 K spacing, held-out nodes",dS,J/(mol*K),-54.817992,-54.824,0.0060081348,nan

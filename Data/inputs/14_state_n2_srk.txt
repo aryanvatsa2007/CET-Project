@@ -1,0 +1,22 @@
+# Scenario 14: nitrogen at 300 K and 10 MPa with Soave-Redlich-Kwong, mixed input
+# units (degC, bar) and output in user units.
+[scenario]
+name = 14_state_n2_srk
+type = state
+description = N2 at 26.85 degC and 100 bar, SRK, output in MPa and L/mol
+
+[model]
+fluid = N2
+eos = SRK
+
+[state]
+T = 26.85 degC
+P = 100 bar
+
+[targets]
+derivatives = (dT/dP)_H
+
+[output_units]
+P = MPa
+V = L/mol
+muJT = K/MPa

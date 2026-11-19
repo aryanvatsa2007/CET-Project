@@ -1,0 +1,18 @@
+# scenario: 04_derivatives_symbolic
+# type: derivative
+# status: ok
+# input file: Data/inputs/04_derivatives_symbolic.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+(dT/dP)_H,nan,(K)/(Pa),symbolic only,,,= V*(T*alpha - 1)/Cp
+(dT/dP)_S,nan,(K)/(Pa),symbolic only,,,= T*V*alpha/Cp
+(dU/dV)_T,nan,(J/mol)/(m3/mol),symbolic only,,,= (T*alpha - P*kappaT)/kappaT
+(dH/dP)_T,nan,(J/mol)/(Pa),symbolic only,,,= V*(1 - T*alpha)
+(dS/dV)_T,nan,(J/(mol*K))/(m3/mol),symbolic only,,,= alpha/kappaT
+(dT/dV)_U,nan,(K)/(m3/mol),symbolic only,,,= (T*alpha - P*kappaT)/(T*V*alpha^2 - Cp*kappaT)
+(dP/dT)_V,nan,(Pa)/(K),symbolic only,,,= alpha/kappaT
+(dS/dT)_V,nan,(J/(mol*K))/(K),symbolic only,,,= (Cp*kappaT - T*V*alpha^2)/(T*kappaT)
+(dG/dP)_T,nan,(J/mol)/(Pa),symbolic only,,,= V
+(dA/dV)_T,nan,(J/mol)/(m3/mol),symbolic only,,,= -P
+(dH/dS)_P,nan,(J/mol)/(J/(mol*K)),symbolic only,,,= T
+(dU/dS)_V,nan,(J/mol)/(J/(mol*K)),symbolic only,,,= T

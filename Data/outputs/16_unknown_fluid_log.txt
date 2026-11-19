@@ -1,0 +1,8 @@
+# scenario: 16_unknown_fluid
+# type: state
+# status: error: MissingDataError
+# input file: Data/inputs/16_unknown_fluid.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: fluid absent from the database
+ERROR (MissingDataError): fluid 'unobtainium' is not in the database (available: carbon dioxide, nitrogen). Supply Tc, Pc, omega and M directly.

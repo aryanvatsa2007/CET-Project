@@ -1,0 +1,15 @@
+# Scenario 07 (edge case, inconsistent input): the stated Cv is larger than the
+# stated Cp, and disagrees with Cp - T V alpha^2 / kappaT.
+[scenario]
+name = 07_infer_inconsistent
+type = infer
+description = stated Cv contradicts Cp, alpha and kappaT
+
+[given]
+T = 350 K
+P = 10 MPa
+V = 0.19235 L/mol
+Cp = 85.729 J/(mol*K)
+Cv = 95 J/(mol*K)
+alpha = 0.0105 1/K
+kappaT = 0.15 1/MPa

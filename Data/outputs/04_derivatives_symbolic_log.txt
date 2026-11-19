@@ -1,0 +1,19 @@
+# scenario: 04_derivatives_symbolic
+# type: derivative
+# status: ok
+# input file: Data/inputs/04_derivatives_symbolic.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: reduce a set of textbook derivatives to T, P, V, S, Cp, alpha, kappaT
+(dT/dP)_H = V*(T*alpha - 1)/Cp    [needs: Cp, T, V, alpha]
+(dT/dP)_S = T*V*alpha/Cp    [needs: Cp, T, V, alpha]
+(dU/dV)_T = (T*alpha - P*kappaT)/kappaT    [needs: P, T, alpha, kappaT]
+(dH/dP)_T = V*(1 - T*alpha)    [needs: T, V, alpha]
+(dS/dV)_T = alpha/kappaT    [needs: alpha, kappaT]
+(dT/dV)_U = (T*alpha - P*kappaT)/(T*V*alpha^2 - Cp*kappaT)    [needs: Cp, P, T, V, alpha, kappaT]
+(dP/dT)_V = alpha/kappaT    [needs: alpha, kappaT]
+(dS/dT)_V = (Cp*kappaT - T*V*alpha^2)/(T*kappaT)    [needs: Cp, T, V, alpha, kappaT]
+(dG/dP)_T = V    [needs: V]
+(dA/dV)_T = -P    [needs: P]
+(dH/dS)_P = T    [needs: T]
+(dU/dS)_V = T    [needs: T]

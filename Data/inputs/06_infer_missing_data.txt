@@ -1,0 +1,17 @@
+# Scenario 06 (edge case, missing data): too little information is stated.
+# Cv and the Joule-Thomson coefficient need the expansivity, which is absent.
+[scenario]
+name = 06_infer_missing_data
+type = infer
+description = T, P, V, Cp and kappaT stated; alpha missing
+
+[given]
+T = 350 K
+P = 10 MPa
+V = 0.19235 L/mol
+Cp = 85.729 J/(mol*K)
+kappaT = 0.15 1/MPa
+
+[targets]
+quantities = Z, Cv, muJT, w
+derivatives = (dT/dP)_H, (dV/dP)_T

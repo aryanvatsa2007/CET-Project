@@ -1,0 +1,59 @@
+thermocalculus interactive session. Type 'help' for commands.
+First give the targets and the known values; the engine will ask for what is missing.
+> target (dT/dP)_H; Cv; w
+  target added: (dT/dP)_H
+  target added: Cv
+  target added: w
+> T = 350 K
+  T = 350 K   (stored as 350 K)
+
+Cannot compute (dT/dP)_H yet: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: Cp (or {Cv, gamma} | {Cv, kappaS, kappaT}); V (or {M, rho} | {P, Z}); alpha (or {gammaV, kappaT} | {Cp, V, muJT} | {gamma, gammaV, kappaS})
+Enter a value (name = value unit), or 'skip' to give up on this target > P = 10 MPa
+  P = 10 MPa   (stored as 1e+07 Pa)
+
+Cannot compute (dT/dP)_H yet: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: Cp (or {Cv, gamma} | {Cv, kappaS, kappaT}); V (or {Z} | {M, rho}); alpha (or {gammaV, kappaT} | {Cp, V, muJT} | {Cp, Z, muJT})
+Enter a value (name = value unit), or 'skip' to give up on this target > V = 0.19235 L/mol
+  V = 0.19235 L/mol   (stored as 0.00019235 m3/mol)
+
+Cannot compute (dT/dP)_H yet: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: Cp (or {Cv, gamma} | {Cv, alpha, gammaV} | {Cv, alpha, kappaT}); alpha (or {Cp, muJT} | {gammaV, kappaT} | {Cv, gamma, muJT})
+Enter a value (name = value unit), or 'skip' to give up on this target > Cp = 85.729 J/(mol*K)
+  Cp = 85.729 J/(mol*K)   (stored as 85.729 J/(mol*K))
+
+Cannot compute (dT/dP)_H yet: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: alpha (or {muJT} | {gammaV, kappaT} | {Cv, gammaV, kappaS})
+Enter a value (name = value unit), or 'skip' to give up on this target > alpha = 4 mL
+  rejected: alpha = '4 mL' has dimension m^3; expected K^-1 (for example 1/K)
+
+Cannot compute (dT/dP)_H yet: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: alpha (or {muJT} | {gammaV, kappaT} | {Cv, gammaV, kappaS})
+Enter a value (name = value unit), or 'skip' to give up on this target > muJT = 6.0435 K/MPa
+  muJT = 6.0435 K/MPa   (stored as 6.0435e-06 K/Pa)
+
+Cannot compute Cv yet: Cv cannot be computed from the supplied data; supply any one of: {gamma} | {gammaV} | {kappaS} | {kappaT} | {M, w}
+Enter a value (name = value unit), or 'skip' to give up on this target > M = 44.0095 g/mol
+  M = 44.0095 g/mol   (stored as 0.0440095 kg/mol)
+
+Cannot compute Cv yet: Cv cannot be computed from the supplied data; supply any one of: {gamma} | {gammaV} | {kappaS} | {kappaT} | {w}
+Enter a value (name = value unit), or 'skip' to give up on this target > w = 248.62 m/s
+  w = 248.62 m/s   (stored as 248.62 m/s)
+> quit
+
+Final result
+Known and inferred quantities:
+  T       = 350            K          [stated]
+  P       = 1e+07          Pa         [stated]
+  V       = 0.00019235     m3/mol     [stated]
+  Cp      = 85.729         J/(mol*K)  [stated]
+  muJT    = 6.0435e-06     K/Pa       [stated]
+  M       = 0.0440095      kg/mol     [stated]
+  w       = 248.62         m/s        [stated]
+  Z       = 0.660982       1          [inferred]
+  rho     = 228.799        kg/m3      [inferred]
+  kappaS  = 7.07088e-08    1/Pa       [inferred]
+  alpha   = 0.010553       1/K        [inferred]
+  kappaT  = 1.58163e-07    1/Pa       [inferred]
+  gammaV  = 66722          Pa/K       [inferred]
+  Cv      = 38.3261        J/(mol*K)  [inferred]
+  gamma   = 2.23683        1          [inferred]
+Targets:
+  (dT/dP)_H = V*(T*alpha - 1)/Cp = 6.0435e-06
+  Cv = 38.3261 J/(mol*K)
+  w = 248.62 m/s

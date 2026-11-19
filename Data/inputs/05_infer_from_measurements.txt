@@ -1,0 +1,27 @@
+# Scenario 05: inference without any equation of state.  The stated values are
+# the NIST reference values for CO2 at 350 K and 10 MPa (V, Cp, speed of sound,
+# Joule-Thomson coefficient).  The engine must infer alpha, kappaS, kappaT, Cv,
+# gamma and Z; NIST lists Cv = 38.325 J/(mol K) for comparison.
+[scenario]
+name = 05_infer_from_measurements
+type = infer
+description = infer response functions of CO2 from stated V, Cp, w and muJT (no EoS)
+
+[given]
+T = 350 K
+P = 10 MPa
+V = 0.19235 L/mol
+Cp = 85.729 J/(mol*K)
+w = 248.62 m/s
+muJT = 6.0435 K/MPa
+M = 44.0095 g/mol
+
+[targets]
+quantities = Cv, kappaT, alpha, gamma
+derivatives = (dP/dT)_V, (dU/dV)_T, (dT/dP)_S
+
+[uncertainty]
+V = 0.0001 L/mol
+Cp = 0.5 J/(mol*K)
+w = 0.5 m/s
+muJT = 0.03 K/MPa

@@ -1,0 +1,20 @@
+# Scenario 12 (edge case, missing data): a user fluid with critical constants but
+# no ideal-gas heat capacity.  Volumetric and residual properties are computable;
+# caloric properties are reported as missing.
+[scenario]
+name = 12_missing_cp0
+type = state
+description = user-defined fluid without a Cp0 model
+
+[model]
+Tc = 304.1282 K
+Pc = 7.3773 MPa
+omega = 0.22394
+eos = SRK
+
+[state]
+T = 350 K
+P = 10 MPa
+
+[targets]
+derivatives = (dP/dT)_V, (dT/dP)_H

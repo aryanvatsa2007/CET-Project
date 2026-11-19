@@ -1,0 +1,12 @@
+# scenario: 03_saturation_co2_pr
+# type: saturation
+# status: ok
+# input file: Data/inputs/03_saturation_co2_pr.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,280,K,stated,,,
+Psat,4160087.209,Pa,parameterised (PR),5591.333487,,"variance share: T 90.5%, omega 9.5%"
+VL,5.168398541e-05,m3/mol,parameterised (PR),3.0356639e-08,,"variance share: T 87.5%, omega 12.5%"
+VV,0.0003588116576,m3/mol,parameterised (PR),6.455207858e-07,,"variance share: T 87.5%, omega 12.5%"
+dHvap,9145.910234,J/mol,parameterised (PR),13.21531535,,"variance share: omega 58.6%, T 41.4%"
+dSvap,32.66396512,J/(mol*K),parameterised (PR),0.05114573186,,"variance share: T 50.1%, omega 49.9%"

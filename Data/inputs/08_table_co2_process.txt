@@ -1,0 +1,21 @@
+# Scenario 08: tabulated input.  Molar volumes of CO2 on a (T, P) grid are the
+# only volumetric information; enthalpy and entropy changes follow from spline
+# derivatives and integrals plus the ideal-gas Cp correlation.
+[scenario]
+name = 08_table_co2_process
+type = table
+description = CO2 from 400 K, 0.1 MPa to 350 K, 10 MPa using only tabulated P-V-T data
+
+[table]
+pvt = tables/co2_pvt_table_nist.csv
+
+[model]
+fluid = CO2
+
+[state1]
+T = 400 K
+P = 0.1 MPa
+
+[state2]
+T = 350 K
+P = 10 MPa

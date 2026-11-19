@@ -1,0 +1,10 @@
+# scenario: 11_unit_missing
+# type: state
+# status: error: UnitError
+# input file: Data/inputs/11_unit_missing.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: temperature given as a bare number
+fluid carbon dioxide: critical constants from NIST WebBook fluid page (Span and Wagner 1996)
+equation of state PR: a_c = 0.396304 Pa m6/mol2, b = 2.66669e-05 m3/mol, m = 0.706477
+ERROR (UnitError): T = '350' has no unit; expected a unit of dimension K (for example K)

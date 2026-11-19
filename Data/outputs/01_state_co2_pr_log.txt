@@ -1,0 +1,40 @@
+# scenario: 01_state_co2_pr
+# type: state
+# status: ok
+# input file: Data/inputs/01_state_co2_pr.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: CO2 at 350 K and 10 MPa, Peng-Robinson, with uncertainty in T, P, Tc, Pc, omega
+fluid carbon dioxide: critical constants from NIST WebBook fluid page (Span and Wagner 1996)
+equation of state PR: a_c = 0.396304 Pa m6/mol2, b = 2.66669e-05 m3/mol, m = 0.706477
+phase: supercritical; volume roots at this state: 0.000189512 m3/mol
+uncertainty: first-order propagation of u(T) = 0.1, u(P) = 10000, u(Tc) = 0.015, u(Pc) = 3000, u(omega) = 0.001 (SI units)
+Monte Carlo check with 2000 draws (0 failed); ratio = Monte Carlo u / linear u:
+  T: linear u = 0.1, Monte Carlo u = 0.10115, ratio = 1.0115
+  P: linear u = 10000, Monte Carlo u = 10062.2, ratio = 1.0062
+  V: linear u = 3.57419e-07, Monte Carlo u = 3.57684e-07, ratio = 1.0007
+  Z: linear u = 0.000648372, Monte Carlo u = 0.000653163, ratio = 1.0074
+  rho: linear u = 0.437978, Monte Carlo u = 0.438288, ratio = 1.0007
+  alpha: linear u = 3.00641e-05, Monte Carlo u = 3.00935e-05, ratio = 1.0010
+  kappaT: linear u = 1.86719e-10, Monte Carlo u = 1.91818e-10, ratio = 1.0273
+  gammaV: linear u = 176.027, Monte Carlo u = 175.353, ratio = 0.9962
+  lnphi: linear u = 0.000563232, Monte Carlo u = 0.000566362, ratio = 1.0056
+  fugacity: linear u = 5597.83, Monte Carlo u = 5698.2, ratio = 1.0179
+  HR: linear u = 7.11343, Monte Carlo u = 7.06935, ratio = 0.9938
+  SR: linear u = 0.018136, Monte Carlo u = 0.0179644, ratio = 0.9905
+  GR: linear u = 1.4549, Monte Carlo u = 1.46315, ratio = 1.0057
+  Cp0: linear u = 0.00408978, Monte Carlo u = 0.0041368, ratio = 1.0115
+  Cp: linear u = 0.161747, Monte Carlo u = 0.160564, ratio = 0.9927
+  Cv: linear u = 0.0102831, Monte Carlo u = 0.0102996, ratio = 1.0016
+  gamma: linear u = 0.00445688, Monte Carlo u = 0.00444842, ratio = 0.9981
+  kappaS: linear u = 1.15141e-10, Monte Carlo u = 1.15131e-10, ratio = 0.9999
+  w: linear u = 0.10323, Monte Carlo u = 0.106145, ratio = 1.0282
+  muJT: linear u = 5.70969e-09, Monte Carlo u = 5.83449e-09, ratio = 1.0219
+  H: linear u = 10.0109, Monte Carlo u = 9.96125, ratio = 0.9950
+  S: linear u = 0.0315622, Monte Carlo u = 0.0313679, ratio = 0.9938
+  U: linear u = 7.83943, Monte Carlo u = 7.77357, ratio = 0.9916
+  A: linear u = 3.56442, Monte Carlo u = 3.62155, ratio = 1.0160
+  G: linear u = 4.53512, Monte Carlo u = 4.62392, ratio = 1.0196
+  (dT/dP)_H: linear u = 5.70969e-09, Monte Carlo u = 5.83449e-09, ratio = 1.0219
+  (dH/dP)_T: linear u = 1.02289e-06, Monte Carlo u = 1.02569e-06, ratio = 1.0027
+  (dU/dV)_T: linear u = 49741.2, Monte Carlo u = 49530.4, ratio = 0.9958

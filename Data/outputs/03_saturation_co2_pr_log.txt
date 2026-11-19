@@ -1,0 +1,11 @@
+# scenario: 03_saturation_co2_pr
+# type: saturation
+# status: ok
+# input file: Data/inputs/03_saturation_co2_pr.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: saturation pressure, coexisting volumes and enthalpy of vaporisation of CO2 at 280 K
+fluid carbon dioxide: critical constants from NIST WebBook fluid page (Span and Wagner 1996)
+equation of state PR: a_c = 0.396304 Pa m6/mol2, b = 2.66669e-05 m3/mol, m = 0.706477
+saturation from equality of fugacity in both phases; the enthalpy of vaporisation is a residual-property difference and needs no Cp0
+uncertainty: first-order propagation of u(T) = 0.05, u(omega) = 0.001 (SI units)

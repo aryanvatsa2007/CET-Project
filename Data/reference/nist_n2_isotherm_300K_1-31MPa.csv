@@ -1,0 +1,16 @@
+# Nitrogen, reference values on the 300 K isotherm (Span et al. equation of state)
+# source: Lemmon, E. W.; Bell, I. H.; Huber, M. L.; McLinden, M. O. Thermophysical Properties of Fluid Systems. In NIST Chemistry WebBook, NIST Standard Reference Database Number 69; https://doi.org/10.18434/T4D303
+# source: NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems; fluid.cgi ID=C7727379 Type=IsoTherm T=300 K; retrieved 2026-11-15; transport columns omitted; duplicate rows at the phase-label boundary removed
+# enthalpy and entropy use the NIST default reference state; only differences are comparable with the engine
+T [K],P [MPa],rho [mol/L],V [L/mol],U [kJ/mol],H [kJ/mol],S [J/(mol*K)],Cv [J/(mol*K)],Cp [J/(mol*K)],w [m/s],muJT [K/MPa],phase
+300,1,0.40155,2.4904,6.1722,8.6625,172.45,20.881,29.58,354.63,2.0532,vapor
+300,4,1.6095,0.62131,6.0012,8.4865,160.37,21.078,30.939,360.88,1.8266,supercritical
+300,7,2.8103,0.35583,5.8334,8.3242,155.19,21.26,32.254,369.19,1.5967,supercritical
+300,10,3.9883,0.25074,5.6707,8.1781,151.74,21.426,33.474,379.52,1.3706,supercritical
+300,13,5.129,0.19497,5.5147,8.0493,149.1,21.578,34.56,391.7,1.1549,supercritical
+300,16,6.2208,0.16075,5.3666,7.9386,146.97,21.716,35.489,405.51,0.95459,supercritical
+300,19,7.2556,0.13783,5.2272,7.8459,145.17,21.842,36.255,420.66,0.77262,supercritical
+300,22,8.2289,0.12152,5.0967,7.7702,143.63,21.959,36.866,436.87,0.60998,supercritical
+300,25,9.1397,0.10941,4.9752,7.7105,142.28,22.068,37.34,453.85,0.46633,supercritical
+300,28,9.9892,0.10011,4.8622,7.6653,141.08,22.17,37.699,471.34,0.34049,supercritical
+300,31,10.78,0.092762,4.7574,7.633,140.01,22.267,37.963,489.14,0.23075,supercritical

@@ -1,0 +1,20 @@
+# outcome of every scenario in Data/inputs (one row per input file)
+# status: ok | partial (some targets not computable) | inconsistent | error: <type>
+scenario,type,status,n_output_rows,first_message
+01_state_co2_pr,state,ok,28,
+02_process_co2_pr,process,ok,60,
+03_saturation_co2_pr,saturation,ok,6,
+04_derivatives_symbolic,derivative,ok,12,
+05_infer_from_measurements,infer,ok,18,
+06_infer_missing_data,infer,partial,7,"MISSING DATA: Cv cannot be computed from the supplied data; supply any one of: {alpha} | {gamma} | {gammaV} | {kappaS} | {muJT} | {M, w}"
+07_infer_inconsistent,infer,inconsistent,12,"INCONSISTENT: Cv = Cp - T V alpha^2 / kappaT gives Cv = 36.247, but Cv = 95 is already known (relative difference 0.618, tolerance 0.01)"
+08_table_co2_process,table,ok,53,
+09_table_out_of_range,table,error: OutOfRangeError,0,"ERROR (OutOfRangeError): state T = 450 K, P = 1e+07 Pa is outside the table (T from 310 to 400 K, P from 100000 to 2e+07 Pa); the engine does not extrapolate tabulated data"
+10_unit_wrong_dimension,state,error: UnitError,0,ERROR (UnitError): P = '10 K' has dimension K; expected kg m^-1 s^-2 (for example Pa)
+11_unit_missing,state,error: UnitError,0,ERROR (UnitError): T = '350' has no unit; expected a unit of dimension K (for example K)
+12_missing_cp0,state,partial,13,MISSING DATA: Cp0(T) not available; volumetric and residual properties only
+13_cp0_out_of_range,state,error: OutOfRangeError,0,ERROR (OutOfRangeError): ideal-gas Cp model (shomate) is valid for 298 K to 1200 K; requested 250 K
+14_state_n2_srk,state,ok,26,
+15_state_ideal_gas_cp_table,state,ok,27,
+16_unknown_fluid,state,error: MissingDataError,0,"ERROR (MissingDataError): fluid 'unobtainium' is not in the database (available: carbon dioxide, nitrogen). Supply Tc, Pc, omega and M directly."
+17_singular_derivative,state,partial,27,SINGULAR: (dP/dT)_H = Cp/(V*(T*alpha - 1)) : the derivative is singular at this state: its denominator V*(T*alpha - 1) vanishes

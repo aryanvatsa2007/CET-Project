@@ -1,0 +1,13 @@
+# Scenario 10 (edge case, unit problem): the pressure is given in kelvin.
+[scenario]
+name = 10_unit_wrong_dimension
+type = state
+description = pressure given with a temperature unit
+
+[model]
+fluid = CO2
+eos = PR
+
+[state]
+T = 350 K
+P = 10 K

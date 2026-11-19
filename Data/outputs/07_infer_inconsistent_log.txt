@@ -1,0 +1,12 @@
+# scenario: 07_infer_inconsistent
+# type: infer
+# status: inconsistent
+# input file: Data/inputs/07_infer_inconsistent.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: stated Cv contradicts Cp, alpha and kappaT
+INCONSISTENT: Cv = Cp - T V alpha^2 / kappaT gives Cv = 36.247, but Cv = 95 is already known (relative difference 0.618, tolerance 0.01)
+INCONSISTENT: Cp = Cv + T V alpha^2 / kappaT gives Cp = 144.482, but Cp = 85.729 is already known (relative difference 0.685, tolerance 0.01)
+INCONSISTENT: kappaS = kappaT - T V alpha^2 / Cp gives kappaS = 6.34213e-08, but kappaS = 1.66221e-07 is already known (relative difference 0.618, tolerance 0.01)
+INCONSISTENT: kappaT = kappaS + T V alpha^2 / Cp gives kappaT = 2.528e-07, but kappaT = 1.5e-07 is already known (relative difference 0.685, tolerance 0.01)
+INCONSISTENT: Cp = 85.729 is smaller than Cv = 95; Cp - Cv = T V alpha^2 / kappaT cannot be negative

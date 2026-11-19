@@ -1,0 +1,10 @@
+# scenario: 03_saturation_co2_pr
+# type: saturation
+# status: ok
+# fraction of the output variance contributed by each uncertain input (first-order propagation); SI units
+quantity,value,std_uncertainty,share_T,share_omega
+Psat,4160087.209,5591.333487,0.904501,0.095499
+VL,5.168398541e-05,3.0356639e-08,0.875154,0.124846
+VV,0.0003588116576,6.455207858e-07,0.875154,0.124846
+dHvap,9145.910234,13.21531535,0.413971,0.586029
+dSvap,32.66396512,0.05114573186,0.500956,0.499044

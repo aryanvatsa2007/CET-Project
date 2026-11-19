@@ -1,0 +1,7 @@
+# constants of the generic cubic form P = RT/(V-b) - a(T)/((V+eps b)(V+sig b)) and CO2 parameters;
+# last two columns: residuals of the critical-point conditions P(Tc,Vc)=Pc and (dP/dV)_T=0
+eos,eps,sig,Omega_a,Omega_b,m_CO2,a_c_Pa_m6_mol-2,b_m3_mol-1,"P(Tc,Vc)/Pc-1",Vc/Pc*(dP/dV)_Tc
+vdW,0,0,0.421875,0.125,,0.36565212,4.2845325e-05,0,0
+RK,0,1,0.42748023,0.08664035,,0.37051035,2.9697072e-05,4.4408921e-16,-9.4526765e-16
+SRK,0,1,0.42748023,0.08664035,0.82365531,0.37051035,2.9697072e-05,4.4408921e-16,-9.4526765e-16
+PR,-0.41421356,2.4142136,0.45724,0.0778,0.70647745,0.39630406,2.6666931e-05,8.6055763e-05,-0.00023725744

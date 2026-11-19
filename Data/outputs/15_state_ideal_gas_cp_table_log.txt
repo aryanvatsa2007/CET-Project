@@ -1,0 +1,11 @@
+# scenario: 15_state_ideal_gas_cp_table
+# type: state
+# status: ok
+# input file: Data/inputs/15_state_ideal_gas_cp_table.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: ideal gas with Cp0 from a table, 360 K and 0.5 MPa
+ideal-gas Cp from table tables/co2_cp0_table.csv (300 K to 500 K)
+NOTE: the Cp0 model does not cover 298.15 K; H and S are referred to the ideal gas at 300 K and 100000 Pa
+equation of state ideal gas, P = RT/V
+phase: ideal gas; volume roots at this state: 0.00598641 m3/mol

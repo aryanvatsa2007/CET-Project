@@ -1,0 +1,14 @@
+# Scenario 13 (edge case, out-of-range correlation): the Shomate Cp0 correlation
+# for CO2 is valid from 298 K; a state at 250 K is refused.
+[scenario]
+name = 13_cp0_out_of_range
+type = state
+description = CO2 liquid at 250 K, below the validity range of the Cp0 correlation
+
+[model]
+fluid = CO2
+eos = PR
+
+[state]
+T = 250 K
+P = 5 MPa

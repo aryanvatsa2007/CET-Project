@@ -1,0 +1,130 @@
+# every number quoted in manuscript.tex: LaTeX macro, value as typeset, source file under Data/, meaning
+macro,value_as_typeset,source,meaning
+NDerivTotal,336,verification/all_derivatives_reduced.csv,number of reduced derivatives
+NDerivNoS,142,verification/all_derivatives_reduced.csv,derivatives that do not need S
+NDerivAllSeven,96,verification/all_derivatives_reduced.csv,derivatives needing all seven symbols
+NDerivChecked,672,verification/derivatives_336_check.csv,derivative checks performed (two states)
+NDerivSkipped,0,verification/derivatives_336_check.csv,derivative checks skipped
+DerivMaxDevSC,1.5 \times 10^{-5},verification/derivatives_336_check.csv,"max relative deviation, PR supercritical"
+DerivMedDevSC,1.3 \times 10^{-9},verification/derivatives_336_check.csv,"median relative deviation, PR supercritical"
+DerivNBelowSC,324,verification/derivatives_336_check.csv,"count below 1e-6, PR supercritical"
+DerivMaxDevGas,8.9 \times 10^{-6},verification/derivatives_336_check.csv,"max relative deviation, PR gas"
+DerivMedDevGas,2.8 \times 10^{-10},verification/derivatives_336_check.csv,"median relative deviation, PR gas"
+DerivNBelowGas,324,verification/derivatives_336_check.csv,"count below 1e-6, PR gas"
+NMaxwell,4,verification/identity_checks.csv,Maxwell relations confirmed
+NRecip,336,verification/identity_checks.csv,reciprocity identities confirmed
+NCyclic,336,verification/identity_checks.csv,cyclic-rule identities confirmed
+ClosedNumMax,5.4 \times 10^{-10},verification/closedform_vs_numerical.csv,max closed-form vs numerical difference
+ClosedNumN,144,verification/closedform_vs_numerical.csv,number of closed-form vs numerical comparisons
+ConsistMax,2.7 \times 10^{-9},verification/consistency_checks.csv,max residual of G and H surface identities
+ConsistN,45,verification/consistency_checks.csv,number of consistency comparisons
+PRCritResid,8.6 \times 10^{-5},verification/eos_constants.csv,PR critical-pressure residual
+PRrhoAAD,1.8,validation/summary_deviations.csv,"PR density AAD %, all CO2 points"
+PRrhoMax,10,validation/summary_deviations.csv,PR density max deviation %
+SRKrhoAAD,3.3,validation/summary_deviations.csv,"SRK density AAD %, all CO2 points"
+SRKrhoMax,17,validation/summary_deviations.csv,SRK density max deviation %
+RKrhoAAD,2.1,validation/summary_deviations.csv,"RK density AAD %, all CO2 points"
+RKrhoMax,15,validation/summary_deviations.csv,RK density max deviation %
+vdWrhoAAD,4.7,validation/summary_deviations.csv,"vdW density AAD %, all CO2 points"
+vdWrhoMax,27,validation/summary_deviations.csv,vdW density max deviation %
+IGrhoAAD,22.3,validation/summary_deviations.csv,"IG density AAD %, all CO2 points"
+IGrhoMax,75,validation/summary_deviations.csv,IG density max deviation %
+PRrhoAADlow,0.6,validation/summary_deviations.csv,"PR density AAD %, 0.1-4 MPa"
+PRrhoAADmid,2.1,validation/summary_deviations.csv,"PR density AAD %, 6-10 MPa"
+PRrhoAADhigh,3.6,validation/summary_deviations.csv,"PR density AAD %, 15-20 MPa"
+PRCpAAD,2.7,validation/summary_deviations.csv,PR Cp AAD %
+PRCpMax,21,validation/summary_deviations.csv,PR Cp max %
+PRCvAAD,5.0,validation/summary_deviations.csv,PR Cv AAD %
+PRwAAD,2.4,validation/summary_deviations.csv,PR sound speed AAD %
+PRmuAAD,8.5,validation/summary_deviations.csv,PR Joule-Thomson AAD %
+PRdHAAD,104,validation/summary_deviations.csv,"PR enthalpy-change AAD, J/mol"
+PRdSAAD,0.24,validation/summary_deviations.csv,"PR entropy-change AAD, J/(mol K)"
+SRKrhoAADlow,0.2,validation/summary_deviations.csv,"SRK density AAD %, 0.1-4 MPa"
+SRKrhoAADmid,2.8,validation/summary_deviations.csv,"SRK density AAD %, 6-10 MPa"
+SRKrhoAADhigh,10.3,validation/summary_deviations.csv,"SRK density AAD %, 15-20 MPa"
+SRKCpAAD,2.3,validation/summary_deviations.csv,SRK Cp AAD %
+SRKCpMax,18,validation/summary_deviations.csv,SRK Cp max %
+SRKCvAAD,4.0,validation/summary_deviations.csv,SRK Cv AAD %
+SRKwAAD,4.2,validation/summary_deviations.csv,SRK sound speed AAD %
+SRKmuAAD,5.2,validation/summary_deviations.csv,SRK Joule-Thomson AAD %
+SRKdHAAD,66,validation/summary_deviations.csv,"SRK enthalpy-change AAD, J/mol"
+SRKdSAAD,0.19,validation/summary_deviations.csv,"SRK entropy-change AAD, J/(mol K)"
+IGdHAAD,2878,validation/summary_deviations.csv,"ideal-gas enthalpy-change AAD, J/mol"
+vdWCvAAD,11.8,validation/summary_deviations.csv,vdW Cv AAD %
+IGCvAAD,11.8,validation/summary_deviations.csv,ideal-gas Cv AAD %
+PRPsatAAD,0.5,validation/summary_deviations.csv,PR saturation pressure AAD %
+PRrhoLAAD,4.4,validation/summary_deviations.csv,PR saturated liquid density AAD %
+SRKPsatAAD,0.5,validation/summary_deviations.csv,SRK saturation pressure AAD %
+SRKrhoLAAD,12.6,validation/summary_deviations.csv,SRK saturated liquid density AAD %
+RKPsatAAD,19.5,validation/summary_deviations.csv,RK saturation pressure AAD %
+RKrhoLAAD,16.0,validation/summary_deviations.csv,RK saturated liquid density AAD %
+vdWPsatAAD,73.7,validation/summary_deviations.csv,vdW saturation pressure AAD %
+vdWrhoLAAD,38.4,validation/summary_deviations.csv,vdW saturated liquid density AAD %
+PRdHvapAAD,2.4,validation/summary_deviations.csv,PR enthalpy of vaporisation AAD %
+PRdHvapMax,13,validation/summary_deviations.csv,PR enthalpy of vaporisation max %
+PRrhoVAAD,1.1,validation/summary_deviations.csv,PR saturated vapour density AAD %
+NtwoPRrhoAAD,2.4,validation/summary_deviations.csv,N2 PR density AAD %
+NtwoPRCpAAD,0.6,validation/summary_deviations.csv,N2 PR Cp AAD %
+NtwoPRwAAD,3.0,validation/summary_deviations.csv,N2 PR sound speed AAD %
+NtwoSRKrhoAAD,1.3,validation/summary_deviations.csv,N2 SRK density AAD %
+NtwoSRKCpAAD,1.1,validation/summary_deviations.csv,N2 SRK Cp AAD %
+NtwoSRKwAAD,1.0,validation/summary_deviations.csv,N2 SRK sound speed AAD %
+TabdHAAD,57,validation/summary_deviations.csv,"table route enthalpy AAD, J/mol"
+TabdSAAD,0.18,validation/summary_deviations.csv,"table route entropy AAD, J/(mol K)"
+TabdHAADlow,10,validation/summary_deviations.csv,"table route enthalpy AAD 0.1-4 MPa, J/mol"
+TabdHMax,1379,validation/summary_deviations.csv,"table route enthalpy max, J/mol"
+TabCpAAD,19,validation/summary_deviations.csv,table route Cp AAD %
+TabCvAAD,54,validation/summary_deviations.csv,table route Cv AAD %
+TabCpAADlow,12,validation/summary_deviations.csv,"table route Cp AAD %, 0.1-4 MPa"
+TabHeldCpAADlow,2.0,validation/summary_deviations.csv,"held-out table Cp AAD %, 0.1-4 MPa"
+TabHeldrhoAAD,0.10,validation/summary_deviations.csv,held-out table density AAD %
+TabHeldrhoMax,3.6,validation/summary_deviations.csv,held-out table density max %
+TabHelddHAAD,52,validation/summary_deviations.csv,"held-out table enthalpy AAD, J/mol"
+TabNRefused,6,validation/co2_table_route_vs_nist.csv,grid nodes refused by the table route (kappaT <= 0)
+TabNNodes,171,validation/co2_table_route_vs_nist.csv,"grid nodes tested, full table"
+NNistCOtwo,171,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,CO2 single-phase reference points
+NNistTotal,200,reference/*.csv,all NIST reference state points
+NScen,17,outputs/scenario_summary.csv,number of scenarios
+NScenOK,8,outputs/scenario_summary.csv,scenarios completing normally
+NScenPartial,3,outputs/scenario_summary.csv,scenarios with partial results
+NScenIncons,1,outputs/scenario_summary.csv,scenarios flagged inconsistent
+NScenError,5,outputs/scenario_summary.csv,scenarios refused with an error
+InfCv,38.33,outputs/05_infer_from_measurements_output.csv,Cv inferred from stated measurements
+InfCvU,0.24,outputs/05_infer_from_measurements_output.csv,its standard uncertainty
+InfCvNist,38.325,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,"NIST Cv at 350 K, 10 MPa"
+InfKappaT,0.1582,outputs/05_infer_from_measurements_output.csv,"inferred kappaT, 1/MPa"
+InfAlpha,10.553,outputs/05_infer_from_measurements_output.csv,"inferred alpha, 1e-3 /K"
+TabScendH,-5822,outputs/08_table_co2_process_output.csv,"table scenario enthalpy change, J/mol"
+TabScendS,-51.96,outputs/08_table_co2_process_output.csv,table scenario entropy change
+TabScendHNist,-5828,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,NIST enthalpy change for the same states
+TabScendSNist,-51.98,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,NIST entropy change for the same states
+SatP,4.160,outputs/03_saturation_co2_pr_output.csv,"PR saturation pressure at 280 K, MPa"
+SatPU,0.006,outputs/03_saturation_co2_pr_output.csv,"its standard uncertainty, MPa"
+SatPNist,4.1607,reference/nist_co2_saturation_220-300K.csv,"NIST saturation pressure at 280 K, MPa"
+OneRho,5.277,outputs/01_state_co2_pr_output.csv,"PR molar density at 350 K, 10 MPa, mol/L"
+OneRhoNist,5.1989,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,"NIST density at 350 K, 10 MPa"
+OneCp,82.66,outputs/01_state_co2_pr_output.csv,"PR Cp at 350 K, 10 MPa"
+OneCpNist,85.729,reference/nist_co2_isobars_310-400K_0.1-20MPa.csv,"NIST Cp at 350 K, 10 MPa"
+OneCpU,0.16,outputs/01_state_co2_pr_output.csv,its standard uncertainty
+OneMu,6.145,outputs/01_state_co2_pr_output.csv,"PR Joule-Thomson coefficient, K/MPa"
+OneMuU,0.006,outputs/01_state_co2_pr_output.csv,its standard uncertainty
+MCRatioMin,0.99,outputs/0[12]_*_output.csv,min Monte Carlo / linear u
+MCRatioMax,1.03,outputs/0[12]_*_output.csv,max Monte Carlo / linear u
+MCN,36,outputs/0[12]_*_output.csv,outputs compared
+TwodH,-12634,outputs/02_process_co2_pr_output.csv,"process enthalpy change, J/mol"
+TwodHU,16,outputs/02_process_co2_pr_output.csv,its standard uncertainty
+TwodS,-73.72,outputs/02_process_co2_pr_output.csv,process entropy change
+TwodSU,0.10,outputs/02_process_co2_pr_output.csv,its standard uncertainty
+TwodHShareTtwo,76,outputs/02_process_co2_pr_uncertainty_budget.csv,"share of T2 in var(dH), %"
+TwodHShareOmega,10,outputs/02_process_co2_pr_uncertainty_budget.csv,"share of omega in var(dH), %"
+TwodSSharePone,74,outputs/02_process_co2_pr_uncertainty_budget.csv,"share of P1 in var(dS), %"
+TwodSShareTtwo,19,outputs/02_process_co2_pr_uncertainty_budget.csv,"share of T2 in var(dS), %"
+InfCvShareCp,47,outputs/05_infer_from_measurements_uncertainty_budget.csv,"share of Cp in var(Cv), %"
+InfCvShareMu,40,outputs/05_infer_from_measurements_uncertainty_budget.csv,"share of muJT in var(Cv), %"
+NTests,81,verification/test_suite_result.txt,tests passed
+NTestsFailed,0,verification/test_suite_result.txt,tests failed
+PyVer,3.12.3,runtime,Python version used
+NumpyVer,2.5.4,runtime,NumPy version used
+ScipyVer,1.18.1,runtime,SciPy version used
+MplVer,3.11.2,runtime,Matplotlib version used
+NCodeLines,2548,Codes/thermocalculus/*.py,lines in the engine package

@@ -1,0 +1,33 @@
+# scenario: 15_state_ideal_gas_cp_table
+# type: state
+# status: ok
+# input file: Data/inputs/15_state_ideal_gas_cp_table.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,360,K,stated,,,
+P,500000,Pa,stated,,,
+V,0.005986413085,m3/mol,parameterised (IG),,,
+Z,1,1,parameterised (IG),,,
+rho,7.35156418,kg/m3,parameterised (IG),,,
+alpha,0.002777777778,1/K,parameterised (IG),,,
+kappaT,2e-06,1/Pa,parameterised (IG),,,
+gammaV,1388.888889,Pa/K,parameterised (IG),,,
+lnphi,0,1,parameterised (IG),,,
+fugacity,500000,Pa,parameterised (IG),,,
+HR,0,J/mol,parameterised (IG),,,
+SR,0,J/(mol*K),parameterised (IG),,,
+GR,0,J/mol,parameterised (IG),,,
+Cp0,39.814788,J/(mol*K),parameterised (IG),,,
+Cp,39.814788,J/(mol*K),parameterised (IG),,,
+Cv,31.50032538,J/(mol*K),parameterised (IG),,,
+gamma,1.263948468,1,parameterised (IG),,,
+kappaS,1.582342992e-06,1/Pa,parameterised (IG),,,
+w,293.1971939,m/s,parameterised (IG),,,
+muJT,-1.669292737e-20,K/Pa,parameterised (IG),,,
+H,2313.167044,J/mol,parameterised (IG),,,
+S,-6.359796498,J/(mol*K),parameterised (IG),,,
+U,-680.0394981,J/mol,parameterised (IG),,,
+A,1609.487241,J/mol,parameterised (IG),,,
+G,4602.693784,J/mol,parameterised (IG),,,
+(dT/dP)_H,-2.178491414e-20,(K)/(Pa),parameterised (IG),,,= V*(T*alpha - 1)/Cp
+(dT/dP)_S,0.0001503565229,(K)/(Pa),parameterised (IG),,,= T*V*alpha/Cp

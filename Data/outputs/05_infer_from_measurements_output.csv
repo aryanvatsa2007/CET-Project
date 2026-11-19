@@ -1,0 +1,24 @@
+# scenario: 05_infer_from_measurements
+# type: infer
+# status: ok
+# input file: Data/inputs/05_infer_from_measurements.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,350,K,stated,,,
+P,10000000,Pa,stated,,,
+V,0.00019235,m3/mol,stated,1e-07,,"variance share: V 100.0%, Cp 0.0%, w 0.0%"
+Cp,85.729,J/(mol*K),stated,0.5,,"variance share: Cp 100.0%, V 0.0%, w 0.0%"
+w,248.62,m/s,stated,0.5,,"variance share: w 100.0%, V 0.0%, Cp 0.0%"
+muJT,6.0435e-06,K/Pa,stated,3e-08,,"variance share: muJT 100.0%, V 0.0%, Cp 0.0%"
+M,0.0440095,kg/mol,stated,,,
+Z,0.6609824998,1,inferred,0.0003436353001,,"variance share: V 100.0%, Cp 0.0%, w 0.0%"
+rho,228.7990642,kg/m3,inferred,0.1189493445,,"variance share: V 100.0%, Cp 0.0%, w 0.0%"
+kappaS,7.070882687e-08,1/Pa,inferred,2.867711042e-10,,"variance share: w 98.4%, V 1.6%, Cp 0.0%"
+alpha,0.0105529832,1/K,inferred,5.907668287e-05,,"variance share: Cp 57.7%, muJT 41.8%, V 0.5%"
+kappaT,1.581634899e-07,1/Pa,inferred,7.326331771e-10,,"variance share: muJT 74.7%, w 15.1%, Cp 10.2%"
+gammaV,66721.99259,Pa/K,inferred,224.377179,,"variance share: Cp 68.1%, w 28.6%, V 2.0%"
+Cv,38.32614609,J/(mol*K),inferred,0.2427077517,,"variance share: Cp 47.3%, muJT 40.0%, w 12.3%"
+gamma,2.236828086,1,inferred,0.0108053246,,"variance share: muJT 68.7%, w 21.2%, Cp 9.4%"
+(dP/dT)_V,66721.99259,(Pa)/(K),inferred,224.377179,,"variance share: Cp 68.1%, w 28.6%, V 2.0%"
+(dU/dV)_T,13352697.41,(J/mol)/(m3/mol),inferred,78532.01265,,"variance share: Cp 68.1%, w 28.6%, V 2.0%"
+(dT/dP)_S,8.287198165e-06,(K)/(Pa),inferred,3.275063134e-08,,"variance share: muJT 83.9%, Cp 16.0%, V 0.1%"

@@ -1,0 +1,28 @@
+# Scenario 02: property changes of CO2 between a low-pressure gas state and a
+# dense supercritical state (cooling and compression).
+[scenario]
+name = 02_process_co2_pr
+type = process
+description = CO2 from 400 K, 0.1 MPa to 320 K, 15 MPa with Peng-Robinson
+
+[model]
+fluid = CO2
+eos = PR
+
+[state1]
+T = 400 K
+P = 0.1 MPa
+
+[state2]
+T = 320 K
+P = 15 MPa
+
+[uncertainty]
+T1 = 0.1 K
+P1 = 0.001 MPa
+T2 = 0.1 K
+P2 = 0.015 MPa
+Tc = 0.015 K
+Pc = 0.003 MPa
+omega = 0.001
+monte_carlo = 2000

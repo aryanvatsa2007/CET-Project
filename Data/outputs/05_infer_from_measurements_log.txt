@@ -1,0 +1,8 @@
+# scenario: 05_infer_from_measurements
+# type: infer
+# status: ok
+# input file: Data/inputs/05_infer_from_measurements.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: infer response functions of CO2 from stated V, Cp, w and muJT (no EoS)
+uncertainty: first-order propagation of u(V) = 1e-07, u(Cp) = 0.5, u(w) = 0.5, u(muJT) = 3e-08 (SI units)

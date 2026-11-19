@@ -1,0 +1,13 @@
+# scenario: 06_infer_missing_data
+# type: infer
+# status: partial
+# input file: Data/inputs/06_infer_missing_data.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,350,K,stated,,,
+P,10000000,Pa,stated,,,
+V,0.00019235,m3/mol,stated,,,
+Cp,85.729,J/(mol*K),stated,,,
+kappaT,1.5e-07,1/Pa,stated,,,
+Z,0.6609824998,1,inferred,,,"Z = P V / (R T)  [from P, V, T]"
+(dV/dP)_T,-2.88525e-11,(m3/mol)/(Pa),inferred,,,= -V*kappaT

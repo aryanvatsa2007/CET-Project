@@ -1,0 +1,22 @@
+# scenario: 02_process_co2_pr
+# type: process
+# status: ok
+# input file: Data/inputs/02_process_co2_pr.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: CO2 from 400 K, 0.1 MPa to 320 K, 15 MPa with Peng-Robinson
+fluid carbon dioxide: critical constants from NIST WebBook fluid page (Span and Wagner 1996)
+equation of state PR: a_c = 0.396304 Pa m6/mol2, b = 2.66669e-05 m3/mol, m = 0.706477
+state 1: gas; state 2: supercritical
+uncertainty: first-order propagation of u(T1) = 0.1, u(P1) = 1000, u(T2) = 0.1, u(P2) = 15000, u(Tc) = 0.015, u(Pc) = 3000, u(omega) = 0.001 (SI units)
+Monte Carlo check with 2000 draws (0 failed); ratio = Monte Carlo u / linear u:
+  dH: linear u = 15.6371, Monte Carlo u = 15.8634, ratio = 1.0145
+  dS: linear u = 0.0969027, Monte Carlo u = 0.0961577, ratio = 0.9923
+  dU: linear u = 14.4402, Monte Carlo u = 14.6827, ratio = 1.0168
+  dA: linear u = 33.6955, Monte Carlo u = 34.121, ratio = 1.0126
+  dG: linear u = 33.8124, Monte Carlo u = 34.32, ratio = 1.0150
+  dV: linear u = 0.000332683, Monte Carlo u = 0.000334694, ratio = 1.0060
+  dH_ideal: linear u = 5.6239, Monte Carlo u = 5.59789, ratio = 0.9954
+  dH_residual: linear u = 11.7416, Monte Carlo u = 12.0409, ratio = 1.0255
+  dS_ideal: linear u = 0.085035, Monte Carlo u = 0.0850675, ratio = 1.0004
+  dS_residual: linear u = 0.0356672, Monte Carlo u = 0.0364316, ratio = 1.0214

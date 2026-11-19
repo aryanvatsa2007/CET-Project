@@ -1,0 +1,32 @@
+# scenario: 14_state_n2_srk
+# type: state
+# status: ok
+# input file: Data/inputs/14_state_n2_srk.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,300,K,stated,,,
+P,10,MPa,stated,,,
+V,0.254054071,L/mol,parameterised (SRK),,,
+Z,1.018522714,1,parameterised (SRK),,,
+rho,110.2655033,kg/m3,parameterised (SRK),,,
+alpha,0.003879400155,1/K,parameterised (SRK),,,
+kappaT,9.605265036e-08,1/Pa,parameterised (SRK),,,
+gammaV,40388.26768,Pa/K,parameterised (SRK),,,
+lnphi,0.007201803605,1,parameterised (SRK),,,
+fugacity,10072277.99,Pa,parameterised (SRK),,,
+HR,-518.8816432,J/mol,parameterised (SRK),,,
+SR,-1.789484604,J/(mol*K),parameterised (SRK),,,
+GR,17.96373806,J/mol,parameterised (SRK),,,
+Cp0,29.12478708,J/(mol*K),parameterised (SRK),,,
+Cp,33.85565765,J/(mol*K),parameterised (SRK),,,
+Cv,21.91392847,J/(mol*K),parameterised (SRK),,,
+gamma,1.544937855,1,parameterised (SRK),,,
+kappaS,6.2172501e-08,1/Pa,parameterised (SRK),,,
+w,381.9275606,m/s,parameterised (SRK),,,
+muJT,1.229311512,K/MPa,parameterised (SRK),,,
+H,-465.0017142,J/mol,parameterised (SRK),,,
+S,-39.89884415,J/(mol*K),parameterised (SRK),,,
+U,-3005.542424,J/mol,parameterised (SRK),,,
+A,8964.110821,J/mol,parameterised (SRK),,,
+G,11504.65153,J/mol,parameterised (SRK),,,
+(dT/dP)_H,1.229311512e-06,(K)/(Pa),parameterised (SRK),,,= V*(T*alpha - 1)/Cp

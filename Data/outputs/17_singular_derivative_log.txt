@@ -1,0 +1,11 @@
+# scenario: 17_singular_derivative
+# type: state
+# status: partial
+# input file: Data/inputs/17_singular_derivative.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: ideal gas; (dP/dT)_H is singular, (dT/dP)_H is zero
+fluid carbon dioxide: critical constants from NIST WebBook fluid page (Span and Wagner 1996)
+equation of state ideal gas, P = RT/V
+phase: ideal gas; volume roots at this state: 0.00291006 m3/mol
+SINGULAR: (dP/dT)_H = Cp/(V*(T*alpha - 1)) : the derivative is singular at this state: its denominator V*(T*alpha - 1) vanishes

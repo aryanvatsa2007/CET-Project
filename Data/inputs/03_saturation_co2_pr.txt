@@ -1,0 +1,16 @@
+# Scenario 03: vapour-liquid saturation of CO2 at 280 K from equality of fugacity.
+[scenario]
+name = 03_saturation_co2_pr
+type = saturation
+description = saturation pressure, coexisting volumes and enthalpy of vaporisation of CO2 at 280 K
+
+[model]
+fluid = CO2
+eos = PR
+
+[state]
+T = 280 K
+
+[uncertainty]
+T = 0.05 K
+omega = 0.001

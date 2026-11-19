@@ -1,0 +1,4 @@
+# result of 'python -m pytest -q' run from Codes/ by run_all.py
+........................................................................ [ 88%]
+.........                                                                [100%]
+81 passed in 5.89s

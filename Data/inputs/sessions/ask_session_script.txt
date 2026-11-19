@@ -1,0 +1,15 @@
+# Scripted answers for the interactive session:
+#   python -m thermocalculus ask --script ../Data/inputs/sessions/ask_session_script.txt
+# The user wants (dT/dP)_H, Cv and the speed of sound of CO2 at 350 K and 10 MPa
+# (NIST reference values, as in scenario 05), starts with incomplete data, and the
+# engine asks for what is missing. One answer has a deliberately wrong unit.
+target (dT/dP)_H; Cv; w
+T = 350 K
+P = 10 MPa
+V = 0.19235 L/mol
+Cp = 85.729 J/(mol*K)
+alpha = 4 mL
+muJT = 6.0435 K/MPa
+M = 44.0095 g/mol
+w = 248.62 m/s
+quit

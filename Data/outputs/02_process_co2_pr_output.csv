@@ -1,0 +1,66 @@
+# scenario: 02_process_co2_pr
+# type: process
+# status: ok
+# input file: Data/inputs/02_process_co2_pr.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+dH,-12633.50189,J/mol,parameterised (PR),15.63714043,15.86335799,"variance share: T2 76.1%, omega 10.3%, T1 7.0%"
+dS,-73.71815607,J/(mol*K),parameterised (PR),0.09690266731,0.09615773343,"variance share: P1 74.4%, T2 19.3%, omega 3.0%"
+dU,-10277.38307,J/mol,parameterised (PR),14.44024601,14.68265039,"variance share: T2 73.0%, omega 12.8%, P2 6.3%"
+dA,14230.91027,J/mol,parameterised (PR),33.69546035,34.12102147,"variance share: P1 97.4%, T2 2.1%, T1 0.3%"
+dG,11874.79146,J/mol,parameterised (PR),33.81237248,34.32002112,"variance share: P1 96.3%, T2 3.4%, T1 0.1%"
+dV,-0.03312464426,m3/mol,parameterised (PR),0.0003326832623,0.0003346940263,"variance share: P1 99.9%, T1 0.1%, T2 0.0%"
+dH_ideal,-3183.057533,J/mol,parameterised (PR),5.623904627,5.597894898,"variance share: T1 54.0%, T2 46.0%, P1 0.0%"
+dH_residual,-9450.444353,J/mol,parameterised (PR),11.74162497,12.04088726,"variance share: T2 70.0%, omega 18.3%, P2 7.5%"
+dS_ideal,-50.52594666,J/(mol*K),parameterised (PR),0.08503504219,0.08506753025,"variance share: P1 95.6%, T2 2.0%, T1 1.5%"
+dS_residual,-23.19220941,J/(mol*K),parameterised (PR),0.03566715417,0.03643161085,"variance share: T2 74.1%, omega 22.0%, Tc 1.8%"
+state1.T,400,K,stated,,,
+state1.P,100000,Pa,stated,,,
+state1.V,0.03318882853,m3/mol,parameterised (PR),,,
+state1.Z,0.9979246421,1,parameterised (PR),,,
+state1.rho,1.326033546,kg/m3,parameterised (PR),,,
+state1.alpha,0.002518960174,1/K,parameterised (PR),,,
+state1.kappaT,1.002078712e-05,1/Pa,parameterised (PR),,,
+state1.gammaV,251.3734842,Pa/K,parameterised (PR),,,
+state1.lnphi,-0.002075835651,1,parameterised (PR),,,
+state1.fugacity,99792.63174,Pa,parameterised (PR),,,
+state1.HR,-25.150562,J/mol,parameterised (PR),,,
+state1.SR,-0.04561694708,J/(mol*K),parameterised (PR),,,
+state1.GR,-6.903783168,J/mol,parameterised (PR),,,
+state1.Cp0,41.33622407,J/(mol*K),parameterised (PR),,,
+state1.Cp,41.44844569,J/(mol*K),parameterised (PR),,,
+state1.Cv,33.04238192,J/(mol*K),parameterised (PR),,,
+state1.gamma,1.254402476,1,parameterised (PR),,,
+state1.kappaS,7.988494374e-06,1/Pa,parameterised (PR),,,
+state1.w,307.2488582,m/s,parameterised (PR),,,
+state1.muJT,6.072758013e-06,K/Pa,parameterised (PR),,,
+state1.H,3980.281931,J/mol,parameterised (PR),,,
+state1.S,11.48104253,J/(mol*K),parameterised (PR),,,
+state1.U,661.3990784,J/mol,parameterised (PR),,,
+state1.A,-3931.017933,J/mol,parameterised (PR),,,
+state1.G,-612.13508,J/mol,parameterised (PR),,,
+state2.T,320,K,stated,,,
+state2.P,15000000,Pa,stated,,,
+state2.V,6.418426914e-05,m3/mol,parameterised (PR),,,
+state2.Z,0.3618559316,1,parameterised (PR),,,
+state2.rho,685.6742406,kg/m3,parameterised (PR),,,
+state2.alpha,0.01355341171,1/K,parameterised (PR),,,
+state2.kappaT,3.865828105e-08,1/Pa,parameterised (PR),,,
+state2.gammaV,350595.3017,Pa/K,parameterised (PR),,,
+state2.lnphi,-0.7665447607,1,parameterised (PR),,,
+state2.fugacity,6969234.845,Pa,parameterised (PR),,,
+state2.HR,-9475.594915,J/mol,parameterised (PR),,,
+state2.SR,-23.23782635,J/(mol*K),parameterised (PR),,,
+state2.GR,-2039.490482,J/mol,parameterised (PR),,,
+state2.Cp0,38.13327819,J/(mol*K),parameterised (PR),,,
+state2.Cp,136.3851569,J/(mol*K),parameterised (PR),,,
+state2.Cv,38.78886857,J/(mol*K),parameterised (PR),,,
+state2.gamma,3.516090103,1,parameterised (PR),,,
+state2.kappaS,1.099467872e-08,1/Pa,parameterised (PR),,,
+state2.w,364.2082769,m/s,parameterised (PR),,,
+state2.muJT,1.570469981e-06,K/Pa,parameterised (PR),,,
+state2.H,-8653.219954,J/mol,parameterised (PR),,,
+state2.S,-62.23711354,J/(mol*K),parameterised (PR),,,
+state2.U,-9615.983991,J/mol,parameterised (PR),,,
+state2.A,10299.89234,J/mol,parameterised (PR),,,
+state2.G,11262.65638,J/mol,parameterised (PR),,,

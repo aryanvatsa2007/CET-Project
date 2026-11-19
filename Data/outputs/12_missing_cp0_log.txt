@@ -1,0 +1,11 @@
+# scenario: 12_missing_cp0
+# type: state
+# status: partial
+# input file: Data/inputs/12_missing_cp0.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: user-defined fluid without a Cp0 model
+equation of state SRK: a_c = 0.37051 Pa m6/mol2, b = 2.96971e-05 m3/mol, m = 0.823655
+phase: supercritical; volume roots at this state: 0.000198822 m3/mol
+MISSING DATA: Cp0(T) not available; volumetric and residual properties only
+MISSING DATA: (dT/dP)_H = V*(T*alpha - 1)/Cp : cannot evaluate: missing Cp

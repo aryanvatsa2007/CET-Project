@@ -1,0 +1,25 @@
+# Scenario 01: full state of supercritical CO2 from the Peng-Robinson equation,
+# three reduced derivatives, and propagation of input uncertainty.
+[scenario]
+name = 01_state_co2_pr
+type = state
+description = CO2 at 350 K and 10 MPa, Peng-Robinson, with uncertainty in T, P, Tc, Pc, omega
+
+[model]
+fluid = CO2
+eos = PR
+
+[state]
+T = 350 K
+P = 10 MPa
+
+[targets]
+derivatives = (dT/dP)_H, (dH/dP)_T, (dU/dV)_T
+
+[uncertainty]
+T = 0.1 K
+P = 0.01 MPa
+Tc = 0.015 K
+Pc = 0.003 MPa
+omega = 0.001
+monte_carlo = 2000

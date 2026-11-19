@@ -1,0 +1,10 @@
+# scenario: 14_state_n2_srk
+# type: state
+# status: ok
+# input file: Data/inputs/14_state_n2_srk.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: N2 at 26.85 degC and 100 bar, SRK, output in MPa and L/mol
+fluid nitrogen: critical constants from NIST WebBook fluid page (Span et al. 2000)
+equation of state SRK: a_c = 0.138582 Pa m6/mol2, b = 2.67697e-05 m3/mol, m = 0.538309
+phase: supercritical; volume roots at this state: 0.000254054 m3/mol

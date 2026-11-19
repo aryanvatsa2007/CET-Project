@@ -1,0 +1,676 @@
+# each reduced formula evaluated with CO2 state values and compared with a direct numerical
+# derivative taken along the constraint Z = const (central difference after a 2x2 nonlinear solve);
+# SI units; relative_deviation = |formula - numeric| / max(|formula|, |numeric|)
+state,eos,T_K,P_Pa,X,Y,Z,expression,formula_value,numeric_value,relative_deviation,status
+PR supercritical,PR,350,10000000,T,P,V,kappaT/alpha,1.4487888e-05,1.4487888e-05,6.0777772e-12,checked
+PR supercritical,PR,350,10000000,T,P,S,T*V*alpha/Cp,8.4374438e-06,8.4374438e-06,1.3478128e-10,checked
+PR supercritical,PR,350,10000000,T,P,U,V*(P*kappaT - T*alpha)/(P*V*alpha - Cp),6.5155548e-06,6.5155548e-06,6.4795558e-11,checked
+PR supercritical,PR,350,10000000,T,P,H,V*(T*alpha - 1)/Cp,6.144648e-06,6.144648e-06,7.9145392e-11,checked
+PR supercritical,PR,350,10000000,T,P,A,P*V*kappaT/(P*V*alpha + S),-1.3839371e-05,-1.3839371e-05,9.94375e-10,checked
+PR supercritical,PR,350,10000000,T,P,G,V/S,-4.6465896e-06,-4.6465896e-06,5.2760886e-10,checked
+PR supercritical,PR,350,10000000,T,V,P,1/(V*alpha),501864.68,501864.68,1.0698678e-09,checked
+PR supercritical,PR,350,10000000,T,V,S,T*alpha/(T*V*alpha^2 - Cp*kappaT),-699858.52,-699858.52,3.6647661e-09,checked
+PR supercritical,PR,350,10000000,T,V,U,(T*alpha - P*kappaT)/(T*V*alpha^2 - Cp*kappaT),-410159.32,-410159.32,3.9375072e-09,checked
+PR supercritical,PR,350,10000000,T,V,H,(T*alpha - 1)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-369614.41,-369614.41,2.7258605e-09,checked
+PR supercritical,PR,350,10000000,T,V,A,-P/S,245187.55,245187.55,2.7552055e-10,checked
+PR supercritical,PR,350,10000000,T,V,G,1/(V*alpha - S*kappaT),121872.11,121872.11,1.8819634e-10,checked
+PR supercritical,PR,350,10000000,T,S,P,T/Cp,4.2344551,4.2344551,4.2513396e-10,checked
+PR supercritical,PR,350,10000000,T,S,V,-T*kappaT/(T*V*alpha^2 - Cp*kappaT),10.139472,10.139472,9.6249392e-11,checked
+PR supercritical,PR,350,10000000,T,S,U,T*(T*alpha - P*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),-14.355576,-14.355576,5.8446695e-09,checked
+PR supercritical,PR,350,10000000,T,S,H,T*(1 - T*alpha)/Cp,-11.348257,-11.348257,1.6190891e-08,checked
+PR supercritical,PR,350,10000000,T,S,A,-T*P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),2.6306361,2.6306361,1.1037871e-09,checked
+PR supercritical,PR,350,10000000,T,S,G,-T/(T*S*alpha - Cp),1.5038004,1.5038004,3.4076946e-09,checked
+PR supercritical,PR,350,10000000,T,U,P,-1/(P*V*alpha - Cp),0.015941444,0.015941444,2.2012175e-09,checked
+PR supercritical,PR,350,10000000,T,U,V,-kappaT/(T*V*alpha^2 - Cp*kappaT),0.02896992,0.02896992,1.6095188e-10,checked
+PR supercritical,PR,350,10000000,T,U,S,-T*alpha/(P*(T*V*alpha^2 - Cp*kappaT)),0.069985852,0.069985851,2.5841031e-09,checked
+PR supercritical,PR,350,10000000,T,U,H,(1 - T*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-0.26409483,-0.26409712,8.6687277e-06,checked
+PR supercritical,PR,350,10000000,T,U,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.010838632,0.010838632,1.474954e-09,checked
+PR supercritical,PR,350,10000000,T,U,G,-1/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.0066361217,0.0066361218,7.1785387e-09,checked
+PR supercritical,PR,350,10000000,T,H,P,1/Cp,0.012098443,0.012098443,1.9062237e-09,checked
+PR supercritical,PR,350,10000000,T,H,V,-kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.021008731,0.021008731,4.9451605e-11,checked
+PR supercritical,PR,350,10000000,T,H,S,T*alpha/Cp,0.044522034,0.044522034,5.6983436e-10,checked
+PR supercritical,PR,350,10000000,T,H,U,(T*alpha - P*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),0.21252798,0.21252957,7.4648319e-06,checked
+PR supercritical,PR,350,10000000,T,H,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.0083784368,0.0083784368,1.496839e-09,checked
+PR supercritical,PR,350,10000000,T,H,G,-1/(T*S*alpha - S - Cp),0.0052094581,0.0052094581,6.7091785e-09,checked
+PR supercritical,PR,350,10000000,T,A,P,-1/(P*V*alpha + S),0.047939984,0.047939984,4.2064508e-09,checked
+PR supercritical,PR,350,10000000,T,A,V,-1/S,0.024518755,0.024518755,2.6594406e-11,checked
+PR supercritical,PR,350,10000000,T,A,S,-T*alpha/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.018157485,0.018157485,1.4290522e-11,checked
+PR supercritical,PR,350,10000000,T,A,U,(P*kappaT - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.015345455,0.015345455,6.0147845e-11,checked
+PR supercritical,PR,350,10000000,T,A,H,(1 - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.014740495,0.014740495,7.4174473e-11,checked
+PR supercritical,PR,350,10000000,T,A,G,-1/(P*V*alpha - P*S*kappaT + S),-0.024231778,-0.024231779,7.6003728e-09,checked
+PR supercritical,PR,350,10000000,T,G,P,-1/S,0.024518755,0.024518755,1.5132905e-11,checked
+PR supercritical,PR,350,10000000,T,G,V,kappaT/(V*alpha - S*kappaT),0.018564656,0.018564656,2.5201753e-11,checked
+PR supercritical,PR,350,10000000,T,G,S,-T*alpha/(T*S*alpha - Cp),0.015811303,0.015811303,2.8047541e-11,checked
+PR supercritical,PR,350,10000000,T,G,U,(P*kappaT - T*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.014312061,0.014312061,1.958731e-10,checked
+PR supercritical,PR,350,10000000,T,G,H,(1 - T*alpha)/(T*S*alpha - S - Cp),0.013961246,0.013961246,2.6582985e-10,checked
+PR supercritical,PR,350,10000000,T,G,A,P*kappaT/(P*V*alpha - P*S*kappaT + S),0.036912023,0.036912023,7.9187529e-09,checked
+PR supercritical,PR,350,10000000,P,T,V,alpha/kappaT,69023.172,69023.172,2.3247208e-11,checked
+PR supercritical,PR,350,10000000,P,T,S,Cp/(T*V*alpha),118519.31,118519.31,1.0912591e-09,checked
+PR supercritical,PR,350,10000000,P,T,U,(Cp - P*V*alpha)/(V*(T*alpha - P*kappaT)),153478.87,153478.87,2.56329e-09,checked
+PR supercritical,PR,350,10000000,P,T,H,Cp/(V*(T*alpha - 1)),162743.25,162743.25,3.8501676e-09,checked
+PR supercritical,PR,350,10000000,P,T,A,(P*V*alpha + S)/(P*V*kappaT),-72257.622,-72257.621,4.2323415e-09,checked
+PR supercritical,PR,350,10000000,P,T,G,S/V,-215211.6,-215211.62,5.4116051e-08,checked
+PR supercritical,PR,350,10000000,P,V,T,-1/(V*kappaT),-3.4640292e+10,-3.4640292e+10,4.044605e-09,checked
+PR supercritical,PR,350,10000000,P,V,S,Cp/(V*(T*V*alpha^2 - Cp*kappaT)),-8.2946747e+10,-8.2946748e+10,1.2846952e-08,checked
+PR supercritical,PR,350,10000000,P,V,U,(Cp - P*V*alpha)/(V*(T*V*alpha^2 - Cp*kappaT)),-6.2950789e+10,-6.295079e+10,1.1398369e-08,checked
+PR supercritical,PR,350,10000000,P,V,H,Cp/(V*(T*V*alpha^2 - V*alpha - Cp*kappaT)),-6.0152251e+10,-6.0152252e+10,1.008291e-08,checked
+PR supercritical,PR,350,10000000,P,V,A,-(P*V*alpha + S)/(V*S*kappaT),-1.771667e+10,-1.771667e+10,1.5739448e-09,checked
+PR supercritical,PR,350,10000000,P,V,G,S/(V*(V*alpha - S*kappaT)),-2.6228293e+10,-2.6228293e+10,2.3843279e-09,checked
+PR supercritical,PR,350,10000000,P,S,T,-1/(V*alpha),-501864.68,-501864.68,3.5987357e-10,checked
+PR supercritical,PR,350,10000000,P,S,V,-T*alpha/(T*V*alpha^2 - Cp*kappaT),699858.52,699858.52,5.8209448e-11,checked
+PR supercritical,PR,350,10000000,P,S,U,T*(Cp - P*V*alpha)/(P*V*(T*V*alpha^2 - Cp*kappaT)),-2203277.6,-2203277.7,5.6961405e-08,checked
+PR supercritical,PR,350,10000000,P,S,H,-T/V,-1846852.2,-1846852.3,1.4068195e-08,checked
+PR supercritical,PR,350,10000000,P,S,A,-T*(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),-190083.51,-190083.51,2.8073208e-09,checked
+PR supercritical,PR,350,10000000,P,S,G,-T*S/(V*(T*S*alpha - Cp)),-323635.3,-323635.3,1.1082733e-09,checked
+PR supercritical,PR,350,10000000,P,U,T,-1/(V*(T*alpha - P*kappaT)),-2446.6749,-2446.6749,4.1913681e-09,checked
+PR supercritical,PR,350,10000000,P,U,V,-alpha/(T*V*alpha^2 - Cp*kappaT),1999.5958,1999.5958,2.9527518e-10,checked
+PR supercritical,PR,350,10000000,P,U,S,-Cp/(P*V*(T*V*alpha^2 - Cp*kappaT)),8294.6747,8294.6748,1.1662833e-08,checked
+PR supercritical,PR,350,10000000,P,U,H,-Cp/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),-42979.652,-42979.878,5.2542839e-06,checked
+PR supercritical,PR,350,10000000,P,U,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),-783.1738,-783.1738,3.373134e-09,checked
+PR supercritical,PR,350,10000000,P,U,G,-S/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),-1428.1704,-1428.1704,1.5787533e-09,checked
+PR supercritical,PR,350,10000000,P,H,T,-1/(V*(T*alpha - 1)),-1968.94,-1968.94,4.300704e-09,checked
+PR supercritical,PR,350,10000000,P,H,V,-alpha/(T*V*alpha^2 - V*alpha - Cp*kappaT),1450.0893,1450.0893,1.5244937e-10,checked
+PR supercritical,PR,350,10000000,P,H,S,1/V,5276.7207,5276.7207,5.828303e-10,checked
+PR supercritical,PR,350,10000000,P,H,U,(Cp - P*V*alpha)/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),32618.555,32618.707,4.6563082e-06,checked
+PR supercritical,PR,350,10000000,P,H,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-605.40592,-605.40592,3.3913684e-09,checked
+PR supercritical,PR,350,10000000,P,H,G,-S/(V*(T*S*alpha - S - Cp)),-1121.1358,-1121.1358,1.3423235e-09,checked
+PR supercritical,PR,350,10000000,P,A,T,1/(P*V*kappaT),3464.0292,3464.0292,1.5450574e-09,checked
+PR supercritical,PR,350,10000000,P,A,V,-alpha/(S*kappaT),1692.3623,1692.3623,2.0894554e-11,checked
+PR supercritical,PR,350,10000000,P,A,S,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),2152.0125,2152.0125,1.494035e-10,checked
+PR supercritical,PR,350,10000000,P,A,U,(P*V*alpha - Cp)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),2355.2031,2355.2031,2.6731123e-10,checked
+PR supercritical,PR,350,10000000,P,A,H,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),2398.9161,2398.9161,3.3753158e-10,checked
+PR supercritical,PR,350,10000000,P,A,G,-S/(V*(P*V*alpha - P*S*kappaT + S)),5214.9599,5214.9599,2.4441901e-09,checked
+PR supercritical,PR,350,10000000,P,G,T,1/V,5276.7207,5276.7208,1.3987052e-08,checked
+PR supercritical,PR,350,10000000,P,G,V,alpha/(V*alpha - S*kappaT),1281.3914,1281.3914,2.6626889e-11,checked
+PR supercritical,PR,350,10000000,P,G,S,-Cp/(V*(T*S*alpha - Cp)),1873.9447,1873.9447,2.7703739e-10,checked
+PR supercritical,PR,350,10000000,P,G,U,(P*V*alpha - Cp)/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),2196.599,2196.599,5.0211823e-10,checked
+PR supercritical,PR,350,10000000,P,G,H,-Cp/(V*(T*S*alpha - S - Cp)),2272.0986,2272.0986,6.9227737e-10,checked
+PR supercritical,PR,350,10000000,P,G,A,(P*V*alpha + S)/(V*(P*V*alpha - P*S*kappaT + S)),-2667.175,-2667.175,1.224244e-08,checked
+PR supercritical,PR,350,10000000,V,T,P,V*alpha,1.992569e-06,1.992569e-06,5.4427243e-09,checked
+PR supercritical,PR,350,10000000,V,T,S,(T*V*alpha^2 - Cp*kappaT)/(T*alpha),-1.4288602e-06,-1.4288602e-06,1.110274e-09,checked
+PR supercritical,PR,350,10000000,V,T,U,(T*V*alpha^2 - Cp*kappaT)/(T*alpha - P*kappaT),-2.438077e-06,-2.438077e-06,4.7054407e-09,checked
+PR supercritical,PR,350,10000000,V,T,H,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*alpha - 1),-2.7055222e-06,-2.7055222e-06,4.3556811e-09,checked
+PR supercritical,PR,350,10000000,V,T,A,-S/P,4.0785104e-06,4.0785104e-06,1.0741972e-09,checked
+PR supercritical,PR,350,10000000,V,T,G,V*alpha - S*kappaT,8.2053227e-06,8.2053227e-06,6.1952984e-09,checked
+PR supercritical,PR,350,10000000,V,P,T,-V*kappaT,-2.8868117e-11,-2.8868117e-11,3.6038237e-10,checked
+PR supercritical,PR,350,10000000,V,P,S,V*(T*V*alpha^2 - Cp*kappaT)/Cp,-1.2055928e-11,-1.2055928e-11,3.434025e-10,checked
+PR supercritical,PR,350,10000000,V,P,U,V*(Cp*kappaT - T*V*alpha^2)/(P*V*alpha - Cp),-1.5885424e-11,-1.5885424e-11,4.9799028e-10,checked
+PR supercritical,PR,350,10000000,V,P,H,V*(T*V*alpha^2 - V*alpha - Cp*kappaT)/Cp,-1.6624482e-11,-1.6624482e-11,4.7758186e-10,checked
+PR supercritical,PR,350,10000000,V,P,A,-V*S*kappaT/(P*V*alpha + S),-5.6444017e-11,-5.6444017e-11,1.0757326e-09,checked
+PR supercritical,PR,350,10000000,V,P,G,V*(V*alpha - S*kappaT)/S,-3.8126767e-11,-3.8126767e-11,3.7696789e-10,checked
+PR supercritical,PR,350,10000000,V,S,T,kappaT/alpha,1.4487888e-05,1.4487888e-05,5.7034353e-09,checked
+PR supercritical,PR,350,10000000,V,S,P,T*V*alpha/Cp,8.4374438e-06,8.4374438e-06,8.7445904e-10,checked
+PR supercritical,PR,350,10000000,V,S,U,T*(T*V*alpha^2 - Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),3.5e-05,3.5e-05,7.0728608e-09,checked
+PR supercritical,PR,350,10000000,V,S,H,T*(V*alpha + Cp*kappaT - T*V*alpha^2)/Cp,3.0702961e-05,3.0702962e-05,1.5743038e-08,checked
+PR supercritical,PR,350,10000000,V,S,A,T*S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),1.0729077e-05,1.0729077e-05,1.035372e-09,checked
+PR supercritical,PR,350,10000000,V,S,G,T*(S*kappaT - V*alpha)/(T*S*alpha - Cp),1.2339168e-05,1.2339168e-05,2.0039709e-09,checked
+PR supercritical,PR,350,10000000,V,U,T,kappaT/(T*alpha - P*kappaT),7.0630896e-08,7.0630898e-08,2.2422619e-08,checked
+PR supercritical,PR,350,10000000,V,U,P,-V*alpha/(P*V*alpha - Cp),3.1764427e-08,3.1764427e-08,1.7838989e-09,checked
+PR supercritical,PR,350,10000000,V,U,S,-1/P,-1e-07,-1e-07,2.6279486e-08,checked
+PR supercritical,PR,350,10000000,V,U,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),7.1451444e-07,7.1452511e-07,1.4941395e-05,checked
+PR supercritical,PR,350,10000000,V,U,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),4.4205475e-08,4.4205476e-08,1.3336675e-09,checked
+PR supercritical,PR,350,10000000,V,U,G,(S*kappaT - V*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),5.445152e-08,5.445152e-08,4.816424e-09,checked
+PR supercritical,PR,350,10000000,V,H,T,kappaT/(T*alpha - 1),5.6839589e-08,5.683959e-08,2.1575639e-08,checked
+PR supercritical,PR,350,10000000,V,H,P,V*alpha/Cp,2.4106982e-08,2.4106982e-08,1.3568997e-09,checked
+PR supercritical,PR,350,10000000,V,H,S,(T*V*alpha^2 - Cp*kappaT)/Cp,-6.3615764e-08,-6.3615766e-08,2.9943559e-08,checked
+PR supercritical,PR,350,10000000,V,H,U,(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-5.1815959e-07,-5.1816685e-07,1.4016866e-05,checked
+PR supercritical,PR,350,10000000,V,H,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),3.4171542e-08,3.4171542e-08,1.3705262e-09,checked
+PR supercritical,PR,350,10000000,V,H,G,(S*kappaT - V*alpha)/(T*S*alpha - S - Cp),4.2745284e-08,4.2745285e-08,4.4245622e-09,checked
+PR supercritical,PR,350,10000000,V,A,T,-1/P,-1e-07,-1e-07,3.9597533e-10,checked
+PR supercritical,PR,350,10000000,V,A,P,-V*alpha/(P*V*alpha + S),9.5523725e-08,9.5523726e-08,1.1139833e-08,checked
+PR supercritical,PR,350,10000000,V,A,S,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),-2.5944508e-08,-2.5944508e-08,1.8579304e-10,checked
+PR supercritical,PR,350,10000000,V,A,U,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),-3.7413401e-08,-3.7413401e-08,4.5696281e-10,checked
+PR supercritical,PR,350,10000000,V,A,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),-3.9880737e-08,-3.9880737e-08,4.3293501e-10,checked
+PR supercritical,PR,350,10000000,V,A,G,(S*kappaT - V*alpha)/(P*V*alpha - P*S*kappaT + S),-1.9882956e-07,-1.9882956e-07,5.445159e-09,checked
+PR supercritical,PR,350,10000000,V,G,T,-kappaT,-1.5232899e-07,-1.5232899e-07,3.5604497e-09,checked
+PR supercritical,PR,350,10000000,V,G,P,-V*alpha/S,4.8855311e-08,4.8855312e-08,3.5596284e-09,checked
+PR supercritical,PR,350,10000000,V,G,S,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha - Cp),-2.2592143e-08,-2.2592143e-08,6.0500293e-10,checked
+PR supercritical,PR,350,10000000,V,G,U,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-3.4893908e-08,-3.4893908e-08,1.7029685e-09,checked
+PR supercritical,PR,350,10000000,V,G,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*S*alpha - S - Cp),-3.7772461e-08,-3.7772461e-08,1.5274512e-09,checked
+PR supercritical,PR,350,10000000,V,G,A,-S*kappaT/(P*V*alpha - P*S*kappaT + S),1.5054607e-07,1.5054607e-07,7.9700968e-09,checked
+PR supercritical,PR,350,10000000,S,T,P,Cp/T,0.2361579,0.2361579,7.9988082e-09,checked
+PR supercritical,PR,350,10000000,S,T,V,(Cp*kappaT - T*V*alpha^2)/(T*kappaT),0.098624465,0.098624465,6.7142825e-11,checked
+PR supercritical,PR,350,10000000,S,T,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*alpha - P*kappaT)),-0.069659343,-0.069659343,1.8533341e-09,checked
+PR supercritical,PR,350,10000000,S,T,H,-Cp/(T*(T*alpha - 1)),-0.088119259,-0.08811926,2.1409565e-09,checked
+PR supercritical,PR,350,10000000,S,T,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*kappaT),0.38013619,0.38013619,1.1675192e-08,checked
+PR supercritical,PR,350,10000000,S,T,G,(Cp - T*S*alpha)/T,0.66498186,0.6649819,6.3051288e-08,checked
+PR supercritical,PR,350,10000000,S,P,T,-V*alpha,-1.992569e-06,-1.992569e-06,5.2299551e-12,checked
+PR supercritical,PR,350,10000000,S,P,V,(Cp*kappaT - T*V*alpha^2)/(T*alpha),1.4288602e-06,1.4288602e-06,1.1841244e-13,checked
+PR supercritical,PR,350,10000000,S,P,U,P*V*(Cp*kappaT - T*V*alpha^2)/(T*(P*V*alpha - Cp)),-4.5386927e-07,-4.5386927e-07,2.4997819e-10,checked
+PR supercritical,PR,350,10000000,S,P,H,-V/T,-5.4146183e-07,-5.4146183e-07,2.2092478e-10,checked
+PR supercritical,PR,350,10000000,S,P,A,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha + S)),-5.2608456e-06,-5.2608456e-06,1.9687974e-09,checked
+PR supercritical,PR,350,10000000,S,P,G,V*(Cp - T*S*alpha)/(T*S),-3.0898978e-06,-3.0898978e-06,1.1730903e-10,checked
+PR supercritical,PR,350,10000000,S,V,T,alpha/kappaT,69023.172,69023.172,3.4801239e-09,checked
+PR supercritical,PR,350,10000000,S,V,P,Cp/(T*V*alpha),118519.31,118519.31,1.4260682e-09,checked
+PR supercritical,PR,350,10000000,S,V,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - Cp*kappaT)),28571.429,28571.429,2.5448299e-09,checked
+PR supercritical,PR,350,10000000,S,V,H,-Cp/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),32570.148,32570.148,3.994667e-09,checked
+PR supercritical,PR,350,10000000,S,V,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*kappaT),93204.663,93204.663,2.6399196e-09,checked
+PR supercritical,PR,350,10000000,S,V,G,(Cp - T*S*alpha)/(T*(V*alpha - S*kappaT)),81042.743,81042.744,3.0069441e-09,checked
+PR supercritical,PR,350,10000000,S,U,T,alpha/(T*alpha - P*kappaT),0.0048751685,0.0048751685,4.2705085e-09,checked
+PR supercritical,PR,350,10000000,S,U,P,-Cp/(T*(P*V*alpha - Cp)),0.0037646979,0.0037646979,6.7973325e-10,checked
+PR supercritical,PR,350,10000000,S,U,V,1/T,0.0028571429,0.0028571429,5.3885577e-10,checked
+PR supercritical,PR,350,10000000,S,U,H,Cp/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),0.023271841,0.023272059,9.3619781e-06,checked
+PR supercritical,PR,350,10000000,S,U,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),0.0041201564,0.0041201564,5.2408764e-10,checked
+PR supercritical,PR,350,10000000,S,U,G,(T*S*alpha - Cp)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),0.0044129006,0.0044129006,1.2560145e-10,checked
+PR supercritical,PR,350,10000000,S,H,T,alpha/(T*alpha - 1),0.0039232487,0.0039232487,4.1686751e-09,checked
+PR supercritical,PR,350,10000000,S,H,P,1/T,0.0028571429,0.0028571429,2.2075408e-10,checked
+PR supercritical,PR,350,10000000,S,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),0.0020719749,0.0020719749,3.311472e-10,checked
+PR supercritical,PR,350,10000000,S,H,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),-0.01480456,-0.014804707,9.9389264e-06,checked
+PR supercritical,PR,350,10000000,S,H,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),0.0031849471,0.0031849471,1.5839106e-10,checked
+PR supercritical,PR,350,10000000,S,H,G,(T*S*alpha - Cp)/(T*(T*S*alpha - S - Cp)),0.0034641951,0.0034641951,2.1569075e-10,checked
+PR supercritical,PR,350,10000000,S,A,T,-alpha/(P*kappaT),-0.0069023172,-0.0069023172,1.1627182e-09,checked
+PR supercritical,PR,350,10000000,S,A,P,-Cp/(T*(P*V*alpha + S)),0.011321406,0.011321406,1.4283969e-08,checked
+PR supercritical,PR,350,10000000,S,A,V,(T*V*alpha^2 - Cp*kappaT)/(T*S*kappaT),0.0024181491,0.0024181491,1.2096224e-11,checked
+PR supercritical,PR,350,10000000,S,A,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),-0.0010689543,-0.0010689543,1.6095704e-10,checked
+PR supercritical,PR,350,10000000,S,A,H,Cp/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-0.0012989215,-0.0012989215,1.7695666e-10,checked
+PR supercritical,PR,350,10000000,S,A,G,(T*S*alpha - Cp)/(T*(P*V*alpha - P*S*kappaT + S)),-0.016113693,-0.016113693,4.9144496e-09,checked
+PR supercritical,PR,350,10000000,S,G,T,-alpha,-0.01051423,-0.01051423,1.0396791e-08,checked
+PR supercritical,PR,350,10000000,S,G,P,-Cp/(T*S),0.0057902977,0.0057902977,5.5769971e-09,checked
+PR supercritical,PR,350,10000000,S,G,V,(Cp*kappaT - T*V*alpha^2)/(T*(V*alpha - S*kappaT)),0.0018309292,0.0018309292,1.3577034e-11,checked
+PR supercritical,PR,350,10000000,S,G,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),-0.00099696879,-0.00099696879,5.3783048e-10,checked
+PR supercritical,PR,350,10000000,S,G,H,Cp/(T*(T*S*alpha - S - Cp)),-0.0012302547,-0.0012302547,4.551998e-10,checked
+PR supercritical,PR,350,10000000,S,G,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha - P*S*kappaT + S)),0.014031596,0.014031596,6.9682213e-09,checked
+PR supercritical,PR,350,10000000,U,T,P,Cp - P*V*alpha,62.729574,62.729574,7.7295184e-09,checked
+PR supercritical,PR,350,10000000,U,T,V,(Cp*kappaT - T*V*alpha^2)/kappaT,34.518563,34.518563,1.4194773e-11,checked
+PR supercritical,PR,350,10000000,U,T,S,P*(Cp*kappaT - T*V*alpha^2)/(T*alpha),14.288602,14.288602,1.7077357e-10,checked
+PR supercritical,PR,350,10000000,U,T,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*alpha - 1),-3.7865186,-3.7865186,5.8955912e-09,checked
+PR supercritical,PR,350,10000000,U,T,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),92.262562,92.262564,1.4388126e-08,checked
+PR supercritical,PR,350,10000000,U,T,G,P*S*kappaT + Cp - T*S*alpha - P*V*alpha,150.69042,150.69044,8.1824652e-08,checked
+PR supercritical,PR,350,10000000,U,P,T,V*(P*kappaT - T*alpha),-0.00040871797,-0.00040871797,7.8557431e-11,checked
+PR supercritical,PR,350,10000000,U,P,V,(Cp*kappaT - T*V*alpha^2)/alpha,0.00050010108,0.00050010108,7.127622e-12,checked
+PR supercritical,PR,350,10000000,U,P,S,P*V*(Cp*kappaT - T*V*alpha^2)/Cp,0.00012055928,0.00012055928,1.9579337e-10,checked
+PR supercritical,PR,350,10000000,U,P,H,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/Cp,-2.3266824e-05,-2.3266824e-05,3.4639311e-10,checked
+PR supercritical,PR,350,10000000,U,P,A,V*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),-0.0012768558,-0.0012768558,2.3100284e-09,checked
+PR supercritical,PR,350,10000000,U,P,G,V*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/S,-0.00070019656,-0.00070019656,1.8341347e-10,checked
+PR supercritical,PR,350,10000000,U,V,T,(T*alpha - P*kappaT)/kappaT,14158110,14158110,5.2414839e-09,checked
+PR supercritical,PR,350,10000000,U,V,P,(Cp - P*V*alpha)/(V*alpha),31481758,31481758,2.0774119e-09,checked
+PR supercritical,PR,350,10000000,U,V,S,-P,-10000000,-10000000,4.8533357e-09,checked
+PR supercritical,PR,350,10000000,U,V,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*V*alpha^2 - V*alpha - Cp*kappaT),1399551.8,1399551.9,1.769122e-08,checked
+PR supercritical,PR,350,10000000,U,V,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(S*kappaT),22621632,22621632,3.3678825e-09,checked
+PR supercritical,PR,350,10000000,U,V,G,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(V*alpha - S*kappaT),18364960,18364960,4.1093045e-09,checked
+PR supercritical,PR,350,10000000,U,S,T,(T*alpha - P*kappaT)/alpha,205.12112,205.12112,6.8736585e-10,checked
+PR supercritical,PR,350,10000000,U,S,P,T*(Cp - P*V*alpha)/Cp,265.62556,265.62556,8.462077e-10,checked
+PR supercritical,PR,350,10000000,U,S,V,T,350,350,2.5696344e-10,checked
+PR supercritical,PR,350,10000000,U,S,H,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/Cp,42.970386,42.970388,3.0758636e-08,checked
+PR supercritical,PR,350,10000000,U,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),242.70923,242.70923,5.0311164e-10,checked
+PR supercritical,PR,350,10000000,U,S,G,T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - Cp),226.60832,226.60832,4.4758359e-10,checked
+PR supercritical,PR,350,10000000,U,H,T,(T*alpha - P*kappaT)/(T*alpha - 1),0.80474116,0.80474116,4.2985149e-10,checked
+PR supercritical,PR,350,10000000,U,H,P,(Cp - P*V*alpha)/Cp,0.75893018,0.75893018,4.2928887e-10,checked
+PR supercritical,PR,350,10000000,U,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.7251912,0.7251912,5.7196622e-11,checked
+PR supercritical,PR,350,10000000,U,H,S,P*(Cp*kappaT - T*V*alpha^2)/Cp,0.63615764,0.63615764,1.2154549e-09,checked
+PR supercritical,PR,350,10000000,U,H,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.77301605,0.77301605,4.2123285e-10,checked
+PR supercritical,PR,350,10000000,U,H,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - S - Cp),0.78501545,0.78501545,5.747404e-10,checked
+PR supercritical,PR,350,10000000,U,A,T,(P*kappaT - T*alpha)/(P*kappaT),-1.415811,-1.415811,1.989585e-09,checked
+PR supercritical,PR,350,10000000,U,A,P,(P*V*alpha - Cp)/(P*V*alpha + S),3.0072548,3.0072548,1.3849881e-08,checked
+PR supercritical,PR,350,10000000,U,A,V,(T*V*alpha^2 - Cp*kappaT)/(S*kappaT),0.8463522,0.8463522,3.5301419e-11,checked
+PR supercritical,PR,350,10000000,U,A,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.25944508,0.25944508,2.6173004e-11,checked
+PR supercritical,PR,350,10000000,U,A,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),-0.055815159,-0.055815159,6.2503312e-10,checked
+PR supercritical,PR,350,10000000,U,A,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - P*S*kappaT + S),-3.651497,-3.651497,6.7466862e-09,checked
+PR supercritical,PR,350,10000000,U,G,T,P*kappaT - T*alpha,-2.1566906,-2.1566906,1.9699526e-08,checked
+PR supercritical,PR,350,10000000,U,G,P,(P*V*alpha - Cp)/S,1.5380511,1.5380511,5.6612965e-09,checked
+PR supercritical,PR,350,10000000,U,G,V,(Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),0.64082523,0.64082523,3.716554e-11,checked
+PR supercritical,PR,350,10000000,U,G,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*S*alpha - Cp),0.22592143,0.22592143,7.3037294e-13,checked
+PR supercritical,PR,350,10000000,U,G,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*S*alpha - S - Cp),-0.052864518,-0.052864518,8.8134864e-10,checked
+PR supercritical,PR,350,10000000,U,G,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),3.4055978,3.4055979,1.0379062e-08,checked
+PR supercritical,PR,350,10000000,H,T,P,Cp,82.655263,82.655264,7.178239e-09,checked
+PR supercritical,PR,350,10000000,H,T,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/kappaT,47.599257,47.599257,4.1504703e-12,checked
+PR supercritical,PR,350,10000000,H,T,S,Cp/(T*alpha),22.460789,22.460789,3.2461821e-10,checked
+PR supercritical,PR,350,10000000,H,T,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*alpha - P*kappaT),4.7052628,4.7052628,2.480083e-09,checked
+PR supercritical,PR,350,10000000,H,T,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),119.35401,119.35401,1.2647526e-08,checked
+PR supercritical,PR,350,10000000,H,T,G,S + Cp - T*S*alpha,191.95855,191.95856,7.134899e-08,checked
+PR supercritical,PR,350,10000000,H,P,T,V*(1 - T*alpha),-0.0005078875,-0.0005078875,1.0745415e-10,checked
+PR supercritical,PR,350,10000000,H,P,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/alpha,0.00068961272,0.00068961272,3.1352611e-12,checked
+PR supercritical,PR,350,10000000,H,P,S,V,0.00018951164,0.00018951164,1.3937678e-10,checked
+PR supercritical,PR,350,10000000,H,P,U,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(P*V*alpha - Cp),3.0657398e-05,3.0657398e-05,3.8156675e-10,checked
+PR supercritical,PR,350,10000000,H,P,A,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),-0.0016517843,-0.0016517843,2.0876875e-09,checked
+PR supercritical,PR,350,10000000,H,P,G,V*(S + Cp - T*S*alpha)/S,-0.00089195259,-0.00089195259,1.1341686e-10,checked
+PR supercritical,PR,350,10000000,H,V,T,(T*alpha - 1)/kappaT,17593371,17593371,4.4051687e-09,checked
+PR supercritical,PR,350,10000000,H,V,P,Cp/(V*alpha),41481758,41481758,1.5763246e-09,checked
+PR supercritical,PR,350,10000000,H,V,S,Cp/(T*V*alpha^2 - Cp*kappaT),-15719374,-15719374,6.7009805e-09,checked
+PR supercritical,PR,350,10000000,H,V,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*V*alpha^2 - Cp*kappaT),-1929907.4,-1929907.4,1.8317453e-08,checked
+PR supercritical,PR,350,10000000,H,V,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(S*kappaT),29264117,29264117,2.9008186e-09,checked
+PR supercritical,PR,350,10000000,H,V,G,(S + Cp - T*S*alpha)/(V*alpha - S*kappaT),23394393,23394393,3.4733321e-09,checked
+PR supercritical,PR,350,10000000,H,S,T,(T*alpha - 1)/alpha,254.8908,254.8908,1.3231692e-09,checked
+PR supercritical,PR,350,10000000,H,S,P,T,350,350,4.3117227e-10,checked
+PR supercritical,PR,350,10000000,H,S,V,T*(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),482.63134,482.63134,2.025672e-10,checked
+PR supercritical,PR,350,10000000,H,S,U,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),-67.546758,-67.546764,9.6548861e-08,checked
+PR supercritical,PR,350,10000000,H,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),313.97696,313.97696,1.4216424e-10,checked
+PR supercritical,PR,350,10000000,H,S,G,T*(T*S*alpha - S - Cp)/(T*S*alpha - Cp),288.66734,288.66734,3.9716916e-11,checked
+PR supercritical,PR,350,10000000,H,U,T,(T*alpha - 1)/(T*alpha - P*kappaT),1.2426356,1.2426356,1.0831914e-10,checked
+PR supercritical,PR,350,10000000,H,U,P,-Cp/(P*V*alpha - Cp),1.3176443,1.3176443,4.3055372e-10,checked
+PR supercritical,PR,350,10000000,H,U,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),1.3789467,1.3789467,8.1352947e-11,checked
+PR supercritical,PR,350,10000000,H,U,S,-Cp/(P*(T*V*alpha^2 - Cp*kappaT)),1.5719374,1.5719374,1.437408e-09,checked
+PR supercritical,PR,350,10000000,H,U,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),1.2936342,1.2936342,3.7960162e-10,checked
+PR supercritical,PR,350,10000000,H,U,G,(T*S*alpha - S - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),1.2738603,1.2738603,4.4361412e-10,checked
+PR supercritical,PR,350,10000000,H,A,T,(1 - T*alpha)/(P*kappaT),-1.7593371,-1.7593371,1.4035543e-09,checked
+PR supercritical,PR,350,10000000,H,A,P,-Cp/(P*V*alpha + S),3.962492,3.9624921,1.3196347e-08,checked
+PR supercritical,PR,350,10000000,H,A,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(S*kappaT),1.1670745,1.1670745,3.1882389e-11,checked
+PR supercritical,PR,350,10000000,H,A,S,-Cp/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.40783143,0.40783143,8.0363826e-12,checked
+PR supercritical,PR,350,10000000,H,A,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.072204399,0.072204399,2.9544683e-10,checked
+PR supercritical,PR,350,10000000,H,A,G,(T*S*alpha - S - Cp)/(P*V*alpha - P*S*kappaT + S),-4.651497,-4.651497,5.2942088e-09,checked
+PR supercritical,PR,350,10000000,H,G,T,1 - T*alpha,-2.6799805,-2.6799805,1.4276584e-08,checked
+PR supercritical,PR,350,10000000,H,G,P,-Cp/S,2.0266042,2.0266042,5.1543697e-09,checked
+PR supercritical,PR,350,10000000,H,G,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),0.88366381,0.88366381,3.1047062e-11,checked
+PR supercritical,PR,350,10000000,H,G,S,-Cp/(T*S*alpha - Cp),0.35513434,0.35513434,3.5959807e-11,checked
+PR supercritical,PR,350,10000000,H,G,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.067342009,0.067342009,2.6776922e-10,checked
+PR supercritical,PR,350,10000000,H,G,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),4.4055978,4.4055979,8.0238276e-09,checked
+PR supercritical,PR,350,10000000,A,T,P,-(P*V*alpha + S),20.859415,20.859414,3.562712e-09,checked
+PR supercritical,PR,350,10000000,A,T,V,-S,40.785104,40.785104,3.9703706e-11,checked
+PR supercritical,PR,350,10000000,A,T,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha),55.073707,55.073707,4.3629961e-11,checked
+PR supercritical,PR,350,10000000,A,T,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - P*kappaT),65.165874,65.165874,4.9992359e-10,checked
+PR supercritical,PR,350,10000000,A,T,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - 1),67.840326,67.840327,6.3258213e-10,checked
+PR supercritical,PR,350,10000000,A,T,G,P*S*kappaT - P*V*alpha - S,-41.268123,-41.268124,3.3096353e-08,checked
+PR supercritical,PR,350,10000000,A,P,T,P*V*kappaT,0.00028868117,0.00028868117,7.668198e-11,checked
+PR supercritical,PR,350,10000000,A,P,V,-S*kappaT/alpha,0.00059089004,0.00059089004,2.1240372e-12,checked
+PR supercritical,PR,350,10000000,A,P,S,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,0.00046468131,0.00046468131,1.240261e-10,checked
+PR supercritical,PR,350,10000000,A,P,U,V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(P*V*alpha - Cp),0.00042459183,0.00042459183,8.729617e-11,checked
+PR supercritical,PR,350,10000000,A,P,H,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/Cp,0.00041685493,0.00041685493,9.4387676e-11,checked
+PR supercritical,PR,350,10000000,A,P,G,V*(P*S*kappaT - P*V*alpha - S)/S,0.00019175603,0.00019175603,1.3031842e-10,checked
+PR supercritical,PR,350,10000000,A,V,T,-P,-10000000,-10000000,9.8538268e-10,checked
+PR supercritical,PR,350,10000000,A,V,P,-(P*V*alpha + S)/(V*alpha),10468604,10468603,4.615246e-09,checked
+PR supercritical,PR,350,10000000,A,V,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-38543803,-38543803,3.9681411e-09,checked
+PR supercritical,PR,350,10000000,A,V,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-26728390,-26728391,4.0829434e-09,checked
+PR supercritical,PR,350,10000000,A,V,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-25074762,-25074762,3.2215776e-09,checked
+PR supercritical,PR,350,10000000,A,V,G,(P*S*kappaT - P*V*alpha - S)/(V*alpha - S*kappaT),-5029433.2,-5029433.2,1.1121491e-09,checked
+PR supercritical,PR,350,10000000,A,S,T,-P*kappaT/alpha,-144.87888,-144.87888,9.7559309e-10,checked
+PR supercritical,PR,350,10000000,A,S,P,-T*(P*V*alpha + S)/Cp,88.328254,88.328254,3.4467653e-09,checked
+PR supercritical,PR,350,10000000,A,S,V,T*S*kappaT/(T*V*alpha^2 - Cp*kappaT),413.53942,413.53942,3.3886912e-10,checked
+PR supercritical,PR,350,10000000,A,S,U,T*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),-935.49367,-935.49367,1.285413e-09,checked
+PR supercritical,PR,350,10000000,A,S,H,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/Cp,-769.86946,-769.86945,1.1373353e-08,checked
+PR supercritical,PR,350,10000000,A,S,G,T*(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - Cp),-62.05902,-62.05902,1.8298666e-09,checked
+PR supercritical,PR,350,10000000,A,U,T,-P*kappaT/(T*alpha - P*kappaT),-0.70630896,-0.70630897,1.0321477e-08,checked
+PR supercritical,PR,350,10000000,A,U,P,(P*V*alpha + S)/(P*V*alpha - Cp),0.33252919,0.33252919,5.2271277e-09,checked
+PR supercritical,PR,350,10000000,A,U,V,S*kappaT/(T*V*alpha^2 - Cp*kappaT),1.1815412,1.1815412,4.9525514e-10,checked
+PR supercritical,PR,350,10000000,A,U,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),3.8543803,3.8543803,1.9129836e-09,checked
+PR supercritical,PR,350,10000000,A,U,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-17.91628,-17.916437,8.7681681e-06,checked
+PR supercritical,PR,350,10000000,A,U,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-0.27386028,-0.27386028,2.0736787e-09,checked
+PR supercritical,PR,350,10000000,A,H,T,-P*kappaT/(T*alpha - 1),-0.56839589,-0.5683959,9.465271e-09,checked
+PR supercritical,PR,350,10000000,A,H,P,-(P*V*alpha + S)/Cp,0.25236644,0.25236644,4.9642308e-09,checked
+PR supercritical,PR,350,10000000,A,H,V,S*kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.85684329,0.85684329,2.6312109e-10,checked
+PR supercritical,PR,350,10000000,A,H,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,2.4519935,2.4519935,7.3745104e-10,checked
+PR supercritical,PR,350,10000000,A,H,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),13.849572,13.84968,7.7861925e-06,checked
+PR supercritical,PR,350,10000000,A,H,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - S - Cp),-0.21498455,-0.21498455,2.0987003e-09,checked
+PR supercritical,PR,350,10000000,A,G,T,P*kappaT,1.5232899,1.5232899,2.7726496e-09,checked
+PR supercritical,PR,350,10000000,A,G,P,(P*V*alpha + S)/S,0.51144689,0.51144688,3.3936216e-09,checked
+PR supercritical,PR,350,10000000,A,G,V,-S*kappaT/(V*alpha - S*kappaT),0.75716141,0.75716141,9.3603961e-12,checked
+PR supercritical,PR,350,10000000,A,G,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*alpha - Cp),0.87078708,0.87078708,1.5211989e-11,checked
+PR supercritical,PR,350,10000000,A,G,U,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.93265799,0.93265799,1.8820955e-11,checked
+PR supercritical,PR,350,10000000,A,G,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*S*alpha - S - Cp),0.94713548,0.94713548,5.2855233e-11,checked
+PR supercritical,PR,350,10000000,G,T,P,-S,40.785104,40.785104,8.3930658e-10,checked
+PR supercritical,PR,350,10000000,G,T,V,(V*alpha - S*kappaT)/kappaT,53.865799,53.865799,3.4284811e-11,checked
+PR supercritical,PR,350,10000000,G,T,S,(Cp - T*S*alpha)/(T*alpha),63.245893,63.245893,1.162347e-10,checked
+PR supercritical,PR,350,10000000,G,T,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*alpha - P*kappaT),69.871137,69.871137,6.3327151e-10,checked
+PR supercritical,PR,350,10000000,G,T,H,(S + Cp - T*S*alpha)/(T*alpha - 1),71.626845,71.626845,9.1035535e-10,checked
+PR supercritical,PR,350,10000000,G,T,A,(P*V*alpha - P*S*kappaT + S)/(P*kappaT),27.091444,27.091444,6.7149478e-09,checked
+PR supercritical,PR,350,10000000,G,P,T,V,0.00018951164,0.00018951164,2.3535968e-10,checked
+PR supercritical,PR,350,10000000,G,P,V,(V*alpha - S*kappaT)/alpha,0.00078040168,0.00078040168,6.3186178e-12,checked
+PR supercritical,PR,350,10000000,G,P,S,V*(Cp - T*S*alpha)/Cp,0.00053363367,0.00053363367,1.0900278e-10,checked
+PR supercritical,PR,350,10000000,G,P,U,V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - Cp),0.00045524922,0.00045524922,6.0716497e-11,checked
+PR supercritical,PR,350,10000000,G,P,H,V*(S + Cp - T*S*alpha)/Cp,0.00044012175,0.00044012175,6.3797501e-11,checked
+PR supercritical,PR,350,10000000,G,P,A,V*(P*V*alpha - P*S*kappaT + S)/(P*V*alpha + S),-0.00037492853,-0.00037492853,1.3456451e-09,checked
+PR supercritical,PR,350,10000000,G,V,T,-1/kappaT,-6564738.6,-6564738.6,9.9722231e-10,checked
+PR supercritical,PR,350,10000000,G,V,P,-S/(V*alpha),20468604,20468603,2.3617686e-09,checked
+PR supercritical,PR,350,10000000,G,V,S,(Cp - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-44263177,-44263177,4.738682e-09,checked
+PR supercritical,PR,350,10000000,G,V,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*V*alpha^2 - Cp*kappaT),-28658298,-28658298,5.0383702e-09,checked
+PR supercritical,PR,350,10000000,G,V,H,(S + Cp - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-26474314,-26474314,3.9876464e-09,checked
+PR supercritical,PR,350,10000000,G,V,A,(P*S*kappaT - P*V*alpha - S)/(S*kappaT),6642484.9,6642484.9,1.3237926e-09,checked
+PR supercritical,PR,350,10000000,G,S,T,-1/alpha,-95.1092,-95.1092,3.5455257e-09,checked
+PR supercritical,PR,350,10000000,G,S,P,-T*S/Cp,172.70269,172.70269,2.1874358e-09,checked
+PR supercritical,PR,350,10000000,G,S,V,T*(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),546.17076,546.17076,2.4126671e-10,checked
+PR supercritical,PR,350,10000000,G,S,U,T*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),-1003.0404,-1003.0404,5.3032109e-09,checked
+PR supercritical,PR,350,10000000,G,S,H,T*(T*S*alpha - S - Cp)/Cp,-812.83984,-812.83984,9.1450783e-09,checked
+PR supercritical,PR,350,10000000,G,S,A,T*(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),71.267731,71.267731,1.0852003e-09,checked
+PR supercritical,PR,350,10000000,G,U,T,-1/(T*alpha - P*kappaT),-0.46367337,-0.46367338,1.6004652e-08,checked
+PR supercritical,PR,350,10000000,G,U,P,S/(P*V*alpha - Cp),0.65017347,0.65017346,3.5494777e-09,checked
+PR supercritical,PR,350,10000000,G,U,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),1.5604879,1.5604879,4.4573727e-10,checked
+PR supercritical,PR,350,10000000,G,U,S,(T*S*alpha - Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),4.4263177,4.4263177,1.1556152e-09,checked
+PR supercritical,PR,350,10000000,G,U,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-18.91628,-18.916437,8.3046469e-06,checked
+PR supercritical,PR,350,10000000,G,U,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.2936342,0.2936342,1.6836271e-09,checked
+PR supercritical,PR,350,10000000,G,H,T,-1/(T*alpha - 1),-0.37313705,-0.37313705,1.5346467e-08,checked
+PR supercritical,PR,350,10000000,G,H,P,-S/Cp,0.49343626,0.49343626,3.2015783e-09,checked
+PR supercritical,PR,350,10000000,G,H,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),1.1316521,1.1316521,2.3758091e-10,checked
+PR supercritical,PR,350,10000000,G,H,S,(Cp - T*S*alpha)/Cp,2.8158358,2.8158358,3.6770018e-10,checked
+PR supercritical,PR,350,10000000,G,H,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),14.849572,14.84968,7.2618585e-06,checked
+PR supercritical,PR,350,10000000,G,H,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.22698395,0.22698395,1.4192373e-09,checked
+PR supercritical,PR,350,10000000,G,A,T,1/(P*kappaT),0.65647386,0.65647386,5.1052675e-10,checked
+PR supercritical,PR,350,10000000,G,A,P,S/(P*V*alpha + S),1.9552372,1.9552373,5.4370843e-09,checked
+PR supercritical,PR,350,10000000,G,A,V,(S*kappaT - V*alpha)/(S*kappaT),1.3207224,1.3207224,4.9369497e-12,checked
+PR supercritical,PR,350,10000000,G,A,S,(T*S*alpha - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),1.1483863,1.1483863,9.3148084e-12,checked
+PR supercritical,PR,350,10000000,G,A,U,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),1.0722044,1.0722044,1.9132164e-11,checked
+PR supercritical,PR,350,10000000,G,A,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),1.0558152,1.0558152,2.6780407e-11,checked
+PR gas,PR,320,2000000,T,P,V,kappaT/alpha,0.00013139989,0.00013139989,6.4862406e-12,checked
+PR gas,PR,320,2000000,T,P,S,T*V*alpha/Cp,3.7978842e-05,3.7978842e-05,1.1340364e-10,checked
+PR gas,PR,320,2000000,T,P,U,V*(P*kappaT - T*alpha)/(P*V*alpha - Cp),8.9017262e-06,8.9017262e-06,1.0902188e-10,checked
+PR gas,PR,320,2000000,T,P,H,V*(T*alpha - 1)/Cp,9.7414761e-06,9.7414761e-06,1.1121127e-10,checked
+PR gas,PR,320,2000000,T,P,A,P*V*kappaT/(P*V*alpha + S),-9.6916522e-05,-9.6916522e-05,1.9313299e-09,checked
+PR gas,PR,320,2000000,T,P,G,V/S,-5.0496715e-05,-5.0496715e-05,6.6108549e-10,checked
+PR gas,PR,320,2000000,T,V,P,1/(V*alpha),196802.7,196802.7,2.2719664e-10,checked
+PR gas,PR,320,2000000,T,V,S,T*alpha/(T*V*alpha^2 - Cp*kappaT),-80007.008,-80007.008,5.5230485e-10,checked
+PR gas,PR,320,2000000,T,V,U,(T*alpha - P*kappaT)/(T*V*alpha^2 - Cp*kappaT),-14301.306,-14301.306,1.1299562e-09,checked
+PR gas,PR,320,2000000,T,V,H,(T*alpha - 1)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-15758.456,-15758.456,1.0843592e-09,checked
+PR gas,PR,320,2000000,T,V,A,-P/S,83539.475,83539.475,1.7370905e-10,checked
+PR gas,PR,320,2000000,T,V,G,1/(V*alpha - S*kappaT),54634.829,54634.829,2.8055973e-11,checked
+PR gas,PR,320,2000000,T,S,P,T/Cp,7.4743387,7.4743387,3.1496702e-11,checked
+PR gas,PR,320,2000000,T,S,V,-T*kappaT/(T*V*alpha^2 - Cp*kappaT),10.512912,10.512912,3.4774e-11,checked
+PR gas,PR,320,2000000,T,S,U,T*(T*alpha - P*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),-2.288209,-2.288209,2.2406959e-09,checked
+PR gas,PR,320,2000000,T,S,H,T*(1 - T*alpha)/Cp,-2.578537,-2.578537,2.037992e-09,checked
+PR gas,PR,320,2000000,T,S,A,-T*P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),5.3699912,5.3699912,1.5884163e-10,checked
+PR gas,PR,320,2000000,T,S,G,-T/(T*S*alpha - Cp),4.2659189,4.2659189,6.9741653e-11,checked
+PR gas,PR,320,2000000,T,U,P,-1/(P*V*alpha - Cp),0.030627224,0.030627224,6.9607854e-11,checked
+PR gas,PR,320,2000000,T,U,V,-kappaT/(T*V*alpha^2 - Cp*kappaT),0.032852851,0.032852851,7.774055e-11,checked
+PR gas,PR,320,2000000,T,U,S,-T*alpha/(P*(T*V*alpha^2 - Cp*kappaT)),0.040003504,0.040003504,9.8548641e-11,checked
+PR gas,PR,320,2000000,T,U,H,(1 - T*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),0.35528957,0.35529014,1.5939147e-06,checked
+PR gas,PR,320,2000000,T,U,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.028050777,0.028050777,4.915004e-10,checked
+PR gas,PR,320,2000000,T,U,G,-1/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.026037286,0.026037286,9.7240226e-10,checked
+PR gas,PR,320,2000000,T,H,P,1/Cp,0.023357309,0.023357309,9.9091604e-11,checked
+PR gas,PR,320,2000000,T,H,V,-kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.025227583,0.025227583,5.0223783e-11,checked
+PR gas,PR,320,2000000,T,H,S,T*alpha/Cp,0.031415237,0.031415237,3.8077156e-11,checked
+PR gas,PR,320,2000000,T,H,U,(T*alpha - P*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-0.24759797,-0.24759839,1.6927634e-06,checked
+PR gas,PR,320,2000000,T,H,A,-P*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.021223998,0.021223998,5.0956772e-10,checked
+PR gas,PR,320,2000000,T,H,G,-1/(T*S*alpha - S - Cp),0.019580059,0.019580059,9.0980797e-10,checked
+PR gas,PR,320,2000000,T,A,P,-1/(P*V*alpha + S),0.072577812,0.072577812,1.8731683e-09,checked
+PR gas,PR,320,2000000,T,A,V,-1/S,0.041769738,0.041769738,1.1550698e-10,checked
+PR gas,PR,320,2000000,T,A,S,-T*alpha/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.020433773,0.020433773,8.0879388e-12,checked
+PR gas,PR,320,2000000,T,A,U,(P*kappaT - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.006105448,0.006105448,8.3842794e-11,checked
+PR gas,PR,320,2000000,T,A,H,(1 - T*alpha)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.0066288045,0.0066288045,4.0201551e-12,checked
+PR gas,PR,320,2000000,T,A,G,-1/(P*V*alpha - P*S*kappaT + S),-0.078952097,-0.078952097,1.3471993e-09,checked
+PR gas,PR,320,2000000,T,G,P,-1/S,0.041769738,0.041769738,5.5591505e-10,checked
+PR gas,PR,320,2000000,T,G,V,kappaT/(V*alpha - S*kappaT),0.030173949,0.030173949,7.2770203e-11,checked
+PR gas,PR,320,2000000,T,G,S,-T*alpha/(T*S*alpha - Cp),0.017929995,0.017929995,4.7682174e-12,checked
+PR gas,PR,320,2000000,T,G,U,(P*kappaT - T*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),0.0062598068,0.0062598068,7.7104603e-11,checked
+PR gas,PR,320,2000000,T,G,H,(1 - T*alpha)/(T*S*alpha - S - Cp),0.0067548326,0.0067548326,7.4287169e-11,checked
+PR gas,PR,320,2000000,T,G,A,P*kappaT/(P*V*alpha - P*S*kappaT + S),0.087207982,0.087207982,2.2932554e-09,checked
+PR gas,PR,320,2000000,P,T,V,alpha/kappaT,7610.3563,7610.3563,8.4969837e-12,checked
+PR gas,PR,320,2000000,P,T,S,Cp/(T*V*alpha),26330.45,26330.45,6.1949368e-10,checked
+PR gas,PR,320,2000000,P,T,U,(Cp - P*V*alpha)/(V*(T*alpha - P*kappaT)),112337.76,112337.76,9.6662511e-10,checked
+PR gas,PR,320,2000000,P,T,H,Cp/(V*(T*alpha - 1)),102653.85,102653.85,9.4843022e-10,checked
+PR gas,PR,320,2000000,P,T,A,(P*V*alpha + S)/(P*V*kappaT),-10318.158,-10318.158,2.5083208e-09,checked
+PR gas,PR,320,2000000,P,T,G,S/V,-19803.268,-19803.268,5.8696342e-09,checked
+PR gas,PR,320,2000000,P,V,T,-1/(V*kappaT),-1.4977387e+09,-1.4977387e+09,9.8165586e-10,checked
+PR gas,PR,320,2000000,P,V,S,Cp/(V*(T*V*alpha^2 - Cp*kappaT)),-2.1066205e+09,-2.1066205e+09,1.4933043e-09,checked
+PR gas,PR,320,2000000,P,V,U,(Cp - P*V*alpha)/(V*(T*V*alpha^2 - Cp*kappaT)),-1.6065767e+09,-1.6065767e+09,1.1707627e-09,checked
+PR gas,PR,320,2000000,P,V,H,Cp/(V*(T*V*alpha^2 - V*alpha - Cp*kappaT)),-1.6176661e+09,-1.6176661e+09,1.184691e-09,checked
+PR gas,PR,320,2000000,P,V,A,-(P*V*alpha + S)/(V*S*kappaT),-8.6197351e+08,-8.6197351e+08,6.2701781e-10,checked
+PR gas,PR,320,2000000,P,V,G,S/(V*(V*alpha - S*kappaT)),-1.0819482e+09,-1.0819482e+09,7.8433598e-10,checked
+PR gas,PR,320,2000000,P,S,T,-1/(V*alpha),-196802.7,-196802.7,2.3807597e-10,checked
+PR gas,PR,320,2000000,P,S,V,-T*alpha/(T*V*alpha^2 - Cp*kappaT),80007.008,80007.008,3.4578142e-11,checked
+PR gas,PR,320,2000000,P,S,U,T*(Cp - P*V*alpha)/(P*V*(T*V*alpha^2 - Cp*kappaT)),-257052.27,-257052.27,2.7745293e-09,checked
+PR gas,PR,320,2000000,P,S,H,-T/V,-264696.74,-264696.74,2.9904694e-09,checked
+PR gas,PR,320,2000000,P,S,A,-T*(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),-55408.418,-55408.418,1.5518021e-10,checked
+PR gas,PR,320,2000000,P,S,G,-T*S/(V*(T*S*alpha - Cp)),-84479.137,-84479.137,1.8629518e-10,checked
+PR gas,PR,320,2000000,P,U,T,-1/(V*(T*alpha - P*kappaT)),-3440.5938,-3440.5938,2.887602e-10,checked
+PR gas,PR,320,2000000,P,U,V,-alpha/(T*V*alpha^2 - Cp*kappaT),250.0219,250.0219,9.1805676e-11,checked
+PR gas,PR,320,2000000,P,U,S,-Cp/(P*V*(T*V*alpha^2 - Cp*kappaT)),1053.3103,1053.3103,9.4205913e-10,checked
+PR gas,PR,320,2000000,P,U,H,-Cp/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),36471.841,36471.919,2.1227143e-06,checked
+PR gas,PR,320,2000000,P,U,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),-289.43235,-289.43235,8.3505138e-10,checked
+PR gas,PR,320,2000000,P,U,G,-S/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),-515.62336,-515.62336,1.2695923e-09,checked
+PR gas,PR,320,2000000,P,H,T,-1/(V*(T*alpha - 1)),-2397.7176,-2397.7176,3.013369e-11,checked
+PR gas,PR,320,2000000,P,H,V,-alpha/(T*V*alpha^2 - V*alpha - Cp*kappaT),191.9909,191.9909,6.3546258e-11,checked
+PR gas,PR,320,2000000,P,H,S,1/V,827.17732,827.17732,9.800863e-10,checked
+PR gas,PR,320,2000000,P,H,U,(Cp - P*V*alpha)/(V*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),-27814.602,-27814.658,2.0208459e-06,checked
+PR gas,PR,320,2000000,P,H,A,-(P*V*alpha + S)/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-218.99256,-218.99256,5.1108758e-10,checked
+PR gas,PR,320,2000000,P,H,G,-S/(V*(T*S*alpha - S - Cp)),-387.74917,-387.74917,8.5266176e-10,checked
+PR gas,PR,320,2000000,P,A,T,1/(P*V*kappaT),748.86934,748.86934,2.3608299e-10,checked
+PR gas,PR,320,2000000,P,A,V,-alpha/(S*kappaT),317.88258,317.88258,1.0247665e-10,checked
+PR gas,PR,320,2000000,P,A,S,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)),538.03044,538.03044,5.9847663e-11,checked
+PR gas,PR,320,2000000,P,A,U,(P*V*alpha - Cp)/(V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),685.87236,685.87236,9.4235583e-11,checked
+PR gas,PR,320,2000000,P,A,H,-Cp/(V*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),680.47229,680.47229,8.2209874e-11,checked
+PR gas,PR,320,2000000,P,A,G,-S/(V*(P*V*alpha - P*S*kappaT + S)),1563.5096,1563.5096,1.1687081e-10,checked
+PR gas,PR,320,2000000,P,G,T,1/V,827.17732,827.17732,1.0732784e-09,checked
+PR gas,PR,320,2000000,P,G,V,alpha/(V*alpha - S*kappaT),229.6345,229.6345,7.1103254e-11,checked
+PR gas,PR,320,2000000,P,G,S,-Cp/(V*(T*S*alpha - Cp)),472.10482,472.10482,1.1001913e-10,checked
+PR gas,PR,320,2000000,P,G,U,(P*V*alpha - Cp)/(V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),703.21268,703.21268,2.1114864e-10,checked
+PR gas,PR,320,2000000,P,G,H,-Cp/(V*(T*S*alpha - S - Cp)),693.40955,693.40955,1.9619956e-10,checked
+PR gas,PR,320,2000000,P,G,A,(P*V*alpha + S)/(V*(P*V*alpha - P*S*kappaT + S)),-899.82575,-899.82575,1.4921919e-09,checked
+PR gas,PR,320,2000000,V,T,P,V*alpha,5.081231e-06,5.081231e-06,2.0558527e-10,checked
+PR gas,PR,320,2000000,V,T,S,(T*V*alpha^2 - Cp*kappaT)/(T*alpha),-1.2498905e-05,-1.2498905e-05,1.2469974e-09,checked
+PR gas,PR,320,2000000,V,T,U,(T*V*alpha^2 - Cp*kappaT)/(T*alpha - P*kappaT),-6.9923684e-05,-6.9923692e-05,1.2274151e-07,checked
+PR gas,PR,320,2000000,V,T,H,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*alpha - 1),-6.3457993e-05,-6.3457999e-05,9.5593015e-08,checked
+PR gas,PR,320,2000000,V,T,A,-S/P,1.1970389e-05,1.1970389e-05,4.5755658e-10,checked
+PR gas,PR,320,2000000,V,T,G,V*alpha - S*kappaT,1.8303343e-05,1.8303343e-05,2.1083381e-10,checked
+PR gas,PR,320,2000000,V,P,T,-V*kappaT,-6.6767322e-10,-6.6767322e-10,3.9948142e-10,checked
+PR gas,PR,320,2000000,V,P,S,V*(T*V*alpha^2 - Cp*kappaT)/Cp,-4.7469394e-10,-4.7469394e-10,3.1886459e-10,checked
+PR gas,PR,320,2000000,V,P,U,V*(Cp*kappaT - T*V*alpha^2)/(P*V*alpha - Cp),-6.2244149e-10,-6.2244149e-10,3.9343644e-10,checked
+PR gas,PR,320,2000000,V,P,H,V*(T*V*alpha^2 - V*alpha - Cp*kappaT)/Cp,-6.1817452e-10,-6.1817453e-10,4.0422508e-10,checked
+PR gas,PR,320,2000000,V,P,A,-V*S*kappaT/(P*V*alpha + S),-1.1601285e-09,-1.1601285e-09,1.3720619e-09,checked
+PR gas,PR,320,2000000,V,P,G,V*(V*alpha - S*kappaT)/S,-9.2425869e-10,-9.2425869e-10,6.5908928e-10,checked
+PR gas,PR,320,2000000,V,S,T,kappaT/alpha,0.00013139989,0.00013139989,1.8588325e-09,checked
+PR gas,PR,320,2000000,V,S,P,T*V*alpha/Cp,3.7978842e-05,3.7978842e-05,5.4287234e-11,checked
+PR gas,PR,320,2000000,V,S,U,T*(T*V*alpha^2 - Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),0.00016,0.00016,1.8623624e-09,checked
+PR gas,PR,320,2000000,V,S,H,T*(V*alpha + Cp*kappaT - T*V*alpha^2)/Cp,0.00016362878,0.00016362878,1.8526402e-09,checked
+PR gas,PR,320,2000000,V,S,A,T*S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),6.4280883e-05,6.4280883e-05,3.2631457e-10,checked
+PR gas,PR,320,2000000,V,S,G,T*(S*kappaT - V*alpha)/(T*S*alpha - Cp),7.8080577e-05,7.8080577e-05,1.1135277e-11,checked
+PR gas,PR,320,2000000,V,U,T,kappaT/(T*alpha - P*kappaT),2.2971923e-06,2.2971927e-06,1.5163457e-07,checked
+PR gas,PR,320,2000000,V,U,P,-V*alpha/(P*V*alpha - Cp),1.55624e-07,1.55624e-07,1.5147938e-10,checked
+PR gas,PR,320,2000000,V,U,S,-1/P,-5e-07,-5e-07,2.4843099e-09,checked
+PR gas,PR,320,2000000,V,U,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-2.2545963e-05,-2.2546157e-05,8.6190526e-06,checked
+PR gas,PR,320,2000000,V,U,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),3.357787e-07,3.357787e-07,9.8551064e-10,checked
+PR gas,PR,320,2000000,V,U,G,(S*kappaT - V*alpha)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),4.7656938e-07,4.7656938e-07,1.1071991e-09,checked
+PR gas,PR,320,2000000,V,H,T,kappaT/(T*alpha - 1),1.6008918e-06,1.600892e-06,1.2379959e-07,checked
+PR gas,PR,320,2000000,V,H,P,V*alpha/Cp,1.1868388e-07,1.1868388e-07,9.8644321e-11,checked
+PR gas,PR,320,2000000,V,H,S,(T*V*alpha^2 - Cp*kappaT)/Cp,-3.9265606e-07,-3.9265606e-07,2.4972789e-09,checked
+PR gas,PR,320,2000000,V,H,U,(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),1.7312962e-05,1.7313117e-05,8.9415697e-06,checked
+PR gas,PR,320,2000000,V,H,A,S*kappaT/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),2.5405951e-07,2.5405951e-07,1.0339623e-09,checked
+PR gas,PR,320,2000000,V,H,G,(S*kappaT - V*alpha)/(T*S*alpha - S - Cp),3.5838054e-07,3.5838054e-07,1.0511488e-09,checked
+PR gas,PR,320,2000000,V,A,T,-1/P,-5e-07,-5e-07,2.4749731e-10,checked
+PR gas,PR,320,2000000,V,A,P,-V*alpha/(P*V*alpha + S),3.6878463e-07,3.6878463e-07,1.7243101e-09,checked
+PR gas,PR,320,2000000,V,A,S,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),-2.5539979e-07,-2.5539979e-07,1.3471408e-10,checked
+PR gas,PR,320,2000000,V,A,U,(Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),-4.2691541e-07,-4.2691541e-07,3.087464e-10,checked
+PR gas,PR,320,2000000,V,A,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),-4.2065063e-07,-4.2065063e-07,3.0320031e-10,checked
+PR gas,PR,320,2000000,V,A,G,(S*kappaT - V*alpha)/(P*V*alpha - P*S*kappaT + S),-1.4450873e-06,-1.4450873e-06,1.6794637e-09,checked
+PR gas,PR,320,2000000,V,G,T,-kappaT,-5.5228414e-07,-5.5228414e-07,6.1531203e-10,checked
+PR gas,PR,320,2000000,V,G,P,-V*alpha/S,2.1224169e-07,2.1224169e-07,5.5027134e-10,checked
+PR gas,PR,320,2000000,V,G,S,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha - Cp),-2.241053e-07,-2.241053e-07,2.5946893e-10,checked
+PR gas,PR,320,2000000,V,G,U,(Cp*kappaT - T*V*alpha^2)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-4.3770875e-07,-4.3770875e-07,7.375966e-10,checked
+PR gas,PR,320,2000000,V,G,H,(V*alpha + Cp*kappaT - T*V*alpha^2)/(T*S*alpha - S - Cp),-4.2864812e-07,-4.2864812e-07,7.326504e-10,checked
+PR gas,PR,320,2000000,V,G,A,-S*kappaT/(P*V*alpha - P*S*kappaT + S),1.0439135e-06,1.0439135e-06,6.0176272e-09,checked
+PR gas,PR,320,2000000,S,T,P,Cp/T,0.1337911,0.1337911,2.3951647e-10,checked
+PR gas,PR,320,2000000,S,T,V,(Cp*kappaT - T*V*alpha^2)/(T*kappaT),0.095121121,0.095121121,4.330805e-11,checked
+PR gas,PR,320,2000000,S,T,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*alpha - P*kappaT)),-0.43702302,-0.43702304,4.2534453e-08,checked
+PR gas,PR,320,2000000,S,T,H,-Cp/(T*(T*alpha - 1)),-0.38781682,-0.38781683,3.2962216e-08,checked
+PR gas,PR,320,2000000,S,T,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*kappaT),0.18622005,0.18622005,9.1341979e-10,checked
+PR gas,PR,320,2000000,S,T,G,(Cp - T*S*alpha)/T,0.23441608,0.23441608,2.1759893e-09,checked
+PR gas,PR,320,2000000,S,P,T,-V*alpha,-5.081231e-06,-5.081231e-06,1.1738699e-10,checked
+PR gas,PR,320,2000000,S,P,V,(Cp*kappaT - T*V*alpha^2)/(T*alpha),1.2498905e-05,1.2498905e-05,2.2382468e-11,checked
+PR gas,PR,320,2000000,S,P,U,P*V*(Cp*kappaT - T*V*alpha^2)/(T*(P*V*alpha - Cp)),-3.8902593e-06,-3.8902593e-06,1.5224304e-10,checked
+PR gas,PR,320,2000000,S,P,H,-V/T,-3.7779082e-06,-3.7779082e-06,1.2498389e-10,checked
+PR gas,PR,320,2000000,S,P,A,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha + S)),-1.8047799e-05,-1.8047799e-05,1.1513373e-09,checked
+PR gas,PR,320,2000000,S,P,G,V*(Cp - T*S*alpha)/(T*S),-1.1837242e-05,-1.1837242e-05,3.4964922e-10,checked
+PR gas,PR,320,2000000,S,V,T,alpha/kappaT,7610.3563,7610.3563,4.8288956e-10,checked
+PR gas,PR,320,2000000,S,V,P,Cp/(T*V*alpha),26330.45,26330.45,2.1989569e-11,checked
+PR gas,PR,320,2000000,S,V,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - Cp*kappaT)),6250,6250,3.4127064e-10,checked
+PR gas,PR,320,2000000,S,V,H,-Cp/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),6111.3943,6111.3943,3.2456419e-10,checked
+PR gas,PR,320,2000000,S,V,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*kappaT),15556.725,15556.725,3.2471377e-10,checked
+PR gas,PR,320,2000000,S,V,G,(Cp - T*S*alpha)/(T*(V*alpha - S*kappaT)),12807.282,12807.282,3.0737445e-10,checked
+PR gas,PR,320,2000000,S,U,T,alpha/(T*alpha - P*kappaT),0.017482452,0.017482453,4.4706755e-08,checked
+PR gas,PR,320,2000000,S,U,P,-Cp/(T*(P*V*alpha - Cp)),0.00409765,0.00409765,2.0416874e-10,checked
+PR gas,PR,320,2000000,S,U,V,1/T,0.003125,0.003125,1.8324675e-10,checked
+PR gas,PR,320,2000000,S,U,H,Cp/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),-0.13778727,-0.13778769,3.0629012e-06,checked
+PR gas,PR,320,2000000,S,U,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),0.0052236169,0.0052236169,3.2447752e-11,checked
+PR gas,PR,320,2000000,S,U,G,(T*S*alpha - Cp)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),0.0061035586,0.0061035586,2.6527173e-10,checked
+PR gas,PR,320,2000000,S,H,T,alpha/(T*alpha - 1),0.012183357,0.012183357,3.6086485e-08,checked
+PR gas,PR,320,2000000,S,H,P,1/T,0.003125,0.003125,1.3442691e-10,checked
+PR gas,PR,320,2000000,S,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*(T*V*alpha^2 - V*alpha - Cp*kappaT)),0.002399676,0.002399676,1.4287431e-10,checked
+PR gas,PR,320,2000000,S,H,U,P*(T*V*alpha^2 - Cp*kappaT)/(T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)),0.10820601,0.10820635,3.0881513e-06,checked
+PR gas,PR,320,2000000,S,H,A,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),0.0039523338,0.0039523338,1.6621237e-10,checked
+PR gas,PR,320,2000000,S,H,G,(T*S*alpha - Cp)/(T*(T*S*alpha - S - Cp)),0.0045898808,0.0045898808,4.0003762e-10,checked
+PR gas,PR,320,2000000,S,A,T,-alpha/(P*kappaT),-0.0038051781,-0.0038051781,6.791398e-11,checked
+PR gas,PR,320,2000000,S,A,P,-Cp/(T*(P*V*alpha + S)),0.0097102653,0.0097102653,1.462092e-09,checked
+PR gas,PR,320,2000000,S,A,V,(T*V*alpha^2 - Cp*kappaT)/(T*S*kappaT),0.0039731843,0.0039731843,7.2253143e-11,checked
+PR gas,PR,320,2000000,S,A,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)),-0.0026682213,-0.0026682213,2.3785455e-11,checked
+PR gas,PR,320,2000000,S,A,H,Cp/(T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)),-0.0025707619,-0.0025707619,1.3851744e-11,checked
+PR gas,PR,320,2000000,S,A,G,(T*S*alpha - Cp)/(T*(P*V*alpha - P*S*kappaT + S)),-0.018507641,-0.018507641,1.3956597e-09,checked
+PR gas,PR,320,2000000,S,G,T,-alpha,-0.0042030791,-0.0042030791,3.8403756e-10,checked
+PR gas,PR,320,2000000,S,G,P,-Cp/(T*S),0.0055884191,0.0055884191,4.2003762e-10,checked
+PR gas,PR,320,2000000,S,G,V,(Cp*kappaT - T*V*alpha^2)/(T*(V*alpha - S*kappaT)),0.0028701799,0.0028701799,3.0579687e-11,checked
+PR gas,PR,320,2000000,S,G,U,P*(Cp*kappaT - T*V*alpha^2)/(T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)),-0.0027356797,-0.0027356797,6.634287e-11,checked
+PR gas,PR,320,2000000,S,G,H,Cp/(T*(T*S*alpha - S - Cp)),-0.0026196377,-0.0026196377,6.6921247e-11,checked
+PR gas,PR,320,2000000,S,G,A,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*(P*V*alpha - P*S*kappaT + S)),0.016239874,0.016239874,2.3237841e-09,checked
+PR gas,PR,320,2000000,U,T,P,Cp - P*V*alpha,32.65069,32.65069,7.5492646e-11,checked
+PR gas,PR,320,2000000,U,T,V,(Cp*kappaT - T*V*alpha^2)/kappaT,30.438759,30.438759,2.7889123e-11,checked
+PR gas,PR,320,2000000,U,T,S,P*(Cp*kappaT - T*V*alpha^2)/(T*alpha),24.99781,24.99781,4.8420765e-11,checked
+PR gas,PR,320,2000000,U,T,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*alpha - 1),2.8146056,2.8146056,1.91076e-09,checked
+PR gas,PR,320,2000000,U,T,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),35.649637,35.649637,7.0892996e-10,checked
+PR gas,PR,320,2000000,U,T,G,P*S*kappaT + Cp - T*S*alpha - P*V*alpha,38.40646,38.40646,1.9546618e-09,checked
+PR gas,PR,320,2000000,U,P,T,V*(P*kappaT - T*alpha),-0.0002906475,-0.0002906475,4.8686374e-11,checked
+PR gas,PR,320,2000000,U,P,V,(Cp*kappaT - T*V*alpha^2)/alpha,0.0039996497,0.0039996497,3.0913095e-11,checked
+PR gas,PR,320,2000000,U,P,S,P*V*(Cp*kappaT - T*V*alpha^2)/Cp,0.00094938789,0.00094938789,1.4539606e-10,checked
+PR gas,PR,320,2000000,U,P,H,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/Cp,2.7418413e-05,2.7418413e-05,2.6759857e-10,checked
+PR gas,PR,320,2000000,U,P,A,V*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),-0.0034550388,-0.0034550388,1.8553144e-09,checked
+PR gas,PR,320,2000000,U,P,G,V*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/S,-0.0019394001,-0.0019394001,6.0034553e-10,checked
+PR gas,PR,320,2000000,U,V,T,(T*alpha - P*kappaT)/kappaT,435314.01,435314.01,1.2018087e-09,checked
+PR gas,PR,320,2000000,U,V,P,(Cp - P*V*alpha)/(V*alpha),6425744,6425744,7.156744e-11,checked
+PR gas,PR,320,2000000,U,V,S,-P,-2000000,-2000000,5.8441702e-10,checked
+PR gas,PR,320,2000000,U,V,H,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-44353.838,-44353.838,5.9060145e-10,checked
+PR gas,PR,320,2000000,U,V,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(S*kappaT),2978151.9,2978151.9,3.3355189e-10,checked
+PR gas,PR,320,2000000,U,V,G,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(V*alpha - S*kappaT),2098330.4,2098330.4,2.8150407e-10,checked
+PR gas,PR,320,2000000,U,S,T,(T*alpha - P*kappaT)/alpha,57.200214,57.200214,8.2941443e-10,checked
+PR gas,PR,320,2000000,U,S,P,T*(Cp - P*V*alpha)/Cp,244.04232,244.04232,7.970616e-11,checked
+PR gas,PR,320,2000000,U,S,V,T,320,320,8.2425089e-11,checked
+PR gas,PR,320,2000000,U,S,H,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/Cp,-7.2575645,-7.2575645,1.0892143e-09,checked
+PR gas,PR,320,2000000,U,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),191.43823,191.43823,3.381548e-10,checked
+PR gas,PR,320,2000000,U,S,G,T*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - Cp),163.83885,163.83885,3.1556508e-10,checked
+PR gas,PR,320,2000000,U,H,T,(T*alpha - P*kappaT)/(T*alpha - 1),0.69689063,0.69689063,1.7186783e-11,checked
+PR gas,PR,320,2000000,U,H,P,(Cp - P*V*alpha)/Cp,0.76263224,0.76263224,2.4519373e-11,checked
+PR gas,PR,320,2000000,U,H,V,(T*V*alpha^2 - Cp*kappaT)/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.76789632,0.76789632,1.946131e-11,checked
+PR gas,PR,320,2000000,U,H,S,P*(Cp*kappaT - T*V*alpha^2)/Cp,0.78531213,0.78531213,6.3459442e-11,checked
+PR gas,PR,320,2000000,U,H,A,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.75662781,0.75662781,4.6383343e-11,checked
+PR gas,PR,320,2000000,U,H,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*S*alpha - S - Cp),0.75200077,0.75200077,5.6361329e-11,checked
+PR gas,PR,320,2000000,U,A,T,(P*kappaT - T*alpha)/(P*kappaT),-0.217657,-0.217657,4.0787422e-10,checked
+PR gas,PR,320,2000000,U,A,P,(P*V*alpha - Cp)/(P*V*alpha + S),2.3697156,2.3697156,2.0949006e-09,checked
+PR gas,PR,320,2000000,U,A,V,(T*V*alpha^2 - Cp*kappaT)/(S*kappaT),1.271419,1.271419,1.6765759e-10,checked
+PR gas,PR,320,2000000,U,A,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.51079958,0.51079958,4.2500624e-12,checked
+PR gas,PR,320,2000000,U,A,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.01865747,0.01865747,2.6756782e-10,checked
+PR gas,PR,320,2000000,U,A,G,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - P*S*kappaT + S),-3.0322706,-3.0322706,1.4374201e-11,checked
+PR gas,PR,320,2000000,U,G,T,P*kappaT - T*alpha,-0.24041702,-0.24041702,1.5508623e-09,checked
+PR gas,PR,320,2000000,U,G,P,(P*V*alpha - Cp)/S,1.3638107,1.3638107,7.0478662e-10,checked
+PR gas,PR,320,2000000,U,G,V,(Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),0.91845757,0.91845757,1.0838961e-10,checked
+PR gas,PR,320,2000000,U,G,S,P*(T*V*alpha^2 - Cp*kappaT)/(T*S*alpha - Cp),0.4482106,0.4482106,4.0964824e-12,checked
+PR gas,PR,320,2000000,U,G,H,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*S*alpha - S - Cp),0.019012189,0.019012189,1.5346037e-10,checked
+PR gas,PR,320,2000000,U,G,A,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),3.1089329,3.1089329,2.5736718e-10,checked
+PR gas,PR,320,2000000,H,T,P,Cp,42.813152,42.813152,1.0633076e-10,checked
+PR gas,PR,320,2000000,H,T,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/kappaT,39.639152,39.639152,1.9204962e-11,checked
+PR gas,PR,320,2000000,H,T,S,Cp/(T*alpha),31.831688,31.831688,1.3638103e-11,checked
+PR gas,PR,320,2000000,H,T,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*alpha - P*kappaT),-4.0388053,-4.0388053,1.0948496e-09,checked
+PR gas,PR,320,2000000,H,T,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*kappaT),47.116477,47.116477,8.2382386e-10,checked
+PR gas,PR,320,2000000,H,T,G,S + Cp - T*S*alpha,51.072368,51.072368,2.1858089e-09,checked
+PR gas,PR,320,2000000,H,P,T,V*(1 - T*alpha),-0.0004170633,-0.0004170633,3.411378e-11,checked
+PR gas,PR,320,2000000,H,P,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/alpha,0.0052085803,0.0052085803,2.3103756e-11,checked
+PR gas,PR,320,2000000,H,P,S,V,0.0012089306,0.0012089306,1.4144063e-10,checked
+PR gas,PR,320,2000000,H,P,U,V*(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(P*V*alpha - Cp),-3.5952339e-05,-3.5952339e-05,4.1153275e-11,checked
+PR gas,PR,320,2000000,H,P,A,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha + S),-0.0045663651,-0.0045663651,1.7691234e-09,checked
+PR gas,PR,320,2000000,H,P,G,V*(S + Cp - T*S*alpha)/S,-0.0025789868,-0.0025789868,5.6296487e-10,checked
+PR gas,PR,320,2000000,H,V,T,(T*alpha - 1)/kappaT,624651.83,624651.83,1.1635478e-09,checked
+PR gas,PR,320,2000000,H,V,P,Cp/(V*alpha),8425744,8425744,5.5015579e-11,checked
+PR gas,PR,320,2000000,H,V,S,Cp/(T*V*alpha^2 - Cp*kappaT),-2546758.1,-2546758.1,5.8410498e-10,checked
+PR gas,PR,320,2000000,H,V,U,(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(T*V*alpha^2 - Cp*kappaT),57760.191,57760.191,8.5901995e-11,checked
+PR gas,PR,320,2000000,H,V,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(S*kappaT),3936085.8,3936085.8,3.5895693e-10,checked
+PR gas,PR,320,2000000,H,V,G,(S + Cp - T*S*alpha)/(V*alpha - S*kappaT),2790330.1,2790330.1,3.1062492e-10,checked
+PR gas,PR,320,2000000,H,S,T,(T*alpha - 1)/alpha,82.079184,82.079184,7.4290388e-10,checked
+PR gas,PR,320,2000000,H,S,P,T,320,320,7.3947604e-11,checked
+PR gas,PR,320,2000000,H,S,V,T*(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),416.72292,416.72292,7.1982699e-11,checked
+PR gas,PR,320,2000000,H,S,U,T*(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),9.2416305,9.2416305,6.3230644e-10,checked
+PR gas,PR,320,2000000,H,S,A,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),253.01507,253.01507,3.2922399e-10,checked
+PR gas,PR,320,2000000,H,S,G,T*(T*S*alpha - S - Cp)/(T*S*alpha - Cp),217.87058,217.87058,3.1094248e-10,checked
+PR gas,PR,320,2000000,H,U,T,(T*alpha - 1)/(T*alpha - P*kappaT),1.4349454,1.4349454,1.2964339e-11,checked
+PR gas,PR,320,2000000,H,U,P,-Cp/(P*V*alpha - Cp),1.311248,1.311248,3.9703922e-11,checked
+PR gas,PR,320,2000000,H,U,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(T*V*alpha^2 - Cp*kappaT),1.3022591,1.3022591,2.1825097e-11,checked
+PR gas,PR,320,2000000,H,U,S,-Cp/(P*(T*V*alpha^2 - Cp*kappaT)),1.273379,1.273379,6.8542361e-11,checked
+PR gas,PR,320,2000000,H,U,A,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),1.3216538,1.3216538,6.8067444e-11,checked
+PR gas,PR,320,2000000,H,U,G,(T*S*alpha - S - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),1.3297859,1.3297859,8.0455373e-11,checked
+PR gas,PR,320,2000000,H,A,T,(1 - T*alpha)/(P*kappaT),-0.31232592,-0.31232592,3.6572735e-10,checked
+PR gas,PR,320,2000000,H,A,P,-Cp/(P*V*alpha + S),3.1072849,3.1072849,2.0068355e-09,checked
+PR gas,PR,320,2000000,H,A,V,(T*V*alpha^2 - V*alpha - Cp*kappaT)/(S*kappaT),1.655717,1.655717,1.5290894e-10,checked
+PR gas,PR,320,2000000,H,A,S,-Cp/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),0.65044148,0.65044148,1.3610459e-11,checked
+PR gas,PR,320,2000000,H,A,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),-0.024658716,-0.024658716,3.5624212e-10,checked
+PR gas,PR,320,2000000,H,A,G,(T*S*alpha - S - Cp)/(P*V*alpha - P*S*kappaT + S),-4.0322706,-4.0322706,1.0950161e-11,checked
+PR gas,PR,320,2000000,H,G,T,1 - T*alpha,-0.3449853,-0.3449853,1.4830515e-09,checked
+PR gas,PR,320,2000000,H,G,P,-Cp/S,1.7882941,1.7882941,6.6772768e-10,checked
+PR gas,PR,320,2000000,H,G,V,(V*alpha + Cp*kappaT - T*V*alpha^2)/(V*alpha - S*kappaT),1.1960698,1.1960698,9.9077171e-11,checked
+PR gas,PR,320,2000000,H,G,S,-Cp/(T*S*alpha - Cp),0.57074199,0.57074199,9.1491832e-12,checked
+PR gas,PR,320,2000000,H,G,U,(P*V*alpha + P*Cp*kappaT - T*P*V*alpha^2 - Cp)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-0.025282141,-0.025282141,1.3509429e-10,checked
+PR gas,PR,320,2000000,H,G,A,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(P*V*alpha - P*S*kappaT + S),4.1089329,4.1089329,1.9422892e-10,checked
+PR gas,PR,320,2000000,A,T,P,-(P*V*alpha + S),13.778316,13.778316,6.5666455e-11,checked
+PR gas,PR,320,2000000,A,T,V,-S,23.940778,23.940778,4.9303357e-11,checked
+PR gas,PR,320,2000000,A,T,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha),48.938588,48.938588,2.6022527e-11,checked
+PR gas,PR,320,2000000,A,T,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - P*kappaT),163.78814,163.78815,3.3228599e-08,checked
+PR gas,PR,320,2000000,A,T,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*alpha - 1),150.85676,150.85677,2.4499223e-08,checked
+PR gas,PR,320,2000000,A,T,G,P*S*kappaT - P*V*alpha - S,-12.665908,-12.665908,2.8825014e-09,checked
+PR gas,PR,320,2000000,A,P,T,P*V*kappaT,0.0013353464,0.0013353464,1.5353386e-10,checked
+PR gas,PR,320,2000000,A,P,V,-S*kappaT/alpha,0.0031458156,0.0031458156,2.8765783e-12,checked
+PR gas,PR,320,2000000,A,P,S,V*(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,0.0018586309,0.0018586309,1.3874932e-10,checked
+PR gas,PR,320,2000000,A,P,U,V*(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(P*V*alpha - Cp),0.0014579972,0.0014579972,1.2818328e-10,checked
+PR gas,PR,320,2000000,A,P,H,V*(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/Cp,0.0014695676,0.0014695676,1.2512689e-10,checked
+PR gas,PR,320,2000000,A,P,G,V*(P*S*kappaT - P*V*alpha - S)/S,0.00063958675,0.00063958675,4.7183503e-10,checked
+PR gas,PR,320,2000000,A,V,T,-P,-2000000,-2000000,3.3046422e-10,checked
+PR gas,PR,320,2000000,A,V,P,-(P*V*alpha + S)/(V*alpha),2711609.7,2711609.7,6.5015294e-10,checked
+PR gas,PR,320,2000000,A,V,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-3915430,-3915430,5.6956216e-10,checked
+PR gas,PR,320,2000000,A,V,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-2342384.4,-2342384.4,5.4494363e-10,checked
+PR gas,PR,320,2000000,A,V,H,(P*V*alpha + P*Cp*kappaT + S - T*P*V*alpha^2 - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-2377269.7,-2377269.7,5.3098071e-10,checked
+PR gas,PR,320,2000000,A,V,G,(P*S*kappaT - P*V*alpha - S)/(V*alpha - S*kappaT),-691999.71,-691999.71,3.833114e-10,checked
+PR gas,PR,320,2000000,A,S,T,-P*kappaT/alpha,-262.79979,-262.79979,1.7945729e-10,checked
+PR gas,PR,320,2000000,A,S,P,-T*(P*V*alpha + S)/Cp,102.9838,102.9838,5.4551594e-10,checked
+PR gas,PR,320,2000000,A,S,V,T*S*kappaT/(T*V*alpha^2 - Cp*kappaT),251.68729,251.68729,1.5184576e-10,checked
+PR gas,PR,320,2000000,A,S,U,T*(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),-374.7815,-374.7815,6.2995096e-10,checked
+PR gas,PR,320,2000000,A,S,H,T*(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/Cp,-388.98975,-388.98975,6.2543613e-10,checked
+PR gas,PR,320,2000000,A,S,G,T*(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - Cp),-54.031737,-54.031737,3.1127097e-10,checked
+PR gas,PR,320,2000000,A,U,T,-P*kappaT/(T*alpha - P*kappaT),-4.5943847,-4.5943849,5.443828e-08,checked
+PR gas,PR,320,2000000,A,U,P,(P*V*alpha + S)/(P*V*alpha - Cp),0.42199156,0.42199156,8.6062158e-11,checked
+PR gas,PR,320,2000000,A,U,V,S*kappaT/(T*V*alpha^2 - Cp*kappaT),0.7865228,0.7865228,2.7145669e-10,checked
+PR gas,PR,320,2000000,A,U,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(P*(T*V*alpha^2 - Cp*kappaT)),1.957715,1.957715,4.9209889e-11,checked
+PR gas,PR,320,2000000,A,U,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),53.597835,53.597982,2.7368234e-06,checked
+PR gas,PR,320,2000000,A,U,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),-0.32978587,-0.32978587,3.1562017e-10,checked
+PR gas,PR,320,2000000,A,H,T,-P*kappaT/(T*alpha - 1),-3.2017836,-3.2017838,4.3936703e-08,checked
+PR gas,PR,320,2000000,A,H,P,-(P*V*alpha + S)/Cp,0.32182437,0.32182437,3.3235001e-11,checked
+PR gas,PR,320,2000000,A,H,V,S*kappaT/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.60396796,0.60396796,2.0446908e-10,checked
+PR gas,PR,320,2000000,A,H,S,(P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/Cp,1.5374173,1.5374173,1.3872793e-11,checked
+PR gas,PR,320,2000000,A,H,U,(P*S*kappaT + P*Cp*kappaT - T*P*V*alpha^2 - T*S*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-40.553612,-40.553728,2.8571336e-06,checked
+PR gas,PR,320,2000000,A,H,G,(P*V*alpha - P*S*kappaT + S)/(T*S*alpha - S - Cp),-0.24799923,-0.24799923,1.7857042e-10,checked
+PR gas,PR,320,2000000,A,G,T,P*kappaT,1.1045683,1.1045683,1.3007009e-10,checked
+PR gas,PR,320,2000000,A,G,P,(P*V*alpha + S)/S,0.57551663,0.57551663,4.2076218e-10,checked
+PR gas,PR,320,2000000,A,G,V,-S*kappaT/(V*alpha - S*kappaT),0.72238781,0.72238781,2.6317064e-11,checked
+PR gas,PR,320,2000000,A,G,S,(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT)/(T*S*alpha - Cp),0.87746862,0.87746862,2.3131423e-12,checked
+PR gas,PR,320,2000000,A,G,U,(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT)/(T*S*alpha + P*V*alpha - P*S*kappaT - Cp),1.0252821,1.0252821,1.1670485e-11,checked
+PR gas,PR,320,2000000,A,G,H,(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S)/(T*S*alpha - S - Cp),1.0190122,1.0190122,1.1253757e-11,checked
+PR gas,PR,320,2000000,G,T,P,-S,23.940778,23.940778,1.2646923e-10,checked
+PR gas,PR,320,2000000,G,T,V,(V*alpha - S*kappaT)/kappaT,33.141171,33.141171,3.9332533e-11,checked
+PR gas,PR,320,2000000,G,T,S,(Cp - T*S*alpha)/(T*alpha),55.772465,55.772465,9.2333348e-12,checked
+PR gas,PR,320,2000000,G,T,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*alpha - P*kappaT),159.74934,159.74935,3.4096481e-08,checked
+PR gas,PR,320,2000000,G,T,H,(S + Cp - T*S*alpha)/(T*alpha - 1),148.04216,148.04216,2.5001575e-08,checked
+PR gas,PR,320,2000000,G,T,A,(P*V*alpha - P*S*kappaT + S)/(P*kappaT),11.46684,11.46684,1.1887674e-09,checked
+PR gas,PR,320,2000000,G,P,T,V,0.0012089306,0.0012089306,1.6495042e-10,checked
+PR gas,PR,320,2000000,G,P,V,(V*alpha - S*kappaT)/alpha,0.0043547463,0.0043547463,3.2774441e-12,checked
+PR gas,PR,320,2000000,G,P,S,V*(Cp - T*S*alpha)/Cp,0.0021181737,0.0021181737,1.3193915e-10,checked
+PR gas,PR,320,2000000,G,P,U,V*(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(P*V*alpha - Cp),0.0014220449,0.0014220449,1.4037688e-10,checked
+PR gas,PR,320,2000000,G,P,H,V*(S + Cp - T*S*alpha)/Cp,0.0014421492,0.0014421492,1.1453479e-10,checked
+PR gas,PR,320,2000000,G,P,A,V*(P*V*alpha - P*S*kappaT + S)/(P*V*alpha + S),-0.0011113263,-0.0011113263,1.506276e-09,checked
+PR gas,PR,320,2000000,G,V,T,-1/kappaT,-1810662.2,-1810662.2,2.5553282e-10,checked
+PR gas,PR,320,2000000,G,V,P,-S/(V*alpha),4711609.7,4711609.7,3.7380636e-10,checked
+PR gas,PR,320,2000000,G,V,S,(Cp - T*S*alpha)/(T*V*alpha^2 - Cp*kappaT),-4462188.1,-4462188.1,5.7120415e-10,checked
+PR gas,PR,320,2000000,G,V,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*V*alpha^2 - Cp*kappaT),-2284624.2,-2284624.2,5.4906767e-10,checked
+PR gas,PR,320,2000000,G,V,H,(S + Cp - T*S*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),-2332915.9,-2332915.9,5.3447947e-10,checked
+PR gas,PR,320,2000000,G,V,A,(P*S*kappaT - P*V*alpha - S)/(S*kappaT),957933.81,957933.81,3.9845617e-10,checked
+PR gas,PR,320,2000000,G,S,T,-1/alpha,-237.92082,-237.92082,2.5565128e-10,checked
+PR gas,PR,320,2000000,G,S,P,-T*S/Cp,178.94148,178.94148,2.8825178e-10,checked
+PR gas,PR,320,2000000,G,S,V,T*(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),348.41022,348.41022,9.8557626e-11,checked
+PR gas,PR,320,2000000,G,S,U,T*(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(P*(T*V*alpha^2 - Cp*kappaT)),-365.53987,-365.53987,6.657509e-10,checked
+PR gas,PR,320,2000000,G,S,H,T*(T*S*alpha - S - Cp)/Cp,-381.73218,-381.73218,6.5600487e-10,checked
+PR gas,PR,320,2000000,G,S,A,T*(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),61.576831,61.576831,2.993609e-10,checked
+PR gas,PR,320,2000000,G,U,T,-1/(T*alpha - P*kappaT),-4.1594393,-4.1594395,6.0125455e-08,checked
+PR gas,PR,320,2000000,G,U,P,S/(P*V*alpha - Cp),0.73323957,0.73323957,1.1657576e-10,checked
+PR gas,PR,320,2000000,G,U,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - Cp*kappaT),1.0887819,1.0887819,2.2252999e-10,checked
+PR gas,PR,320,2000000,G,U,S,(T*S*alpha - Cp)/(P*(T*V*alpha^2 - Cp*kappaT)),2.231094,2.231094,8.1486836e-11,checked
+PR gas,PR,320,2000000,G,U,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),52.597835,52.597982,2.7888563e-06,checked
+PR gas,PR,320,2000000,G,U,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.32165378,0.32165378,2.6222062e-10,checked
+PR gas,PR,320,2000000,G,H,T,-1/(T*alpha - 1),-2.8986742,-2.8986744,4.8535707e-08,checked
+PR gas,PR,320,2000000,G,H,P,-S/Cp,0.55919213,0.55919213,2.2156726e-11,checked
+PR gas,PR,320,2000000,G,H,V,(S*kappaT - V*alpha)/(T*V*alpha^2 - V*alpha - Cp*kappaT),0.83607164,0.83607164,1.6686391e-10,checked
+PR gas,PR,320,2000000,G,H,S,(Cp - T*S*alpha)/Cp,1.7521052,1.7521052,1.7355698e-11,checked
+PR gas,PR,320,2000000,G,H,U,(P*S*kappaT + Cp - T*S*alpha - P*V*alpha)/(T*P*V*alpha^2 - P*V*alpha - P*Cp*kappaT + Cp),-39.553612,-39.553728,2.9293679e-06,checked
+PR gas,PR,320,2000000,G,H,A,(P*S*kappaT - P*V*alpha - S)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.24337219,0.24337219,1.6222627e-10,checked
+PR gas,PR,320,2000000,G,A,T,1/(P*kappaT),0.90533109,0.90533109,2.9955126e-11,checked
+PR gas,PR,320,2000000,G,A,P,S/(P*V*alpha + S),1.7375693,1.7375693,7.2763014e-10,checked
+PR gas,PR,320,2000000,G,A,V,(S*kappaT - V*alpha)/(S*kappaT),1.384298,1.384298,3.0086823e-11,checked
+PR gas,PR,320,2000000,G,A,S,(T*S*alpha - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*Cp*kappaT),1.1396419,1.1396419,1.8912065e-11,checked
+PR gas,PR,320,2000000,G,A,U,(T*S*alpha + P*V*alpha - P*S*kappaT - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*S*kappaT - P*Cp*kappaT),0.97534128,0.97534128,3.9792406e-12,checked
+PR gas,PR,320,2000000,G,A,H,(T*S*alpha - S - Cp)/(T*P*V*alpha^2 + T*S*alpha - P*V*alpha - P*Cp*kappaT - S),0.98134253,0.98134253,6.7565338e-12,checked

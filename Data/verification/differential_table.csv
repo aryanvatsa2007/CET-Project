@@ -1,0 +1,10 @@
+# partial derivatives of the eight variables in the (T, P) plane used by the Jacobian reduction
+X,(dX/dT)_P,(dX/dP)_T,latex_dT,latex_dP
+T,1,0,1,0
+P,0,1,0,1
+V,V*alpha,-V*kappaT,V \alpha,-V \kappa_T
+S,Cp/T,-V*alpha,\frac{C_P}{T},-V \alpha
+U,Cp - P*V*alpha,V*(P*kappaT - T*alpha),C_P - P V \alpha,V\left(P \kappa_T - T \alpha\right)
+H,Cp,V*(1 - T*alpha),C_P,V\left(1 - T \alpha\right)
+A,-(P*V*alpha + S),P*V*kappaT,-\left(P V \alpha + S\right),P V \kappa_T
+G,-S,V,-S,V

@@ -1,0 +1,33 @@
+# scenario: 17_singular_derivative
+# type: state
+# status: partial
+# input file: Data/inputs/17_singular_derivative.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,350,K,stated,,,
+P,1000000,Pa,stated,,,
+V,0.002910061916,m3/mol,parameterised (IG),,,
+Z,1,1,parameterised (IG),,,
+rho,15.12321774,kg/m3,parameterised (IG),,,
+alpha,0.002857142857,1/K,parameterised (IG),,,
+kappaT,1e-06,1/Pa,parameterised (IG),,,
+gammaV,2857.142857,Pa/K,parameterised (IG),,,
+lnphi,0,1,parameterised (IG),,,
+fugacity,1000000,Pa,parameterised (IG),,,
+HR,0,J/mol,parameterised (IG),,,
+SR,0,J/(mol*K),parameterised (IG),,,
+GR,0,J/mol,parameterised (IG),,,
+Cp0,39.41096802,J/(mol*K),parameterised (IG),,,
+Cp,39.41096802,J/(mol*K),parameterised (IG),,,
+Cv,31.0965054,J/(mol*K),parameterised (IG),,,
+gamma,1.267376109,1,parameterised (IG),,,
+kappaS,7.890317585e-07,1/Pa,parameterised (IG),,,
+w,289.4880598,m/s,parameterised (IG),,,
+muJT,0,K/Pa,parameterised (IG),,,
+H,1985.80137,J/mol,parameterised (IG),,,
+S,-13.00892149,J/(mol*K),parameterised (IG),,,
+U,-924.2605463,J/mol,parameterised (IG),,,
+A,3628.861977,J/mol,parameterised (IG),,,
+G,6538.923893,J/mol,parameterised (IG),,,
+(dT/dP)_H,0,(K)/(Pa),parameterised (IG),,,= V*(T*alpha - 1)/Cp
+(dS/dP)_H,-8.314462618e-06,(J/(mol*K))/(Pa),parameterised (IG),,,= -V/T

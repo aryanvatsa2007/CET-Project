@@ -1,0 +1,11 @@
+# scenario: 06_infer_missing_data
+# type: infer
+# status: partial
+# input file: Data/inputs/06_infer_missing_data.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: T, P, V, Cp and kappaT stated; alpha missing
+MISSING DATA: Cv cannot be computed from the supplied data; supply any one of: {alpha} | {gamma} | {gammaV} | {kappaS} | {muJT} | {M, w}
+MISSING DATA: muJT cannot be computed from the supplied data; supply any one of: {alpha} | {gammaV}
+MISSING DATA: w cannot be computed from the supplied data; supply any one of: {Cv, M} | {M, alpha} | {M, gamma} | {M, gammaV} | {M, kappaS} | {M, muJT}
+MISSING DATA: (dT/dP)_H = V*(T*alpha - 1)/Cp needs Cp, T, V, alpha; missing: alpha (or {gammaV} | {muJT})

@@ -1,0 +1,18 @@
+# scenario: 07_infer_inconsistent
+# type: infer
+# status: inconsistent
+# input file: Data/inputs/07_infer_inconsistent.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,350,K,stated,,,
+P,10000000,Pa,stated,,,
+V,0.00019235,m3/mol,stated,,,
+Cp,85.729,J/(mol*K),stated,,,
+Cv,95,J/(mol*K),stated,,,
+alpha,0.0105,1/K,stated,,,
+kappaT,1.5e-07,1/Pa,stated,,,
+Z,0.6609824998,1,inferred,,,"Z = P V / (R T)  [from P, V, T]"
+gammaV,70000,Pa/K,inferred,,,"(dP/dT)_V = alpha / kappaT  [from alpha, kappaT]"
+gamma,0.9024105263,1,inferred,,,"gamma = Cp / Cv  [from Cp, Cv]"
+kappaS,1.662214653e-07,1/Pa,inferred,,,"kappaS = kappaT / gamma  [from kappaT, gamma]"
+muJT,6.001892592e-06,K/Pa,inferred,,,"muJT = V (T alpha - 1) / Cp  [from V, T, alpha, Cp]"

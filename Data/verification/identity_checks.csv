@@ -1,0 +1,8 @@
+# exact symbolic identities checked by polynomial cross-multiplication
+identity,origin_or_scope,reduced_value,result
+(dT/dV)_S = -(dP/dS)_V,dU = T dS - P dV,T*alpha/(T*V*alpha^2 - Cp*kappaT),holds
+(dT/dP)_S = (dV/dS)_P,dH = T dS + V dP,T*V*alpha/Cp,holds
+(dS/dV)_T = (dP/dT)_V,dA = -S dT - P dV,alpha/kappaT,holds
+(dS/dP)_T = -(dV/dT)_P,dG = -S dT + V dP,-V*alpha,holds
+reciprocity (dX/dY)_Z (dY/dX)_Z = 1,336 triples,,336 of 336 hold
+cyclic rule (dX/dY)_Z (dY/dZ)_X (dZ/dX)_Y = -1,336 triples,,336 of 336 hold

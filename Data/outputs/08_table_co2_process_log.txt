@@ -1,0 +1,10 @@
+# scenario: 08_table_co2_process
+# type: table
+# status: ok
+# input file: Data/inputs/08_table_co2_process.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: CO2 from 400 K, 0.1 MPa to 350 K, 10 MPa using only tabulated P-V-T data
+P-V-T table tables/co2_pvt_table_nist.csv: 19 temperatures (310 to 400 K) x 9 pressures (100000 to 2e+07 Pa); bicubic spline in Z(T,P)
+state 1: low-pressure (below table) correction to HR = -24.19 J/mol of -24.19 J/mol
+state 2: low-pressure (below table) correction to HR = -28.16 J/mol of -3827 J/mol

@@ -1,0 +1,9 @@
+# scenario: 09_table_out_of_range
+# type: table
+# status: error: OutOfRangeError
+# input file: Data/inputs/09_table_out_of_range.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+
+description: request outside the tabulated range
+P-V-T table tables/co2_pvt_table_nist.csv: 19 temperatures (310 to 400 K) x 9 pressures (100000 to 2e+07 Pa); bicubic spline in Z(T,P)
+ERROR (OutOfRangeError): state T = 450 K, P = 1e+07 Pa is outside the table (T from 310 to 400 K, P from 100000 to 2e+07 Pa); the engine does not extrapolate tabulated data

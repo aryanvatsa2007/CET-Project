@@ -1,0 +1,17 @@
+# Scenario 17 (edge case, undefined derivative): in an ideal gas the enthalpy
+# depends on temperature only, so (dP/dT)_H does not exist.
+[scenario]
+name = 17_singular_derivative
+type = state
+description = ideal gas; (dP/dT)_H is singular, (dT/dP)_H is zero
+
+[model]
+fluid = CO2
+eos = IG
+
+[state]
+T = 350 K
+P = 1 MPa
+
+[targets]
+derivatives = (dP/dT)_H, (dT/dP)_H, (dS/dP)_H

@@ -1,0 +1,13 @@
+# Scenario 11 (edge case, unit problem): the temperature has no unit.
+[scenario]
+name = 11_unit_missing
+type = state
+description = temperature given as a bare number
+
+[model]
+fluid = CO2
+eos = PR
+
+[state]
+T = 350
+P = 10 MPa

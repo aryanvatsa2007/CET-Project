@@ -1,0 +1,6 @@
+# scenario: 13_cp0_out_of_range
+# type: state
+# status: error: OutOfRangeError
+# input file: Data/inputs/13_cp0_out_of_range.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note

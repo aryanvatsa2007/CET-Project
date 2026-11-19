@@ -1,0 +1,8 @@
+# Scenario 04: purely symbolic reduction of derivatives (no numbers supplied).
+[scenario]
+name = 04_derivatives_symbolic
+type = derivative
+description = reduce a set of textbook derivatives to T, P, V, S, Cp, alpha, kappaT
+
+[targets]
+derivatives = (dT/dP)_H, (dT/dP)_S, (dU/dV)_T, (dH/dP)_T, (dS/dV)_T, (dT/dV)_U, (dP/dT)_V, (dS/dT)_V, (dG/dP)_T, (dA/dV)_T, (dH/dS)_P, (dU/dS)_V

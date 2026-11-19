@@ -1,0 +1,19 @@
+# scenario: 12_missing_cp0
+# type: state
+# status: partial
+# input file: Data/inputs/12_missing_cp0.txt
+# values are in SI units unless the unit column says otherwise; reference state: ideal gas, H = S = 0 at 298.15 K and 100000 Pa
+quantity,value,unit,provenance,std_uncertainty,mc_std_uncertainty,note
+T,350,K,stated,,,
+P,10000000,Pa,stated,,,
+V,0.0001988222637,m3/mol,parameterised (SRK),,,
+Z,0.6832234827,1,parameterised (SRK),,,
+alpha,0.01014837853,1/K,parameterised (SRK),,,
+kappaT,1.481195018e-07,1/Pa,parameterised (SRK),,,
+gammaV,68514.80332,Pa/K,parameterised (SRK),,,
+lnphi,-0.3015060613,1,parameterised (SRK),,,
+fugacity,7397033.428,Pa,parameterised (SRK),,,
+HR,-3899.36937,J/mol,parameterised (SRK),,,
+SR,-8.634194468,J/(mol*K),parameterised (SRK),,,
+GR,-877.4013066,J/mol,parameterised (SRK),,,
+(dP/dT)_V,68514.80332,(Pa)/(K),parameterised (SRK),,,= alpha/kappaT

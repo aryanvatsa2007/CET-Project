@@ -1,0 +1,16 @@
+# Scenario 09 (edge case, out-of-range table): 450 K is above the last tabulated
+# temperature (400 K).  The engine must refuse instead of extrapolating.
+[scenario]
+name = 09_table_out_of_range
+type = table
+description = request outside the tabulated range
+
+[table]
+pvt = tables/co2_pvt_table_nist.csv
+
+[model]
+fluid = CO2
+
+[state]
+T = 450 K
+P = 10 MPa

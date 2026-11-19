@@ -1,0 +1,14 @@
+# Scenario 16 (edge case, missing data): a fluid that is not in the database and
+# no critical constants are supplied.
+[scenario]
+name = 16_unknown_fluid
+type = state
+description = fluid absent from the database
+
+[model]
+fluid = unobtainium
+eos = PR
+
+[state]
+T = 350 K
+P = 10 MPa

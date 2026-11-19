@@ -1,0 +1,17 @@
+# Scenario 15: ideal-gas equation with a tabulated Cp0(T) (tabulated caloric input).
+[scenario]
+name = 15_state_ideal_gas_cp_table
+type = state
+description = ideal gas with Cp0 from a table, 360 K and 0.5 MPa
+
+[model]
+eos = IG
+M = 44.0095 g/mol
+cp0_table = tables/co2_cp0_table.csv
+
+[state]
+T = 360 K
+P = 0.5 MPa
+
+[targets]
+derivatives = (dT/dP)_H, (dT/dP)_S
