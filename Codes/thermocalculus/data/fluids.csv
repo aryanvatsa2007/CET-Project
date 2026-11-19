@@ -1,0 +1,6 @@
+# Fluid database of the thermocalculus engine.
+# Critical constants and acentric factor: NIST Chemistry WebBook (SRD 69), "Thermophysical Properties of Fluid Systems", auxiliary data of each fluid page (values of the reference equation of state named in source_critical). Retrieved 2026-11-15.
+# Molar mass and ideal-gas heat capacity: NIST Chemistry WebBook (SRD 69), gas phase thermochemistry page; Shomate equation Cp0 = A + B t + C t^2 + D t^3 + E/t^2, t = T/1000 K, J/(mol K); coefficients from Chase (1998), NIST-JANAF Thermochemical Tables. Retrieved 2026-11-15.
+name,formula,M_kg_per_mol,Tc_K,Pc_Pa,omega,cpA,cpB,cpC,cpD,cpE,cp_Tmin_K,cp_Tmax_K,source_critical,source_cp
+carbon dioxide,CO2,0.0440095,304.1282,7377300,0.22394,24.99735,55.18696,-33.69137,7.948387,-0.136638,298,1200,NIST WebBook fluid page (Span and Wagner 1996),NIST WebBook Shomate (Chase 1998)
+nitrogen,N2,0.0280134,126.192,3395800,0.0372,28.98641,1.853978,-9.647459,16.63537,0.000117,100,500,NIST WebBook fluid page (Span et al. 2000),NIST WebBook Shomate (Chase 1998)
